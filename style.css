@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Pangolin&family=Rubik+Puddles&family=Ubuntu:wght@600&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 body {
     margin: 0;
+    padding:0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-family: "Quicksand", sans-serif;
-  }
-  
+}
   .topnav {
     overflow: hidden;
     background-color: #ffffff;
@@ -24,6 +26,7 @@ body {
     text-decoration: none;
     font-size: 17px;
     margin-top: 2vh;
+    font-weight: 900;
   }
   
   
@@ -44,7 +47,7 @@ body {
  
   } 
   input[type=text]{
-    height: 46px;
+    height: 5vh;
     width: 20vw;
     padding: 0 16px;
     border: 2px solid #ddd;
@@ -52,8 +55,8 @@ body {
     font-family: "Quicksand", sans-serif;
     margin-left: 2%;
   }
-  button{
-    height: 46px;
+  .enroll-btn{
+    height: 5vh;
     padding: 12px 10px;
     border: 0;
     background: linear-gradient(to right, #f27941 0%, #ff0000 100%);
@@ -66,3 +69,68 @@ body {
     font-family: "Quicksand", sans-serif;
     text-align: left;
   }
+
+  .login-form{
+    display: flexbox;
+    background: linear-gradient(to right, #fca983 0%, #ff0000 100%);
+    justify-content: center;
+    text-align: center;
+    overflow: auto;
+    margin: 5vh 0 0 0;
+    padding:5vh;
+    /* border: 2px solid black; */
+    
+  }
+  .cross-btn{
+    background: #dddddd00;
+    border: 0px;
+    float: right;
+    cursor: pointer;
+  }
+  .container{
+    margin: 2vh 10vw 2vh 10vw;
+    padding: 5vh;
+    background: rgb(236, 238, 243);
+    box-shadow: 2px 1px 2px 1px rgb(47, 47, 47);
+  }
+  .login-form input{
+    margin: 1vh;
+    padding-left: 1vh;
+    height: 5vh;
+    width: 20vw;
+    padding: 0 16px;
+    border: 2px solid #706d6d;
+    border-radius: 1px;
+    font-family: "Quicksand", sans-serif;
+    margin-left: 2%;
+  }
+
+  .login-form h4{
+    font-size: 30px;
+  }
+  .login-form label{
+    font-size: 20px;
+    text-align: start;
+  }
+  .login-btn{
+    height: 5vh;
+    width: 60%;
+    border: 0px solid black;
+    background: linear-gradient(to right, #ffa57c 0%, #ff0000 100%);
+    border-radius: 1px;
+    font-family: "Quicksand", sans-serif;
+    font-size: large;
+    cursor: pointer;
+
+  }
+  .login-btn:hover{
+    background: linear-gradient(to left, #ffa57c 0%, #ff0000 100%);
+    transition: background-color 0.4s ease-in-out;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+    background-color: rgba(104, 85, 224, 1);
+    color: white;
+    transition: all 0.4s ease-in;
+
+    
+  }
+  
