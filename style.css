@@ -71,14 +71,20 @@ body {
   }
 
   .login-form{
+ 
+    display: none;
     display: flexbox;
-    background: linear-gradient(to right, #fca983 0%, #ff0000 100%);
+    /* filter: blur(2px); */
+    background: linear-gradient(to right, #fca98355 0%, #ff000068 100%);
     justify-content: center;
     text-align: center;
     overflow: auto;
     margin: 5vh 0 0 0;
     padding:5vh;
     /* border: 2px solid black; */
+    position: absolute;
+    top: 20%;
+    left: 25%;
     
   }
   .cross-btn{
