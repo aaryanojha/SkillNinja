@@ -1,142 +1,161 @@
 @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Pangolin&family=Rubik+Puddles&family=Ubuntu:wght@600&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
 body {
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
-  .topnav {
-    overflow: hidden;
-    background-color: #ffffff;
-    position: fixed;
-    display: flex;
-    justify-content: space-top;
-    height: 10vh;
-    width: 100%;
-    box-shadow: 1px 3px 2px 2px rgb(174, 169, 169);
-  }
-  
-  .topnav a {
-    float: left;
-    color: #000000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    margin-top: 2vh;
-    font-weight: 900;
-  }
-  
-  
-  .topnav a.active {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-  }
-  .headers{
-    display: flexbox;
-    text-align: center;
-    padding-top: 10%;
-    font-size: large;
-  }
-  .text{
-    display: flexbox;
-    /* justify-content: center; */
-    /* text-align: center; */
- 
-  } 
-  input[type=text]{
-    height: 5vh;
-    width: 20vw;
-    padding: 0 16px;
-    border: 2px solid #ddd;
-    border-radius: 1px;
-    font-family: "Quicksand", sans-serif;
-    margin-left: 2%;
-  }
-  .enroll-btn{
-    height: 5vh;
-    padding: 12px 10px;
-    border: 0;
-    background: linear-gradient(to right, #f27941 0%, #ff0000 100%);
-    border-radius: 1px;
-    width: 20vw;
-    margin-top: 10px;
-    margin-left: 2vw;
-    color: #fff;
-    letter-spacing: 1px;
-    font-family: "Quicksand", sans-serif;
-    text-align: left;
-  }
 
-  .login-form{
-    display: none;
-    display: flexbox;
-    border-radius: 10px;
-    /* filter: blur(2px); */
-    background: linear-gradient(to right, #fca98355 0%, #ff000068 100%);
-    justify-content: center;
-    text-align: center;
-    overflow: auto;
-    margin: 5vh 0 0 0;
-    padding:5vh;
-    /* border: 2px solid black; */
-    position: absolute;
-    top: 10%;
-    left: 22%;
-    
-  }
-  .cross-btn{
-    background: #dddddd00;
-    border: 0px;
-    float: right;
-    cursor: pointer;
-  }
-  .container{
-    border-radius: 10px;
-    margin: 2vh 10vw 2vh 10vw;
-    padding: 5vh;
-    background: rgb(236, 238, 243);
-    box-shadow: 2px 1px 2px 1px rgb(47, 47, 47);
-  }
-  .login-form input{
-    margin: 1vh;
-    padding-left: 1vh;
-    height: 5vh;
-    width: 20vw;
-    padding: 0 16px;
-    border: 2px solid #706d6d;
-    border-radius: 4px;
-    font-family: "Quicksand", sans-serif;
-    margin-left: 2%;
-  }
+.topnav {
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed;
+  display: flex;
+  justify-content: space-top;
+  height: 10vh;
+  width: 100%;
+  box-shadow: 1px 3px 2px 2px rgb(174, 169, 169);
+}
 
-  .login-form h4{
-    font-size: 30px;
-  }
-  .login-form label{
-    font-size: 20px;
-    text-align: start;
-  }
-  .login-btn{
-    height: 5vh;
-    width: 60%;
-    color: white;
-    border: 0px solid black;
-    background: linear-gradient(to right, #ffa57c 0%, #ff0000 100%);
-    border-radius: 4px;
-    font-family: "Quicksand", sans-serif;
-    font-size: large;
-    cursor: pointer;
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-top: 2vh;
+  font-weight: 900;
+}
 
-  }
-  .login-btn:hover{
-    background: linear-gradient(to left, #ffa57c 0%, #ff0000 100%);
-    transition: background-color 0.4s ease-in-out;
-    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
-    background-color: rgba(104, 85, 224, 1);
-    color: white;
-    transition: all 0.2s ease-in-out;
-  }
-  
+
+.topnav a.active {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.headers {
+  display: flexbox;
+  text-align: center;
+  padding-top: 10%;
+  font-size: large;
+}
+
+.text {
+  display: flexbox;
+  /* justify-content: center; */
+  /* text-align: center; */
+
+}
+
+input[type=text] {
+  height: 5vh;
+  width: 20vw;
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 1px;
+  font-family: "Quicksand", sans-serif;
+  margin-left: 2%;
+}
+
+.enroll-btn {
+  height: 5vh;
+  padding: 12px 10px;
+  border: 0;
+  background: linear-gradient(to right, #f27941 0%, #ff0000 100%);
+  border-radius: 1px;
+  width: 20vw;
+  margin-top: 10px;
+  margin-left: 2vw;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: "Quicksand", sans-serif;
+  text-align: left;
+}
+
+.login-form {
+  display: none;
+  display: flexbox;
+  border-radius: 10px;
+  /* filter: blur(2px); */
+  background: linear-gradient(to right, #fca98355 0%, #ff000068 100%);
+  justify-content: center;
+  text-align: center;
+  overflow: auto;
+  margin: 5vh 0 0 0;
+  padding: 5vh;
+  /* border: 2px solid black; */
+  position: absolute;
+  top: 10%;
+  left: 22%;
+
+}
+
+.cross-btn {
+  background: #dddddd00;
+  border: 0px;
+  float: right;
+  cursor: pointer;
+}
+
+.container {
+  border-radius: 10px;
+  margin: 2vh 10vw 2vh 10vw;
+  padding: 5vh;
+  background: rgb(236, 238, 243);
+  box-shadow: 2px 1px 2px 1px rgb(47, 47, 47);
+}
+
+.login-form input {
+  margin: 1vh;
+  padding-left: 1vh;
+  height: 5vh;
+  width: 20vw;
+  padding: 0 16px;
+  border: 2px solid #706d6d;
+  border-radius: 4px;
+  font-family: "Quicksand", sans-serif;
+  margin-left: 2%;
+}
+
+.login-form h4 {
+  font-size: 30px;
+}
+
+.login-form label {
+  font-size: 20px;
+  text-align: start;
+}
+
+.login-btn {
+  height: 5vh;
+  width: 60%;
+  color: white;
+  border: 0px solid black;
+  background: linear-gradient(to right, #ffa57c 0%, #ff0000 100%);
+  border-radius: 4px;
+  font-family: "Quicksand", sans-serif;
+  font-size: large;
+  cursor: pointer;
+
+}
+
+.login-btn:hover {
+  background: linear-gradient(to left, #ffa57c 0%, #ff0000 100%);
+  transition: background-color 0.4s ease-in-out;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+  background-color: rgba(104, 85, 224, 1);
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.bodyContainer {
+  max-width: 1200px;
+  height: auto;
+  /* Set your desired width here */
+  margin: 0 auto;
+  /* Center the body horizontally */
+}

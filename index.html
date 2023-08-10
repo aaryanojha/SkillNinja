@@ -1,58 +1,59 @@
 <html>
 
 <head>
-    
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <form method="POST" action="logindb.php">
-    <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="#about">Register</a>
-        <a href="#about" onclick="openForm()">Login</a>
-    </div>
-
-    <div style="display: flex; float: right;">
-        <img src="https://hood-cdn.nobrokerhood.com/hood-static-contents/Group-612.png"
-            style="height: 40vw;width: 50vw;padding-top: 10%;">
-    </div>
-    <div class="headers">
-        <h1>Experience community living at its best</h1>
-        <h4>Building secure, connected, thriving societies</h4>
-    </div>
-
-    <div class="text">
-        <input type="text" name="Name" id="" placeholder="Name">
-        <input type="text" name="" id="" placeholder="Phone no">
-        <button class="enroll-btn">Enroll Your Society <i class="fa fa-long-arrow-right"></i></button>
-    </div>
-    <div class="login-form" id="myForm">
-        <div class="container">
-            <button class="cross-btn"   onclick="closeForm(event)"><i class="fa fa-close"></i></button>
-            <h4>LOGIN</h4>
-            <div>
-                <label for="username"><i class="fa fa-user"></i> Username:
-                    <input type="text" name="uname" value="pra" id="">
-                </label>
+    <div class="bodyContainer">
+        <form method="POST" action="logindb.php">
+            <div class="topnav">
+                <a class="active" href="#home">Home</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+                <a href="#about">Register</a>
+                <a href="#about" onclick="openForm()">Login</a>
             </div>
-            <div>
-                <label for="password"><i class="fa fa-lock"></i> Password:&nbsp;
-                    <input type="password" name="pass" value="pra" id="">
-                </label>
-                <p><a href="" style="text-decoration: none;">Forgot Password?</a></p>
+
+            <div style="display: flex; float: right;">
+                <img src="https://hood-cdn.nobrokerhood.com/hood-static-contents/Group-612.png"
+                    style="height: 40vw;width: 50vw;padding-top: 10%;">
             </div>
-            <button class="login-btn" name="login">Submit</button>
-        </div>
+            <div class="headers">
+                <h1>Experience community living at its best</h1>
+                <h4>Building secure, connected, thriving societies</h4>
+            </div>
+
+            <div class="text">
+                <input type="text" name="Name" id="" placeholder="Name">
+                <input type="text" name="" id="" placeholder="Phone no">
+                <button class="enroll-btn">Enroll Your Society <i class="fa fa-long-arrow-right"></i></button>
+            </div>
+            <div class="login-form" id="myForm">
+                <div class="container">
+                    <button class="cross-btn" onclick="closeForm(event)"><i class="fa fa-close"></i></button>
+                    <h4>LOGIN</h4>
+                    <div>
+                        <label for="username"><i class="fa fa-user"></i> Username:
+                            <input type="text" name="uname" value="pra" id="">
+                        </label>
+                    </div>
+                    <div>
+                        <label for="password"><i class="fa fa-lock"></i> Password:&nbsp;
+                            <input type="password" name="pass" value="pra" id="">
+                        </label>
+                        <p><a href="" style="text-decoration: none;">Forgot Password?</a></p>
+                    </div>
+                    <button class="login-btn" name="login">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
-    </form>
 </body>
 
 </html>
