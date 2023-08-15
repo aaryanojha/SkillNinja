@@ -11,7 +11,11 @@ body {
   background-repeat: no-repeat;
   /* background-position-y: 15%;
   background-position-x: 100%; */
-
+}
+@media screen and (max-width: 1366px) {
+  *{
+    zoom: 80%;
+  }
 }
 .topnav {
   overflow: hidden;
