@@ -1,11 +1,8 @@
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
-    
-
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
   }
-  
-  function closeForm(event) {
-    event.preventDefault();
-
-    document.getElementById("myForm").style.display = "none";
-  }
+}
