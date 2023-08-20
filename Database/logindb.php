@@ -19,7 +19,7 @@ if (isset($_POST["login"])) {
               window.location.href='../Homepage/index.html';
               </script>";
         } else {
-            echo "<script> alert('hii.');
+            echo "<script> alert('Incorrect');
                       window.location.href='../Homepage/index.html';
                       </script>";
         }

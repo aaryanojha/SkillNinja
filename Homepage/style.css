@@ -50,19 +50,37 @@ body {
 .topnav .icon {
   display: none;
 }
+#username:focus{
+  outline: 0;
+}
+#username:valid{
+  border-color: green;
+}
+#username:invalid{
+  border-color: red;
+}
+#password:focus{
+outline: 0;
+}
+#password:valid{
+  border-color: green;
+}
+#password:invalid{
+  border-color: red;
+}
 .form-popup{
   display: none;
   position: fixed;
   text-align: center;
   z-index: 9;
   /* padding-top: 10%; */
-  padding: 6% 0% 0% 35%;
+  padding: 6% 35% 10% 35%;
   /* max-width: ; */
   /* backdrop-filter: blur(20px); */
 }
 .form-container{
   background-color: #ffffff;
-  box-shadow: 2px 2px 10px 10px rgb(240, 240, 240);
+  /* box-shadow: 2px 2px 10px 10px rgb(240, 240, 240); */
   padding: 10%;
   padding-top: 5%;
   max-width: 500px;
@@ -108,6 +126,7 @@ body {
   cursor: pointer;
 }
 .form-container label{
+  float: left;
   font-size: medium;
   font-weight:600;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -145,7 +164,7 @@ body {
     width: 60%;
   }
   .form-popup{
-    zoom: 200%;
+    zoom: 150%;
     padding: 5%;
   }
 }

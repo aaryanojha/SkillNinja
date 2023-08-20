@@ -15,21 +15,22 @@
             <a href="#home" class="" style="padding-top: 1.5%;">News</a>
             <a href="#home" class="" style="padding-top: 1.5%;">About</a>
             <a href="#home" class="" style="float: right; padding-top: 1.5%;" onclick="openform()">Login &emsp;</a>
-            <a href="#home" class="" style="float: right; padding-top: 1.5%;"><button id="reg-btn">Join For Free
+            <a href="#home" class="" style="float: right; padding-top: 1.5%;" onclick="openform2()"><button id="reg-btn"
+                    style="pointer-events: none;">Join For Free
                     !</button></a>
             <a href="#none" style="padding-top: 1%;">&nbsp;</i><input type="search" name="" id=""
                     class="search-bar">&nbsp;<i id="search-btn" class="fa fa-search"></i></a>
             <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
         </div>
-
+        <!-- Login -->
         <div class="form-popup" id="myform">
             <div class="form-container">
                 <h1>Welcome Back!</h1>
                 <a href="#closebtn" class="closebtn" onclick="closeform()"><i class="material-icons">close</i></a>
-                <label for="username" >USERNAME:</label>
+                <label for="username">USERNAME:</label>
                 <input type="text" name="username" id="" placeholder="Username">
 
-                <label for="password" >PASSWORD:</label>
+                <label for="password">PASSWORD:</label>
                 <input type="password" name="password" id="" placeholder="Password">
                 <p><a href="#forgotpass" style="text-decoration: none;">Forgot Password?</a></p>
 
@@ -38,7 +39,32 @@
                     <hr style="width: 45%;float: left;border:1px solid rgb(204, 204, 204);"><b>or</b>
                     <hr style="width: 45%;float: right;border:1px solid rgb(204, 204, 204);">
                 </p>
-                <p>New to SkillNinja? <a href="../Database/SignUp.php">SignUp</a></p>
+                <p>New to SkillNinja? <a href="#home" onclick="openform2(),closeform()">SignUp</a></p>
+            </div>
+        </div>
+        <!-- Register -->
+        <div class="form-popup" id="myform2" style="display: none;">
+            <div class="form-container">
+                <h1>Sign Up</h1>
+                <a href="#closebtn" class="closebtn" onclick="closeform2()"><i class="material-icons">close</i></a>
+                <label for="Fullname">Full Name:</label>
+                <input type="text" name="Fullname" id="" placeholder="Enter Your Full Name">
+
+                <label for="username1">Username:</label>
+                <input type="text" id="username" required pattern="[a-z]{4,8}[0-9][0-9]{1,9}?" min="0" max="99"
+                    oninvalid="this.setCustomValidity('Username must be a combination lowercase alphabets and numbers only!')"
+                    maxlength="12" name="username1" id="" placeholder="Create a Username">
+                <label for="password1">Password:</label>
+                <input type="password" name="password1" id="password" required pattern="[a-z]{4,8}[0-9][0-9]{1,9}?"
+                    oninvalid="this.setCustomValidity('Password must contain atleast 4 alphabets and a number!')"
+                    maxlength="12" placeholder="Password">
+
+                <button type="submit" name="signup">Join Now!</button>
+                <p>
+                    <hr style="width: 45%;float: left;border:1px solid rgb(204, 204, 204);"><b>or</b>
+                    <hr style="width: 45%;float: right;border:1px solid rgb(204, 204, 204);">
+                </p>
+                <p>Already a user? <a href="#home" onclick="openform(),closeform2()">Login</a></p>
             </div>
         </div>
 
