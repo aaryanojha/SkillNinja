@@ -17,6 +17,10 @@ body {
   body{
     zoom: 80%;
   }
+  .form-popup{
+    zoom: 105%;
+  }
+
 }
 .topnav {
   overflow: hidden;

@@ -2,8 +2,8 @@
 // Check if the login form was submitted
 if (isset($_POST["login"])) {
     // Get the username and password from the form
-    $UserName = $_POST["username"];
-    $Password = $_POST["password"];
+    $UserName = $_POST["uname"];
+    $Password = $_POST["pass"];
 
     // Connect to the database
     require_once "functions.php";
@@ -11,23 +11,33 @@ if (isset($_POST["login"])) {
     $conn = DBConnect();
 
     if (!empty($UserName) && !empty($Password)) {
-        $INSERT = "INSERT Into users(name,pass) values('$UserName','$Password')";
-        $result = $conn->query($INSERT);
 
-        if ($result) {
-            echo "<script> alert('hi.');
-              window.location.href='../Homepage/index.html';
-              </script>";
+        $query = "SELECT * FROM users WHERE name='$UserName' AND pass='$Password'";
+        $result = mysqli_query($conn, $query);
+        // Check if the query was successful
+        if ($result && mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_assoc($result);
+
+            $IsAdmin = $row["IsAdmin"];
+             
+        }
+
+        if ($IsAdmin) {
+            header("Location:../../Admin/admin.html"); // Redirect to dashboard page
         } else {
-            echo "<script> alert('Incorrect');
-                      window.location.href='../Homepage/index.html';
-                      </script>";
+            header("Location:../homepage.html"); // Redirect to dashboard page
         }
     } else {
-        echo "<script> alert('Invalid input !');
-        window.location.href='../Homepage/index.html';
-        </script>";
+        // User doesn't exist or wrong password
+        echo "<script> alert('Invalid Username or Password !');
+    window.location.href='../Homepage/index.html';
+    </script>";
     }
-
+} else {
+    echo "<script> alert('Invalid input !');
+window.location.href='../Homepage/index.html';
+</script>";
 }
+
+
 ?>
