@@ -9,9 +9,9 @@
 </head>
 
 <body id="mybody">
-    <form action="">
+    <form action="../Database/logindb.php" method="POST">
         <div class="topnav" id="myTopnav">
-            <a href="#home" class="active"><img src="logo.png" alt="" style="zoom: 20%;"></a>
+            <a href="#home" class="active"><img src="../Images/logo.png" alt="" style="zoom: 20%;"></a>
             <a href="#home" class="" style="padding-top: 1.5%;">News</a>
             <a href="#home" class="" style="padding-top: 1.5%;">About</a>
             <a href="#home" class="" style="float: right; padding-top: 1.5%;" onclick="openform()">Login &emsp;</a>
@@ -26,19 +26,19 @@
             <div class="form-container">
                 <h1>Welcome Back!</h1>
                 <a href="#closebtn" class="closebtn" onclick="closeform()"><i class="material-icons">close</i></a>
-                <label for="username">USERNAME:</label>
+                <label for="username" >USERNAME:</label>
                 <input type="text" name="username" id="" placeholder="Username">
 
-                <label for="password">PASSWORD:</label>
+                <label for="password" >PASSWORD:</label>
                 <input type="password" name="password" id="" placeholder="Password">
                 <p><a href="#forgotpass" style="text-decoration: none;">Forgot Password?</a></p>
 
-                <button type="submit">Login</button>
+                <button type="submit" name="login">Login</button>
                 <p>
                     <hr style="width: 45%;float: left;border:1px solid rgb(204, 204, 204);"><b>or</b>
                     <hr style="width: 45%;float: right;border:1px solid rgb(204, 204, 204);">
                 </p>
-                <p>New to SkillNinja? <a href="#register">SignUp</a></p>
+                <p>New to SkillNinja? <a href="../Database/SignUp.php">SignUp</a></p>
             </div>
         </div>
 
@@ -57,7 +57,7 @@
         <hr style="width: 90%; border:1px solid gray;">
         <div>
             <h1 id="middle-section">"Riding the Wave of E-Learning's Popularity Surge!"</h1>
-            <img src="graph2.png" alt="" class="graph-img">
+            <img src="../Images/graph2.png" alt="" class="graph-img">
             <p id="middle-section">
                 <h7 style="color: #3399FF;">#ELearning</h7>
             <p style=" font-family: 'Quicksand', sans-serif; font-size: 22px;padding: 0% 4% 4% 4%; ">Amidst a digital
@@ -75,7 +75,7 @@
                 <p>Basic</p>
                 <!-- <h1>Lawfa Lassan</h1> -->
                 <div class="course-card"><a href="#html" style="text-decoration: none;color: #3399FF;"><img
-                            src="html.png" alt="" style="zoom: 19.8%;">
+                            src="../Images/html.png" alt="" style="zoom: 19.8%;">
                         <p style="float: right;">4.6
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -90,7 +90,7 @@
                             pages.</p>
                     </a>
                 </div>
-                <div class="course-card"><img src="css.png" alt="" style="zoom: 18%;">
+                <div class="course-card"><img src="../Images/css.png" alt="" style="zoom: 18%;">
                     <p style="float: right;">4.5
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -103,7 +103,7 @@
                         tutorial, you'll learn how to add CSS to visually<br>
                         transform HTML into eye-catching sites.</p>
                 </div>
-                <div class="course-card"><img src="js2.png" alt="" style="zoom: 40%;">
+                <div class="course-card"><img src="../Images/js2.png" alt="" style="zoom: 40%;">
                     <p style="float: right;">4.4
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -120,7 +120,7 @@
             <div class="courses">
                 <p>Intermediate</p>
                 <h1>Lawfa Lassan</h1>
-                <div class="course-card"><img src="c.png" alt="" style="zoom: 30.5%;">
+                <div class="course-card"><img src="../Images/c.png" alt="" style="zoom: 30.5%;">
                     <p style="float: right;">4.8
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -132,7 +132,7 @@
                         about
                         the C programming language in this beginner-<br>friendly skill path.</p>
                 </div>
-                <div class="course-card"><img src="php.png" alt="" style="zoom: 40%;">
+                <div class="course-card"><img src="../Images/php.png" alt="" style="zoom: 40%;">
                     <p style="float: right;">4.4
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -144,7 +144,7 @@
                         the
                         fundamentals of PHP, one of the most popular<br> languages of modern web development.</p>
                 </div>
-                <div class="course-card"><img src="sql.png" alt="" style="zoom: 36%;">
+                <div class="course-card"><img src="../Images/sql.png" alt="" style="zoom: 36%;">
                     <p style="float: right;">4.5
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -163,7 +163,7 @@
             <div class="courses">
                 <p>Advanced</p>
                 <h1>Lawfa Lassan</h1>
-                <div class="course-card"><img src="Java.png" alt="" style="zoom: 8%;">
+                <div class="course-card"><img src="../Images/Java.png" alt="" style="zoom: 8%;">
                     <p style="float: right;">4.5
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -177,7 +177,7 @@
                         used to create software, web and mobile apps, and more.
                     </p>
                 </div>
-                <div class="course-card"><img src="python.png" alt="" style="zoom: 31%;">
+                <div class="course-card"><img src="../Images/python.png" alt="" style="zoom: 31%;">
                     <p style="float: right;">4.6
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -191,7 +191,7 @@
                         and in-demand programming languages today.
                     </p>
                 </div>
-                <div class="course-card"><img src="c++.png" alt="" style="zoom: 12.2%;">
+                <div class="course-card"><img src="../Images/c++.png" alt="" style="zoom: 12.2%;">
                     <p style="float: right;">4.5
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>

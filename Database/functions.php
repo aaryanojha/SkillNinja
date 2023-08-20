@@ -4,7 +4,7 @@ function DBConnect()
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $database = "society";
+    $database = "skillninja";
     //Create connection
     $conn = new mysqli($servername, $username, $password, $database);
     //Check connection
