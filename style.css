@@ -50,6 +50,75 @@ body {
 .topnav .icon {
   display: none;
 }
+.form-popup{
+  display: none;
+  position: fixed;
+  text-align: center;
+  z-index: 9;
+  /* padding-top: 10%; */
+  padding: 6% 0% 0% 35%;
+  /* max-width: ; */
+  /* backdrop-filter: blur(20px); */
+}
+.form-container{
+  background-color: #ffffff;
+  box-shadow: 2px 2px 10px 10px rgb(240, 240, 240);
+  padding: 10%;
+  padding-top: 5%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+.form-container h1{
+  color: #3399FF;
+  padding: 0px 0px 50px 0px;
+}
+.closebtn{
+  position: relative;
+  float: right;
+  margin-top: -32%;
+  color: #000000;
+}
+.form-container input[type=text], .form-container input[type=password]{
+  padding: 15px;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #005ebb;
+  margin: 5px 0px 20px 0px;
+  border-radius: 2px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+}
+.form-container p a{
+  color: #2692ff;
+}
+.form-container button{
+  padding: 15px;
+  width: 100%;
+  background:linear-gradient(to left, #7e7cff 0%, #3399FF 100%);
+  font-family: "Quicksand", sans-serif;
+  font-size: medium;
+  font-weight: 600;
+  color: white;
+  border: 0;
+  border-radius: 5px; 
+}
+.form-container button:hover{
+  transition: ease-in-out background;
+  background: #005ebb;
+  cursor: pointer;
+}
+.form-container label{
+  font-size: medium;
+  font-weight:600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.blur-filter {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
 .graph-img{
   zoom: 80%;
   float: left;
@@ -74,6 +143,10 @@ body {
   }
   .course-card{
     width: 60%;
+  }
+  .form-popup{
+    zoom: 200%;
+    padding: 5%;
   }
 }
 
