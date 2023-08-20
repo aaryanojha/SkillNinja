@@ -7,13 +7,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-family: "Quicksand", sans-serif;
   /* background-color:rgb(255, 235, 211); */
-  background-image: url(bg.jpg);
+  background-image: url(bg2.jpg);
+  /* background-size:100%; */
   background-repeat: no-repeat;
   /* background-position-y: 15%;
   background-position-x: 100%; */
 }
-@media screen and (max-width: 1366px) {
-  *{
+@media screen and (max-width: 1366px) and (max-height:768px) {
+  body{
     zoom: 80%;
   }
 }
@@ -69,6 +70,7 @@ body {
   }
   body{
     zoom: 65%
+    
   }
   .course-card{
     width: 60%;
@@ -202,9 +204,23 @@ body {
   font-family: 'Poppins', sans-serif;
   padding: 10px 10px 10px 10px;
   display: inline-block;
-  border-top: 1px solid darkgray;
-  border-left: 1px solid darkgray;
+  border: 2px solid rgb(230, 230, 230);
+  /* border-top: 1px solid darkgray;
+  border-left: 1px solid darkgray; */
   border-radius: 5px ;
-  box-shadow: 2px 2px 1px 1px darkgray;
-  
+  /* box-shadow: 2px 2px 1px 1px darkgray; */
+}
+.course-card:hover{
+  cursor: pointer;
+  box-shadow: 2px 2px 10px 10px rgb(240, 240, 240);
+}
+footer{
+  margin-top: 10%;
+  background-color: #efefefc9;
+  padding-top: 5%;
+}
+footer p{
+  font-weight: bold;
+  font-size: small;
+  padding: 4%;
 }
