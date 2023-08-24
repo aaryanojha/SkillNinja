@@ -26,3 +26,7 @@ function openform2() {
 function closeform2() {
   document.getElementById("myform2").style.display="none";
 }
+
+function generateReport() {
+  window.location.href = '#mycourses';
+}

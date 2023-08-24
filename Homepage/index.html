@@ -79,8 +79,10 @@
             wide range of certifications
             to enhance their skills and advance their careers.<br>
             It's a gateway to unlocking new opportunities and achieving personal and professional growth.</h4>
-        <button class="centerbtn" style="  animation: 1.5s ease-out 0s 1 textanim;">Join For Free!</button>
-        <button class="centerbtn2" style="  animation: 1.5s ease-out 0s 1 textanim;">Explore</button>
+        <button class="centerbtn" style="  animation: 1.5s ease-out 0s 1 textanim;" onclick="openform2()">Join For
+            Free!</button>
+        <a href="#mycourses"><button class="centerbtn2"
+                style="  animation: 1.5s ease-out 0s 1 textanim;">Explore</button></a>
     </div><br><br><br>
     <hr style="width: 90%; border:1px solid gray;">
     <div>
@@ -97,7 +99,7 @@
         </p>
     </div>
     <hr style="width: 90%; border:1px solid gray;">
-    <div class="courses">
+    <div class="courses" id="mycourses">
         <h1 style="font-family:'Poppins', sans-serif; color: #3399FF;">OUR COURSES</h1>
         <div class="courses">
             <p>Basic</p>
@@ -118,130 +120,153 @@
                         pages.</p>
                 </a>
             </div>
-            <div class="course-card"><img src="../Images/css.png" alt="" style="zoom: 18%;">
-                <p style="float: right;">4.5
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-o"></span>
-                </p>
-                <hr>Learn CSS<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">In this
-                    CSS
-                    tutorial, you'll learn how to add CSS to visually<br>
-                    transform HTML into eye-catching sites.</p>
+            <div class="course-card"><a href="#html" style="text-decoration: none;color: #3399FF;"><img
+                        src="../Images/css.png" alt="" style="zoom: 18%;">
+                    <p style="float: right;">4.5
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-o"></span>
+                    </p>
+                    <hr>Learn CSS<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">In this
+                        CSS
+                        tutorial, you'll learn how to add CSS to visually<br>
+                        transform HTML into eye-catching sites.</p>
+                </a>
             </div>
-            <div class="course-card"><img src="../Images/js2.png" alt="" style="zoom: 40%;">
-                <p style="float: right;">4.4
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-o"></span>
-                </p>
-                <hr>Learn Javascript<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">
-                    Learn
-                    how to use JavaScript - a powerful and flexible<br>
-                    programming language for adding website interactivity.</p>
+            <div class="course-card"><a href="#html" style="text-decoration: none;color: #3399FF;"><img
+                        src="../Images/js2.png" alt="" style="zoom: 40%;">
+                    <p style="float: right;">4.4
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-o"></span>
+                    </p>
+                    <hr>Learn Javascript<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">
+                        Learn
+                        how to use JavaScript - a powerful and flexible<br>
+                        programming language for adding website interactivity.</p>
+                </a>
             </div>
         </div>
         <div class="courses">
             <p>Intermediate</p>
             <h1>Lawfa Lassan</h1>
-            <div class="course-card"><img src="../Images/c.png" alt="" style="zoom: 30.5%;">
-                <p style="float: right;">4.8
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half-empty"></span>
-                </p>
-                <hr>Learn C<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">Learn
-                    about
-                    the C programming language in this beginner-<br>friendly skill path.</p>
+            <div class="course-card"><a href="#html" style="text-decoration: none;color: #3399FF;"><img
+                        src="../Images/c.png" alt="" style="zoom: 30.5%;">
+                    <p style="float: right;">4.8
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-half-empty"></span>
+                    </p>
+                    <hr>Learn C<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">Learn
+                        about
+                        the C programming language in this beginner-<br>friendly skill path.</p>
+                </a>
             </div>
-            <div class="course-card"><img src="../Images/php.png" alt="" style="zoom: 40%;">
-                <p style="float: right;">4.4
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-o"></span>
-                </p>
-                <hr>Learn PHP<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">Learn
-                    the
-                    fundamentals of PHP, one of the most popular<br> languages of modern web development.</p>
+            <div class="course-card"><a href="#html" style="text-decoration: none;color: #3399FF;"><img
+                        src="../Images/php.png" alt="" style="zoom: 40%;">
+                    <p style="float: right;">4.4
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-o"></span>
+                    </p>
+                    <hr>Learn PHP<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">Learn
+                        the
+                        fundamentals of PHP, one of the most popular<br> languages of modern web development.</p>
+                </a>
             </div>
-            <div class="course-card"><img src="../Images/sql.png" alt="" style="zoom: 36%;">
-                <p style="float: right;">4.5
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-o"></span>
-                </p>
-                <hr>Learn SQL<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">In this
-                    SQL
-                    course, you'll learn how to manage large <br>datasets and analyze real data using the standard
-                    data
-                    <br>management language.
-                </p>
+            <div class="course-card"><a href="#html" style="text-decoration: none;color: #3399FF;"><img
+                        src="../Images/sql.png" alt="" style="zoom: 36%;">
+                    <p style="float: right;">4.5
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-o"></span>
+                    </p>
+                    <hr>Learn SQL<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">In this
+                        SQL
+                        course, you'll learn how to manage large <br>datasets and analyze real data using the standard
+                        data
+                        <br>management language.
+                    </p>
+                </a>
             </div>
         </div>
         <div class="courses">
             <p>Advanced</p>
             <h1>Lawfa Lassan</h1>
-            <div class="course-card"><img src="../Images/Java.png" alt="" style="zoom: 8%;">
-                <p style="float: right;">4.5
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-o"></span>
-                </p>
-                <hr>Learn JAVA<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">Learn
-                    to
-                    code in Java - a robust programming language<br>
-                    used to create software, web and mobile apps, and more.
-                </p>
+            <div class="course-card"><a href="#html" style="text-decoration: none;color: #3399FF;"><img
+                        src="../Images/Java.png" alt="" style="zoom: 8%;">
+                    <p style="float: right;">4.5
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-o"></span>
+                    </p>
+                    <hr>Learn JAVA<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">Learn
+                        to
+                        code in Java - a robust programming language<br>
+                        used to create software, web and mobile apps, and more.
+                    </p>
+                </a>
             </div>
-            <div class="course-card"><img src="../Images/python.png" alt="" style="zoom: 31%;">
-                <p style="float: right;">4.6
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-o"></span>
-                </p>
-                <hr>Learn Python<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">Learn
-                    the
-                    basics of Python 3, one of the most powerful, versatile,<br>
-                    and in-demand programming languages today.
-                </p>
+            <div class="course-card"><a href="#html" style="text-decoration: none;color: #3399FF;"><img
+                        src="../Images/python.png" alt="" style="zoom: 31%;">
+                    <p style="float: right;">4.6
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-o"></span>
+                    </p>
+                    <hr>Learn Python<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">Learn
+                        the
+                        basics of Python 3, one of the most powerful, versatile,<br>
+                        and in-demand programming languages today.
+                    </p>
+                </a>
             </div>
-            <div class="course-card"><img src="../Images/c++.png" alt="" style="zoom: 12.2%;">
-                <p style="float: right;">4.5
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-o"></span>
-                </p>
-                <hr>Learn C++<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">Learn
-                    C++ -
-                    a versatile programming language that's <br>important for developing software, games, databases,
-                    and
-                    more.
-                </p>
+            <div class="course-card"><a href="#html" style="text-decoration: none;color: #3399FF;"><img
+                        src="../Images/c++.png" alt="" style="zoom: 12.2%;">
+                    <p style="float: right;">4.5
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-o"></span>
+                    </p>
+                    <hr>Learn C++<p style="font-size: medium;color: black;font-family:'Quicksand', sans-serif;">Learn
+                        C++ -
+                        a versatile programming language that's <br>important for developing software, games, databases,
+                        and
+                        more.
+                    </p>
+                </a>
             </div>
         </div>
     </div>
+    <div class="boxbtm">
+        <img src="../Images/boxbtm.png" alt="">
+        <p>Take the next step toward<br> your personal and <br>professional goals with SkillNinja.</p>
+        <p><button>Join Now!</button></p>
+    </div>
     <footer>
-        <h4>Not Afraid to close my eyes</h4>
+        <ul>
+            <li><h4><a href="" class="">About Us</a></h4></li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
         <hr style="width: 90%;">
         <p><i class="fa fa-copyright"></i> 2023 SkillNinja Inc. All rights reserved.</p>
     </footer>
-
 </body>
 
 </html>
