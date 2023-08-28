@@ -5,31 +5,44 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-family: "Quicksand", sans-serif;
   /* background-color:rgb(255, 235, 211); */
   background-image: url(../Images/bg2.jpg);
-  background-size:100%; 
+  background-size: 100%;
   background-repeat: no-repeat;
   /* background-position-y: 15%;
   background-position-x: 100%; */
 }
+
 @media screen and (max-width: 1366px) and (max-height:768px) {
-  body{
+  body {
     zoom: 80%;
   }
-  .form-popup{
+
+  .form-popup {
     zoom: 105%;
   }
-
 }
+
+@media screen and (max-width: 1440px) and (max-height:900px) {
+  body {
+    zoom: 80%;
+  }
+
+  .form-popup {
+    zoom: 105%;
+  }
+}
+
 .topnav {
   overflow: hidden;
   background-color: #ffffff;
   position: fixed;
-  width:100%;
+  width: 100%;
   text-align: center;
 }
 
@@ -57,25 +70,32 @@ body {
 .topnav .icon {
   display: none;
 }
-#username:focus{
+
+#username:focus {
   outline: 0;
 }
-#username:valid{
+
+#username:valid {
   border-color: green;
 }
-#username:invalid{
+
+#username:invalid {
   border-color: red;
 }
-#password:focus{
-outline: 0;
+
+#password:focus {
+  outline: 0;
 }
-#password:valid{
+
+#password:valid {
   border-color: green;
 }
-#password:invalid{
+
+#password:invalid {
   border-color: red;
 }
-.form-popup{
+
+.form-popup {
   display: none;
   position: fixed;
   text-align: center;
@@ -85,7 +105,8 @@ outline: 0;
   /* max-width: ; */
   /* backdrop-filter: blur(20px); */
 }
-.form-container{
+
+.form-container {
   background-color: #ffffff;
   /* box-shadow: 2px 2px 10px 10px rgb(240, 240, 240); */
   padding: 10%;
@@ -93,17 +114,21 @@ outline: 0;
   max-width: 500px;
   border-radius: 5px;
 }
-.form-container h1{
+
+.form-container h1 {
   color: #3399FF;
   padding: 0px 0px 50px 0px;
 }
-.closebtn{
+
+.closebtn {
   position: relative;
   float: right;
   margin-top: -32%;
   color: #000000;
 }
-.form-container input[type=text], .form-container input[type=password]{
+
+.form-container input[type=text],
+.form-container input[type=password] {
   padding: 15px;
   width: 100%;
   background-color: #ffffff;
@@ -113,31 +138,36 @@ outline: 0;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
 }
-.form-container p a{
+
+.form-container p a {
   color: #2692ff;
 }
-.form-container button{
+
+.form-container button {
   padding: 15px;
   width: 100%;
-  background:linear-gradient(to left, #7e7cff 0%, #3399FF 100%);
+  background: linear-gradient(to left, #7e7cff 0%, #3399FF 100%);
   font-family: "Quicksand", sans-serif;
   font-size: medium;
   font-weight: 600;
   color: white;
   border: 0;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
-.form-container button:hover{
+
+.form-container button:hover {
   transition: ease-in-out background;
   background: #005ebb;
   cursor: pointer;
 }
-.form-container label{
+
+.form-container label {
   float: left;
   font-size: medium;
-  font-weight:600;
+  font-weight: 600;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 .blur-filter {
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
@@ -145,58 +175,73 @@ outline: 0;
   -ms-filter: blur(2px);
   filter: blur(2px);
 }
-.graph-img{
+
+.graph-img {
   zoom: 80%;
   float: left;
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
   .topnav a.icon {
     float: right;
     display: block;
     zoom: 150%;
   }
-  .graph-img{
+
+  .graph-img {
     zoom: 60%;
   }
-  #middle-section{
+
+  #middle-section {
     zoom: 50%;
   }
-  body{
+
+  body {
     zoom: 65%
-    
   }
-  .course-card{
+
+  .course-card {
     width: 60%;
   }
-  .form-popup{
+
+  .form-popup {
     zoom: 150%;
     padding: 5%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
+
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
 }
+
 @keyframes textanim {
-  0%{
+  0% {
     transform: translateY(-100%);
   }
-  100%{
+
+  100% {
     transform: translateY(0);
   }
 }
+
 .headers {
   animation: 1s ease-out 0s 1 textanim;
   font-family: 'Poppins', sans-serif;
@@ -206,12 +251,14 @@ outline: 0;
   padding-left: 5%;
   font-size: xx-large;
 }
-.headers p{
+
+.headers p {
   color: #3399FF;
   font-family: 'Quicksand', sans-serif;
   font-weight: bolder;
 }
-.centerbtn{
+
+.centerbtn {
   padding: 30px 44px;
   font-family: "Quicksand", sans-serif;
   font-size: 20px;
@@ -220,7 +267,8 @@ outline: 0;
   border-radius: 5px;
   background-color: white;
 }
-.centerbtn2{
+
+.centerbtn2 {
   padding: 30px 44px;
   font-family: "Quicksand", sans-serif;
   background: linear-gradient(to left, #7e7cff 0%, #3399FF 100%);
@@ -230,7 +278,8 @@ outline: 0;
   border-radius: 5px;
   color: white;
 }
-.centerbtn:hover{
+
+.centerbtn:hover {
   cursor: pointer;
   padding: 30px 44px;
   font-size: 20px;
@@ -240,7 +289,8 @@ outline: 0;
   border: 3px solid #3399FF;
   color: white;
 }
-.centerbtn2:hover{
+
+.centerbtn2:hover {
   cursor: pointer;
   padding: 30px 44px;
   font-size: 20px;
@@ -249,17 +299,19 @@ outline: 0;
   border: 3px solid #3399FF;
   color: rgb(0, 0, 0);
 }
-.search-bar{
+
+.search-bar {
   /* margin-top: 4.62%; */
   padding: 8px 10px;
-  width: 79%; 
+  width: 79%;
   background-color: whitesmoke;
   border: 2px solid darkslategrey;
   color: black;
   font-size: medium;
   border-radius: 5px;
 }
-#search-btn{
+
+#search-btn {
   padding: 8px 10px;
   background-color: #3399FF;
   border: 0px solid darkslategrey;
@@ -267,7 +319,8 @@ outline: 0;
   /* width: 5%; */
   color: white;
 }
-#reg-btn{
+
+#reg-btn {
   padding: 8px 12px;
   border-radius: 5px;
   border: 0;
@@ -277,7 +330,8 @@ outline: 0;
   font-family: "Quicksand", sans-serif;
   cursor: pointer;
 }
-#middle-section{
+
+#middle-section {
   /* animation: 1s ease-out 0s 1 textanim; */
   font-family: 'Poppins', sans-serif;
   /* display: flexbox; */
@@ -285,54 +339,63 @@ outline: 0;
   padding-left: 5%;
   font-size: xx-large;
 }
+
 .courses {
   padding-left: 5%;
   color: #3399FF;
   font-size: x-large;
   font-weight: bolder;
 }
-.courses h1{
-  font-size:40px;
+
+.courses h1 {
+  font-size: 40px;
   font-family: 'Poppins', sans-serif;
   color: #000000;
 }
-.courses img{
+
+.courses img {
   zoom: 20%;
 }
-.course-card{
+
+.course-card {
   font-family: 'Poppins', sans-serif;
   padding: 10px 10px 10px 10px;
   display: inline-block;
   border: 2px solid rgb(230, 230, 230);
   /* border-top: 1px solid darkgray;
   border-left: 1px solid darkgray; */
-  border-radius: 5px ;
+  border-radius: 5px;
   /* box-shadow: 2px 2px 1px 1px darkgray; */
 }
-.course-card:hover{
+
+.course-card:hover {
   cursor: pointer;
   box-shadow: 2px 2px 10px 10px rgb(240, 240, 240);
 }
-.boxbtm:not(button){
-  display:block;
+
+.boxbtm:not(button) {
+  display: block;
   padding: 5%;
-  margin-top:10%;
+  margin-top: 10%;
   /* background-color: #c1d0ff; */
   border-top: 2px solid rgb(189, 189, 189);
   border-bottom: 2px solid rgb(189, 189, 189);
 }
-.boxbtm img{
+
+.boxbtm img {
   zoom: 110%;
 }
-.boxbtm p{
+
+.boxbtm p {
   display: inline-block;
   font-family: 'Poppins', sans-serif;
   font-size: 40px;
   font-weight: bolder;
   color: #3399FF;
 }
-.boxbtm button{
-  padding: 20px 45px 20px 45px; 
+
+.boxbtm button {
+  padding: 20px 45px 20px 45px;
   cursor: pointer;
   background: linear-gradient(to left, #7e7cff 0%, #3399FF 100%);
   border: 2px solid #3399FF;
@@ -341,29 +404,35 @@ outline: 0;
   font-size: medium;
   font-family: "Quicksand", sans-serif;
 }
-.boxbtm button:hover{
+
+.boxbtm button:hover {
   background: #ffffff;
   border: 2px solid black;
   color: #000000;
 }
-footer{
+
+footer {
   display: block;
   margin-top: 10%;
   background-color: #efefefc9;
   padding-top: 2%;
 }
-footer a{
+
+footer a {
   text-decoration: none;
 }
-footer ul{
+
+footer ul {
   padding: 1% 0% 0% 5%;
   list-style: none;
 }
-footer h4{
+
+footer h4 {
   font-weight: bolder;
   font-size: large;
 }
-footer p{
+
+footer p {
   font-weight: bold;
   font-size: small;
   padding: 4%;
