@@ -30,3 +30,6 @@ function closeform2() {
 function generateReport() {
   window.location.href = '#mycourses';
 }
+function generateReport() {
+  window.location.href = '#enroll';
+}
