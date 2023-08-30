@@ -17,15 +17,13 @@ if (isset($_POST["login"])) {
         // Check if the query was successful
         if ($result && mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
-
             $IsAdmin = $row["IsAdmin"];
-             
         }
 
         if ($IsAdmin) {
-            header("Location:../../Admin/admin.html"); // Redirect to dashboard page
+            header("Location:../Admin/upload.php"); // Redirect to dashboard page
         } else {
-            header("Location:../homepage.html"); // Redirect to dashboard page
+            header("Location:../Homepage/homepage.html"); // Redirect to dashboard page
         }
     } else {
         // User doesn't exist or wrong password
