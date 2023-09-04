@@ -19,9 +19,8 @@ if (isset($_POST["login"])) {
             $row = mysqli_fetch_assoc($result);
             $IsAdmin = $row["IsAdmin"];
         }
-
         if ($IsAdmin) {
-            header("Location:../Admin/upload.php"); // Redirect to dashboard page
+            header("Location:../Admin/upload.html"); // Redirect to dashboard page
         } else {
             header("Location:../Homepage/homepage.html"); // Redirect to dashboard page
         }
