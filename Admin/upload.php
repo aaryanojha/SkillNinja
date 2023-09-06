@@ -1,8 +1,6 @@
 <?php
- include("db.php");
+include("db.php");
 if (isset($_POST['upload'])) {
-
-
     $file_name = $_FILES['file']['name'];
     $file_type = $_FILES['file']['type'];
     $temp_name = $_FILES['file']['tmp_name'];

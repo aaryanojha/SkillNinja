@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 30, 2023 at 07:37 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Host: 127.0.0.1:3306
+-- Generation Time: Sep 06, 2023 at 04:47 PM
+-- Server version: 8.0.31
+-- PHP Version: 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,20 +27,27 @@ SET time_zone = "+00:00";
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `u_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `u_id` int NOT NULL AUTO_INCREMENT,
   `fname` varchar(33) NOT NULL,
   `name` varchar(33) NOT NULL,
   `pass` varchar(33) NOT NULL,
-  `IsAdmin` tinyint(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `IsAdmin` tinyint NOT NULL,
+  `loggedIn` tinyint NOT NULL,
+  PRIMARY KEY (`u_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`u_id`, `fname`, `name`, `pass`, `IsAdmin`) VALUES
-(1, 'aa', 'ssss12', 'ssss12', 0);
+INSERT INTO `users` (`u_id`, `fname`, `name`, `pass`, `IsAdmin`, `loggedIn`) VALUES
+(1, '', 'pranav', 'aa', 1, 0),
+(16, 'pranav', 'pppp123', 'pppp123', 1, 0),
+(17, 'ww', 'wwww23', 'wwww23', 0, 0),
+(18, 'qq', 'qqqq12', 'qqqq12', 0, 0),
+(25, 'aa', 'aaaa12', 'aaaa12', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -48,52 +55,26 @@ INSERT INTO `users` (`u_id`, `fname`, `name`, `pass`, `IsAdmin`) VALUES
 -- Table structure for table `video`
 --
 
-CREATE TABLE `video` (
-  `id` int(11) NOT NULL,
-  `name` varchar(400) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+DROP TABLE IF EXISTS `video`;
+CREATE TABLE IF NOT EXISTS `video` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(400) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `video`
 --
 
 INSERT INTO `video` (`id`, `name`) VALUES
-(1, 'html.mp4'),
-(2, 'html.mp4'),
-(3, 'html.mp4'),
-(4, 'html1.mp4');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`u_id`);
-
---
--- Indexes for table `video`
---
-ALTER TABLE `video`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `video`
---
-ALTER TABLE `video`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+(8, 'html4.mp4'),
+(7, 'html3.mp4'),
+(6, 'html2.mp4'),
+(5, 'html1.mp4'),
+(9, 'html4.mp4'),
+(10, 'html2.mp4'),
+(11, 'html2.mp4'),
+(12, 'html4.mp4');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
