@@ -22,12 +22,11 @@ if (isset($_POST["signup"])) {
         $stmt->store_result();
 
         $rnum = $stmt->num_rows;
-
         if ($rnum == 0) {
             $INSERT = "INSERT Into users(fname,name,pass) values('$Fullname','$UserName','$Password')";
             $result = $conn->query($INSERT);
             echo "<script> alert('Account Created Successfully!.');
-              window.location.href='../homepage.html';
+              window.location.href='../Homepage/homepage.html';
               </script>";
         } else {
             echo "<script>
