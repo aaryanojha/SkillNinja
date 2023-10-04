@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 28, 2023 at 06:54 AM
+-- Generation Time: Oct 04, 2023 at 08:04 AM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `payment`;
 CREATE TABLE IF NOT EXISTS `payment` (
   `id` int NOT NULL AUTO_INCREMENT,
+  `u_id` int NOT NULL,
   `Full_Name` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   `Email` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   `Address` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
@@ -42,15 +43,15 @@ CREATE TABLE IF NOT EXISTS `payment` (
   `Expyear` int DEFAULT NULL,
   `Cvv` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `payment`
 --
 
-INSERT INTO `payment` (`id`, `Full_Name`, `Email`, `Address`, `City`, `State`, `Zip`, `Card_Name`, `Card_Number`, `Expmonth`, `Expyear`, `Cvv`) VALUES
-(1, 'aa', 'aa@gmail.com', 'aa', 'aa', 'aa', 123, 'aa', 121, 1, 1, 1),
-(2, 'pranav', 'p@gmailcom', 'hi', 'nanded', 'maharstra', 431602, 'pranav', 1112, 0, 5, 602);
+INSERT INTO `payment` (`id`, `u_id`, `Full_Name`, `Email`, `Address`, `City`, `State`, `Zip`, `Card_Name`, `Card_Number`, `Expmonth`, `Expyear`, `Cvv`) VALUES
+(9, 40, 'pra', 'pra@gmail.com', 'pra', 'pra', 'pra', 23, 'pra', 234, 3, 889, 999),
+(8, 39, 'asdf', 'asdf@gmail.com', 'asd', 'asdf', 'asd', 234, 'sadf', 23, 23, 23, 23);
 
 -- --------------------------------------------------------
 
@@ -67,21 +68,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `IsAdmin` tinyint NOT NULL,
   `loggedIn` tinyint NOT NULL,
   PRIMARY KEY (`u_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`u_id`, `fname`, `name`, `pass`, `IsAdmin`, `loggedIn`) VALUES
-(1, '', 'pranav', 'aa', 1, 0),
 (16, 'pranav', 'pppp123', 'pppp123', 1, 0),
-(17, 'ww', 'wwww23', 'wwww23', 0, 0),
-(18, 'qq', 'qqqq12', 'qqqq12', 0, 0),
-(28, 'aa', 'sasa324', 'sasa324', 0, 0),
-(25, 'aa', 'aaaa12', 'aaaa12', 0, 0),
-(26, 'pp', 'pppp55', 'pppp55', 0, 0),
-(27, 'aa', 'aaaa34', 'aaaa34', 0, 0);
+(40, 'pppp12', 'pppp12', 'pppp12', 0, 0),
+(39, 'gg', 'gggg21', 'gggg21', 0, 0),
+(41, 'aaaa12', 'aaaa12', 'aaaa12', 0, 0);
 
 -- --------------------------------------------------------
 

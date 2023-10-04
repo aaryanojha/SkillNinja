@@ -13,4 +13,12 @@ function DBConnect()
     }
     return $conn;
 }
+function display_payment(int $u_id)
+{
+    $conn = DBConnect();
+    $query = "select * from payment where u_id='$u_id'";
+    $result = mysqli_query($conn, $query);
+    return $result;
+}
+
 ?>

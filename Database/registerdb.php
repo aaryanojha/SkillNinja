@@ -6,6 +6,8 @@ if (isset($_POST["signup"])) {
     $UserName = $_POST["username"];
     $Password = $_POST["password"];
     $IsAdmin = 0;
+    $redirectTo = $_POST['redirectTo'];
+    
     // Connect to the database
     require_once "functions.php";
 
@@ -26,17 +28,17 @@ if (isset($_POST["signup"])) {
             $INSERT = "INSERT Into users(fname,name,pass) values('$Fullname','$UserName','$Password')";
             $result = $conn->query($INSERT);
             echo "<script> alert('Account Created Successfully!.');
-              window.location.href='../Homepage/homepage.html';
+              window.location.href='../$redirectTo';
               </script>";
         } else {
             echo "<script>
             alert('Someone already registered using this Username.');
-            window.location.href='../Homepage/index.html';
+            window.location.href='../$redirectTo';
             </script>";
         }
     } else {
         echo "<script> alert('Invalid input !');
-        window.location.href='../Homepage/index.html';
+        window.location.href='../$redirectTo';
         </script>";
     }
 
