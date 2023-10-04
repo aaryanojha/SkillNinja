@@ -1,22 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Alata" rel="stylesheet" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <!-- <link rel="stylesheet" href="enquire.css" type="text/css" /> -->
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="enquire.css" />
+  <script src="script.js"></script>
 </head>
 
 <body>
-<div class="topnav" id="myTopnav">
-    <a href="#home" class="active"><img src="../Images/logo1.png" alt="" style="zoom: 20%" /></a>
+  <div class="topnav" id="myTopnav">
+    <a href="index.php" class="active"><img src="../Images/logo1.png" alt="" style="zoom: 20%" /></a>
     <a href="#home" class="" style="padding-top: 1.5%">News</a>
     <a href="#home" class="" style="padding-top: 1.5%">About Us</a>
     <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
-    <?php echo "Welcome, <br>" . $_SESSION['username'] . "!"; ?>
     <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
     <?php
     // Check if the user is logged in
@@ -46,11 +43,11 @@
       <h1>Welcome Back!</h1>
       <a href="#closebtn" class="closebtn" onclick="closeform()"><i class="material-icons">close</i></a>
       <form action="../Database/logindb.php" method="POST">
-        <input type="hidden" name="redirectTo" value="Homepage/index.php">
+        <input type="hidden" name="redirectTo" value="Homepage/enquire.php">
         <label for="username">USERNAME:</label>
-        <input type="text" name="uname" id="" placeholder="Username" />
+        <input type="text" name="uname" value="pppp12"id="" placeholder="Username" />
         <label for="password">PASSWORD:</label>
-        <input type="password" name="pass" placeholder="Password" />
+        <input type="password" value="pppp12"name="pass" placeholder="Password" />
         <p>
           <a href="#forgotpass" style="text-decoration: none">Forgot Password?</a>
         </p>
@@ -76,7 +73,7 @@
   </div>
 
   <form action="../Database/registerdb.php" method="POST">
-    <input type="hidden" name="redirectTo" value="Homepage/index.php">
+    <input type="hidden" name="redirectTo" value="Homepage/require.php">
     <!-- Register -->
     <div class="form-popup" id="myform2" style="display: none">
       <div class="form-container">
@@ -112,10 +109,11 @@
         </p>
       </div>
     </div>
+
   </form>
-
-
-    <div class="enquiry">
+  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+  
+  <div class="enquiry">
       <div class="content">
         <h3 style="color:#ff6d12; font-size:6vh ">Send Enquiry:</h3>
         <input type=text name="fname" placeholder="Enter First Name">
@@ -126,7 +124,7 @@
       </div>
     </div>
   </form>
-</body>
+  </body>
 
 </html>
 
@@ -139,8 +137,8 @@ if (isset($_POST['enquire'])) {
   $Message = $_POST['message'];
 
 
-  //Connect to the MySQL database
-  require_once('../Database/functions.php');
+  // Connect to the database
+  require_once "../Database/functions.php";
 
   $conn = DBConnect();
 
@@ -154,13 +152,13 @@ if (isset($_POST['enquire'])) {
     // $result = $conn->query($INSERT);
 
     echo "<script> alert('Enquiry Sent Successfully.');
-    window.location.href='../Enquire/enquire.php';
+    window.location.href='enquire.php';
     </script>";
 
 
   } else {
     echo "<script> alert('Please enter all the details.');
-            window.location.href='../Enquire/enquire.php';
+            window.location.href='enquire.php';
             </script>";
   }
 }

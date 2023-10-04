@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 04, 2023 at 08:04 AM
+-- Generation Time: Oct 04, 2023 at 05:27 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `skillninja`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enquiries`
+--
+
+DROP TABLE IF EXISTS `enquiries`;
+CREATE TABLE IF NOT EXISTS `enquiries` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `Frist_name` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `Last_Name` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `Email` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `Message` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `enquiries`
+--
+
+INSERT INTO `enquiries` (`id`, `Frist_name`, `Last_Name`, `Email`, `Message`) VALUES
+(5, 'pranav', 'malwatkar', 'pranav@gmail.com', 'hey,This is pranav'),
+(14, 'Aaryan', 'Ojha', 'hello1@gmail.com', 'Hello Admin'),
+(16, 'e', 'e', 'e@gmail.com', 'e');
 
 -- --------------------------------------------------------
 
