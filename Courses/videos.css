@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Pangolin&family=Rubik+Puddles&family=Ubuntu:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap');
+
+body {
+    background-color: rgb(40, 40, 40);
+}
+
+.nav-bar {
+    display: block;
+    overflow: hidden;
+    /* position: fixed; */
+    width: 100%;
+    border: 2px;
+    background-color: black;
+    margin-bottom: 1%;
+}
+
+.nav-bar a {
+    text-align: left;
+    display: block;
+    font-size: 18px;
+    color: white;
+    padding: 15px 0px 15px 10px;
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+}
+.side-bar{
+    display:block;
+    float: right;
+    background-color: black;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    color: white;
+}
+.side-bar button{
+    padding: 20px 105px 20px 105px;
+    cursor: pointer;
+    position: fixed;
+    top: 82%;
+    left: 84%;
+    border: 2px solid black;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 900;
+    font-size: larger;
+    color: white;
+    background-color:cornflowerblue;
+}
+.side-bar button:hover{
+    background-color: white;
+    color: blue;
+}
+
+select{
+    width: 20%;
+    float: right;
+    padding: 20px 100px 20px 85px;    
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+select option{
+    width: 30%;
+    zoom: 400%;
+    height: 20vh;
+    /* text-al  ign: left; */
+}
+video{
+    height: 85vh;
+}
+
+video::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.371);
+    content: "Hello";
+}
+
+video::-webkit-media-controls-timeline {
+    background-color: black;
+    padding-bottom: 0;
+    /* height: 10px; */
+    margin: 18px;
+}
+video::-webkit-media-controls-play-button {
+    margin-left: 20px;
+    margin-right: 5px;
+    background-color:blue;
+    border-radius: 50%;
+    display: block;
+    /* height: 20px; */
+}
+video::-webkit-media-controls-timeline-container{
+    background-color: red;
+}
+video::-webkit-media-controls-current-time-display{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 900;
+}
+video::-webkit-media-controls-time-remaining-display{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 900;
+}
+video::-webkit-media-controls-seek-forward-button{
+    background-color: red;
+    display: block;
+}

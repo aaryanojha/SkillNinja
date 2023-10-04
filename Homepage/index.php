@@ -12,7 +12,8 @@
   <div class="topnav" id="myTopnav">
     <a href="#home" class="active"><img src="../Images/logo1.png" alt="" style="zoom: 20%" /></a>
     <a href="#home" class="" style="padding-top: 1.5%">News</a>
-    <a href="#home" class="" style="padding-top: 1.5%">About</a>
+    <a href="#home" class="" style="padding-top: 1.5%">About Us</a>
+    <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
     <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
     <?php
     // Check if the user is logged in
@@ -128,8 +129,8 @@
     <!-- Join For Free! -->
     <?php if (!isset($_SESSION['username'])) { ?>
       <button class="centerbtn" style="animation: 1.5s ease-out 0s 1 textanim" onclick="openform2()">Join For Free!
-        <?php }else {echo "Welcome, " . $_SESSION['username'] . "!"; ?>
-      </button>
+        <?php }else {echo "Welcome, <br>" . $_SESSION['username'] . "!"; ?>
+      </button>&emsp;
     <?php } ?>
 
     <a href="#mycourses"><button class="centerbtn2" style="animation: 1.5s ease-out 0s 1 textanim">
@@ -164,6 +165,7 @@
     </h1>
     <div class="courses">
       <p>Basic</p>
+      <h1>Web-Based Languages</h1>
       <div class="course-card">
         <a href="../Courses/html.php" style="text-decoration: none; color: #3399ff"><img src="../Images/html.png" alt=""
             style="zoom: 19.8%" />
@@ -236,7 +238,7 @@
     </div>
     <div class="courses">
       <p>Intermediate</p>
-      <h1>Lawfa Lassan</h1>
+      <h1>Programming Languages</h1>
       <div class="course-card">
         <a href="#html" style="text-decoration: none; color: #3399ff"><img src="../Images/c.png" alt=""
             style="zoom: 30.5%" />
@@ -310,7 +312,7 @@
     </div>
     <div class="courses">
       <p>Advanced</p>
-      <h1>Lawfa Lassan</h1>
+      <h1>Advanced Programming Languages</h1>
       <div class="course-card">
         <a href="#html" style="text-decoration: none; color: #3399ff"><img src="../Images/Java.png" alt=""
             style="zoom: 8%" />

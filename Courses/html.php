@@ -15,7 +15,7 @@
     <form action="../Database/logindb.php" method="POST">
         <input type="hidden" name="redirectTo" value="Courses/html.php">
         <div class="topnav" id="myTopnav">
-            <a href="../Homepage/index.php" class="active"><img src="../Images/logo.png" alt="" style="zoom: 20%;"></a>
+            <a href="../Homepage/index.php" class="active"><img src="../Images/logo1.png" alt="" style="zoom: 20%;"></a>
             <a href="#home" class="" style="padding-top: 1.5%;">News</a>
             <a href="#home" class="" style="padding-top: 1.5%;">About</a>
             <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%;" onclick="openform()">Login &emsp;</a> -->
@@ -91,7 +91,7 @@
     </form>
     <div class="mainbody">
         <div class="content">
-            <a href="#enroll"><button>Enroll Now<br>for free!</button></a>
+            <a href="#enroll"><button>Enroll Now!</button></a>
         </div>
         <div class="rating-card">
             <span class="span1">4.6 <span class="fa fa-star checked"></span></span>
