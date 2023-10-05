@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
@@ -64,7 +63,8 @@
   <form>
     <div class="col-25">
       <div class="container">
-        <p style="text-align: center;"><i class='fas fa-check-circle' style='color:#01a72a;font-size:150px'></i></p>
+        <p style="text-align: center;"><i style="font-size:184px; color:green" class="fa">&#xf058;</i>
+</p>
         <p id="mytext">Payment Success!</p>
         <p style="text-align: center;font-weight: 600;"> Your Booking has been Confirmed. <br>
           Thank You !</p><br>

@@ -6,6 +6,7 @@
     <title>Display All Videos from database using PHP</title>
     <link rel="stylesheet" href="videos.css">
     <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
@@ -13,7 +14,12 @@
 
 <body>
     <div class="nav-bar">
-        <a href="html.php"> Back</a>
+        <a href="#" onclick="myFunction()"> Back</a>
+    </div>
+    <div class="alert-box" style="display:none" id="alert-box">
+        <strong>NOTE:-</strong> You will lose all your progress without and would have to start again.
+        <strong>Are you Sure you want to go <a href="html.php" style="color:yellow">back?</a></strong>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
     </div>
     <div class="side-bar">
         <Button id="nextBtn" style="display:none;">Next</Button>
@@ -38,7 +44,12 @@
                     width="1360"
                     height="664"
                     poster=""
-                    data-setup='{}'
+                    data-setup='{
+                        "controlBar": {
+                            "seekToLive": false,
+                            "progressControl": false
+                        }
+                    }'
                 >
                     <source src="<?php echo '../Admin/upload/' . $name; ?>">
                     <source src="MY_VIDEO.webm" type="video/webm" />
@@ -50,6 +61,9 @@
                         >
                     </p>
                 </video>
+                <div class="custom-button">
+                    <button id="seekBackBtn" class=""><i class="fa fa-backward"> 5s</i></button>
+                </div>
             </div>
         <?php
         }
@@ -58,10 +72,16 @@
 
     <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
     <script>
+
+        function myFunction() {
+            document.getElementById("alert-box").style.display ="block";
+        }
+
         var currentVideoIndex = 0;
         var videos = <?php echo json_encode($videos); ?>;
         var video = document.getElementById('my-video');
         var nextBtn = document.getElementById('nextBtn');
+        var seekBackBtn = document.getElementById('seekBackBtn');
 
         video.addEventListener('ended', function () {
             showNextButton();
@@ -79,6 +99,14 @@
                 video.load();
                 video.play();
                 nextBtn.style.display = 'none';
+            }
+        });
+
+        seekBackBtn.addEventListener('click', function () {
+            if (video.currentTime >= 5) {
+                video.currentTime -= 5; // Seek 5 seconds back
+            } else {
+                video.currentTime = 0; // If already at the start, jump to the beginning
             }
         });
     </script>
