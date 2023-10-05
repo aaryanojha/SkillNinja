@@ -12,7 +12,7 @@ function myFunction() {
 //   document.getElementById("myform").style.backdropFilter = "brightness(20%)";
 //   // document.getElementById("myform").style.backdropFilter="blur(20px)";
 // }
-function showLogin() {
+function openform() {
   document.getElementById("myform").style.display = "block";
   document.getElementById("myform").style.display = "block";
   document.getElementById("myform").style.backdropFilter = "brightness(20%)";

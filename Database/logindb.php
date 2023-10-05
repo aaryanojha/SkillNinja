@@ -5,6 +5,7 @@ if (isset($_POST["login"])) {
     $UserName = $_POST["uname"];
     $Password = $_POST["pass"];
     $redirectTo = $_POST['redirectTo'];
+    
     // Connect to the database
     require_once "functions.php";
 
@@ -39,20 +40,22 @@ if (isset($_POST["login"])) {
                 if ($UserName == $valid_username && $Password == $valid_password) {
                     $_SESSION["loggedin"] = true;
                     $_SESSION["username"] = $UserName;
-                    $_SESSION["u_id"]=$row['u_id'];
+                    $_SESSION["u_id"] = $row['u_id'];
                     // Successful login
                     // header("Location: ../Homepage/index.php");
-                     echo "<script>window.location.href='../$redirectTo'; </script>";
-                } else {
+                    echo "<script>window.location.href='../$redirectTo'; </script>";
+                }else{
                     // Login failed, show an error message
                     echo "Error: Invalid username or password. <a href='../$redirectTo'>Go back</a>";
                 }
             }
+        }else{
+            echo "Error: Invalid username or password. <a href='../$redirectTo'>Go back</a>";
         }
 
     } else {
         // User doesn't exist or wrong password
-        echo "error";
+        echo "Error: Invalid username or password. <a href='../$redirectTo'>Go back</a>";
     }
 } else {
     echo "error 1";

@@ -23,7 +23,7 @@
       // echo "Welcome, " . $_SESSION['username'] . "!";
       echo '<a href="logout.php" style="float:right;padding-top: 1.5%">Logout</a>';
     } else { // If not logged in, show the login form 
-      echo '<a href="#" onclick="showLogin()" style="float:right;padding-top: 1.5%;">Login</a>';
+      echo '<a href="#" onclick="openform()" style="float:right;padding-top: 1.5%;">Login</a>';
     } ?>
     <?php
     if (!isset($_SESSION['username'])) { ?>

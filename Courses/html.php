@@ -27,7 +27,7 @@
                 // echo "Welcome, " . $_SESSION['username'] . "!";
                 echo '<a href="../Homepage/logout.php" style="float:right;padding-top: 1.5%">Logout</a>';
             } else { // If not logged in, show the login form 
-                echo '<a href="#" onclick="showLogin()" style="float:right;padding-top: 1.5%">Login</a>';
+                echo '<a href="#" onclick="openform()" style="float:right;padding-top: 1.5%">Login</a>';
             } ?>
             <?php
             if (!isset($_SESSION['username'])) { ?>
@@ -91,6 +91,7 @@
     </form>
     <div class="mainbody">
         <div class="content">
+
             <a href="#enroll"><button>Enroll Now!</button></a>
         </div>
         <div class="rating-card">
@@ -153,24 +154,25 @@
         require_once('../Database/functions.php');
         function generatePaymentHTML()
         {
-            $html = '<a href="../Payment/payment.php"><button type="submit" id="enroll">Enroll Now</button></a>';
+            $html = '<a href="../Payment/payment.php"><button type="submit" id="enroll">Start Course</button></a>';
             $result = display_payment($_SESSION['u_id']);
             if ($result && mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_assoc($result);
                 $PaymentId = $row["id"];
                 if (isset($PaymentId)) {
-                    $html = '<a href="htmlcourse.php"><button type="submit" id="enroll">Enroll Now</button></a>';
+                    $html = '<a href="htmlcourse.php"><button type="submit" id="enroll">Start Course</button></a>';
                 }
             }
             return $html;
         }
         if (!isset($_SESSION['username'])) {
-            echo '<button type="submit" id="enroll" onclick="showLogin()">Enroll Now</button>';
+            echo '<button type="submit" id="enroll"onclick="openform()">Enroll Now</button>';
         }
         if (isset($_SESSION['username'])) {
          $paymentCheckHtml = generatePaymentHTML();
         echo $paymentCheckHtml;
         }
+    
         ?>
     </div>
     <footer>

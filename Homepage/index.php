@@ -12,7 +12,7 @@
   <div class="topnav" id="myTopnav">
     <a href="#home" class="active"><img src="../Images/logo1.png" alt="" style="zoom: 20%" /></a>
     <a href="#home" class="" style="padding-top: 1.5%">News</a>
-    <a href="#home" class="" style="padding-top: 1.5%">About Us</a>
+    <a href="aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
     <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
     <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
     <?php
@@ -23,7 +23,7 @@
       // echo "Welcome, " . $_SESSION['username'] . "!";
       echo '<a href="logout.php" style="float:right;padding-top: 1.5%">Logout</a>';
     } else { // If not logged in, show the login form 
-      echo '<a href="#" onclick="showLogin()" style="float:right;padding-top: 1.5%;">Login</a>';
+      echo '<a href="#" onclick="openform()" style="float:right;padding-top: 1.5%;">Login</a>';
     } ?>
     <?php
     if (!isset($_SESSION['username'])) { ?>
