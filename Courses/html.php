@@ -15,7 +15,7 @@
     <form action="../Database/logindb.php" method="POST">
         <input type="hidden" name="redirectTo" value="Courses/html.php">
         <div class="topnav" id="myTopnav">
-            <a href="../Homepage/index.php" class="active"><img src="../Images/logo1.png" alt="" style="zoom: 20%;"></a>
+            <a href="../Homepage/index.php" class="active">SkillNinja ⚔︎</a>
             <a href="#home" class="" style="padding-top: 1.5%;">News</a>
             <a href="../Homepage/aboutus.php" class="" style="padding-top: 1.5%;">About Us</a>
             <a href="../Homepage/enquire.php" class="" style="padding-top: 1.5%">Enquire</a>

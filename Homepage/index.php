@@ -11,7 +11,7 @@
 
 <body>
   <div class="topnav" id="myTopnav">
-    <a href="#home" class="active"><img src="../Images/logo1.png" alt="" style="zoom: 20%" /></a>
+    <a href="#home" class="active">SkillNinja ⚔︎</a>
     <a href="#home" class="" style="padding-top: 1.5%">News</a>
     <a href="aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
     <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>

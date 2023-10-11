@@ -17,6 +17,7 @@ body{
     padding: 0;
 }
 #icon{
+    z-index: 1;
     position: fixed;
     top: 1.5%;
     right: 2%;
@@ -25,6 +26,7 @@ body{
 }
 .side-bar{
     display: flex;
+    z-index: 1;
     flex-direction: column;
     position: fixed;
     font-family: 'Poppins', sans-serif;
@@ -36,11 +38,12 @@ body{
     border-bottom-right-radius: 4%;
     box-shadow: 0px 1px 15px 1px rgb(148, 148, 148);
 }
-.side-bar a{
-    padding: 4px 80px 4px 20px;
-    line-height: 180%;
-    /* color: white; */
-    font-size: x-large;
+.side-bar a:not(:first-child){
+    padding: 4px 120px 4px 30px;
+    line-height: 280%;
+    /* color: black; */
+    color: rgb(80, 80, 80);
+    font-size: large;
     font-weight: 400;
     text-decoration: none;
     border-radius: 4px;
@@ -48,12 +51,13 @@ body{
 .side-bar a.active {
     background-color: #4a5ce2;
     color: white;
+    padding: 6px 0px 6px 30px;
+    text-decoration: none;
+    font-size: xx-large;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     /* position: fixed; */
     width: 1000%;
-    padding-top: 10px;
-    padding-bottom: 10px;
     border: 1px solid grey;
     box-shadow: 0px 1px 15px 1px rgb(148, 148, 148);
 }
@@ -118,19 +122,23 @@ body{
   }
   .container{
     position: absolute;
-    top:6%;
+    top:8%;
     left: 20%;
     color: blue;
     font-size: x-large;
     font-family: 'Poppins', sans-serif;
   }
+  .container h1{
+    border-bottom:4px solid;
+    border-bottom-color: rgb(227, 227, 7);
+  }
   .dashboard {
     display: flex;
     position: absolute;
     top: 28%;
-    width: 100%;
+    width: 80%;
     zoom: 82%;
-    left: 12%;
+    left: 15%;
     /* padding: 20px; */
 }
 .card {
@@ -147,33 +155,45 @@ body{
     box-shadow: 0px 1px 15px 1px rgb(148, 148, 148);
     border: 1px solid grey;
 }
+.card p{
+  font-size: x-large;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+}
 .graph{
     position: absolute;
     top: 60%;
-    left: 60%;
+    left: 19%;
+    zoom: 180%;
+    background-color: white;
+    padding: 2%;
+    border-radius: 1px;
+    box-shadow: 0px 1px 2px 1px rgb(148, 148, 148);
 }
-.graph-card{
+/* .graph-card{
     padding: 40px 80px 40px 80px;
     border: 1px solid #ccc;
+    border-radius: 5px;
+} */
+.bar-graph {
+  width: 300px;
+  height: 230px;
+  /* border: 1px solid #000; */
 }
-.chart {
-    display: flex;
-    width: 400px;
-    margin: 20px auto;
-    /* width: 50px; */
-    height: 100%;
-    /* background-color: chocolate; */
-    transform: rotate(180deg); 
+.bar-graph p{
+  font-size: xx-small;
+  color: rgb(116, 116, 116);
 }
+
 .bar {
-    background-color: blue;
-    height: 100px; /* You can adjust the height as needed */
-    width: 40px; /* You can adjust the width as needed */
-    margin-right: 10px;
+  width: 20px; /* Width of each bar */
+  background-color: #3498db; /* Bar color */
+  margin: 5px; /* Space between bars */
+  display: inline-block;
 }
-.rotate {
-    width: 50px;
-    height: 50px;
-    /* background-color: chocolate; */
-    transform: rotate(180deg); 
+.bar-label {
+  text-align: center;
+  font-size: xx-small;
+  display: inline;
+  margin: 2%;
 }
