@@ -19,6 +19,7 @@ if (isset($_POST["login"])) {
         if ($result && mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
             $IsAdmin = $row["IsAdmin"];
+            $Fullname = $row['fname'];
 
             // Start the session
             session_start();
@@ -41,6 +42,8 @@ if (isset($_POST["login"])) {
                     $_SESSION["loggedin"] = true;
                     $_SESSION["username"] = $UserName;
                     $_SESSION["u_id"] = $row['u_id'];
+                   
+                    $_SESSION["fname"]=$Fullname;
                     // Successful login
                     // header("Location: ../Homepage/index.php");
                     echo "<script>window.location.href='../$redirectTo'; </script>";

@@ -1,13 +1,13 @@
 <?php
 // Check if the login form was submitted
 if (isset($_POST["signup"])) {
+    session_start();
     // Get the username and password from the form
     $Fullname = $_POST['fullname'];
     $UserName = $_POST["username"];
     $Password = $_POST["password"];
     $IsAdmin = 0;
     $redirectTo = $_POST['redirectTo'];
-    
     // Connect to the database
     require_once "functions.php";
 

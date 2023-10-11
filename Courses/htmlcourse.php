@@ -34,38 +34,28 @@
         if (!empty($videos)) {
             $currentVideoIndex = 0;
             $name = $videos[$currentVideoIndex]['name'];
-        ?>
+            ?>
             <div class="col-md-4">
-                <video
-                    id="my-video"
-                    class="video-js"
-                    controls
-                    preload="auto"
-                    width="1360"
-                    height="664"
-                    poster=""
+                <video id="my-video" class="video-js" controls preload="auto" width="1360" height="664" poster=""
                     data-setup='{
                         "controlBar": {
                             "seekToLive": false,
                             "progressControl": false
                         }
-                    }'
-                >
+                    }'>
                     <source src="<?php echo '../Admin/upload/' . $name; ?>">
                     <source src="MY_VIDEO.webm" type="video/webm" />
                     <p class="vjs-no-js">
                         To view this video please enable JavaScript, and consider upgrading to a
                         web browser that
-                        <a href="https://videojs.com/html5-video-support/" target="_blank"
-                        >supports HTML5 video</a
-                        >
+                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
                     </p>
                 </video>
                 <div class="custom-button">
                     <button id="seekBackBtn" class=""><i class="fa fa-backward"> 5s</i></button>
                 </div>
             </div>
-        <?php
+            <?php
         }
         ?>
     </div>
@@ -74,7 +64,7 @@
     <script>
 
         function myFunction() {
-            document.getElementById("alert-box").style.display ="block";
+            document.getElementById("alert-box").style.display = "block";
         }
 
         var currentVideoIndex = 0;

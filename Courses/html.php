@@ -17,7 +17,9 @@
         <div class="topnav" id="myTopnav">
             <a href="../Homepage/index.php" class="active"><img src="../Images/logo1.png" alt="" style="zoom: 20%;"></a>
             <a href="#home" class="" style="padding-top: 1.5%;">News</a>
-            <a href="#home" class="" style="padding-top: 1.5%;">About</a>
+            <a href="../Homepage/aboutus.php" class="" style="padding-top: 1.5%;">About Us</a>
+            <a href="../Homepage/enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
+
             <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%;" onclick="openform()">Login &emsp;</a> -->
             <?php
             // Check if the user is logged in
@@ -25,9 +27,10 @@
             if (isset($_SESSION['username'])) {
                 // If logged in, show the username and a logout button
                 // echo "Welcome, " . $_SESSION['username'] . "!";
-                echo '<a href="../Homepage/logout.php" style="float:right;padding-top: 1.5%">Logout</a>';
+                echo '<a href="../Homepage/logout.php" style="float:right;padding-top: 1%;"><i class="material-icons">person</i> Logout</a>';
             } else { // If not logged in, show the login form 
-                echo '<a href="#" onclick="openform()" style="float:right;padding-top: 1.5%">Login</a>';
+                echo '<a href="#" onclick="openform()" style="float:right;padding-top: 1%;"><i class="material-icons">person</i> Login</a>';
+
             } ?>
             <?php
             if (!isset($_SESSION['username'])) { ?>
@@ -102,6 +105,7 @@
         <div class="info">
             <h2>Skills you'll gain</h2>
             <p> HTML </p>
+      
             <h2>Course Description:</h2>
             <span>Discover the fundamental world of HTML in our beginner course tailored for budding web developers.
                 Uncover
@@ -169,10 +173,9 @@
             echo '<button type="submit" id="enroll"onclick="openform()">Enroll Now</button>';
         }
         if (isset($_SESSION['username'])) {
-         $paymentCheckHtml = generatePaymentHTML();
-        echo $paymentCheckHtml;
+            $paymentCheckHtml = generatePaymentHTML();
+            echo $paymentCheckHtml;
         }
-    
         ?>
     </div>
     <footer>
