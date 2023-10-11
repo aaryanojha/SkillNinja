@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="script.js"></script>
 </head>
@@ -21,9 +22,9 @@
     if (isset($_SESSION['username'])) {
       // If logged in, show the username and a logout button
       // echo "Welcome, " . $_SESSION['username'] . "!";
-      echo '<a href="logout.php" style="float:right;padding-top: 1.5%">Logout</a>';
+      echo '<a href="logout.php" style="float:right;padding-top: 1%"><i class="material-icons" >person</i> Logout</a>';
     } else { // If not logged in, show the login form 
-      echo '<a href="#" onclick="openform()" style="float:right;padding-top: 1.5%;">Login</a>';
+      echo '<a href="#" onclick="openform()" style="float:right;padding-top: 1%;"><i class="material-icons">person</i> Login</a>';
     } ?>
     <?php
     if (!isset($_SESSION['username'])) { ?>
@@ -129,11 +130,11 @@
     <!-- Join For Free! -->
     <?php if (!isset($_SESSION['username'])) { ?>
       <button class="centerbtn" style="animation: 1.5s ease-out 0s 1 textanim" onclick="openform2()">Join For Free!
-        <?php }else {echo "Welcome, <br>" . $_SESSION['username'] . "!"; ?>
-      </button>&emsp;
+        <?php }else {echo "Welcome, <br>" . $_SESSION['username'] . " !"; ?>
+      </button>
     <?php } ?>
-
-    <a href="#mycourses"><button class="centerbtn2" style="animation: 1.5s ease-out 0s 1 textanim">
+    <a href="#mycourses">
+      <button class="centerbtn2" style="animation: 1.5s ease-out 0s 1 textanim">
         Explore
       </button></a>
   </div>
@@ -165,7 +166,7 @@
     </h1>
     <div class="courses">
       <p>Basic</p>
-      <h1>Web-Based Languages</h1>
+      <h1>Web-Development</h1>
       <div class="course-card">
         <a href="../Courses/html.php" style="text-decoration: none; color: #3399ff"><img src="../Images/html.png" alt=""
             style="zoom: 19.8%" />

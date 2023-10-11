@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="enquire.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="script.js"></script>
 </head>
 
@@ -112,19 +113,33 @@
 
   </form>
   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+<div class="form">
   
-  <div class="enquiry">
-      <div class="content">
-        <h3 style="color:#ff6d12; font-size:6vh ">Send Enquiry:</h3>
-        <input type=text name="fname" placeholder="Enter First Name">
-        <input type=text name="lname" placeholder="Enter Last Name">
+<div class="contactus">
+      <h1>Contact Us</h1>
+    
+    <p>If you have any questions or need assistance, please don't hesitate to get in touch with us. We're here to help!</p>
+
+    <p><strong><i class="fa fa-envelope" id="envelope"></i> Email:</strong> <a href="mailto:contact@example.com">contact@example.com</a></p>
+    <p><strong><i class="fa fa-phone" id="phone"></i> Phone:</strong> +1-123-456-7890</p>
+    <strong><i class="fa fa-map-marker" id="location"></i> Address:</strong> 123 Main Street, Cityville, Country
+    
+    <h2>Contact Form</h2>
+    <p>If you prefer, you can also use the contact/enquire form here to send us a message:</p>
+      </div>
+    <div class="enquiry">
+        <h2>Send Enquiry:</h2>
+        <div class="name-inputs">
+        <input type="text" name="fname" placeholder="Enter First Name"/>
+        <input type="text" name="lname" placeholder="Enter Last Name"/>
+        </div>
         <input type=email name=email placeholder="Enter Your Email">
         <p><textarea name="message" id="" cols="25" rows="10" placeholder="Message" class=txta></textarea></p>
         <p><button class="btnenq" name=enquire>Enquire</button></p>
-      </div>
-    </div>
+  </div>
+</div>
   </form>
-  </body>
+</body>
 
 </html>
 
