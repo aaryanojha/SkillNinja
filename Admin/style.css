@@ -16,6 +16,25 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
     padding: 0;
 }
+
+@media screen and (max-width: 1366px) and (max-height:768px) {
+  body {
+    zoom: 80%;
+  }
+
+  .form-popup {
+    zoom: 105%;
+  }
+}
+
+@media screen and (max-width: 1440px) and (max-height:900px) {
+  body {
+    zoom: 80%;
+  }
+}
+  .form-popup {
+    zoom: 105%;
+  }
 #icon{
     z-index: 1;
     position: fixed;

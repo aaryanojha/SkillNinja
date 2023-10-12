@@ -39,8 +39,8 @@
                 <video id="my-video" class="video-js" controls preload="auto" width="1360" height="664" poster=""
                     data-setup='{
                         "controlBar": {
-                            "seekToLive": false,
-                            "progressControl": false
+                            "seekToLive": true,
+                            "progressControl": true
                         }
                     }'>
                     <source src="<?php echo '../Admin/upload/' . $name; ?>">
@@ -89,6 +89,19 @@
                 video.load();
                 video.play();
                 nextBtn.style.display = 'none';
+            }
+            else {
+                <?php
+                session_start();
+                $u_id = $_SESSION["u_id"];
+                $c_id = $_SESSION["courseid"];
+                // Connect to the database
+                require_once "../Database/functions.php";
+                $conn = DBConnect();
+                $INSERT = "INSERT Into course_users(c_id,u_id) values('$c_id','$u_id')";
+                $result = $conn->query($INSERT);
+                ?>
+                window.location.href = 'congratulation.html';
             }
         });
 

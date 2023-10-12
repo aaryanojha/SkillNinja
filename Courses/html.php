@@ -25,6 +25,9 @@
             // Check if the user is logged in
             session_start();
             if (isset($_SESSION['username'])) {
+                $_SESSION['courseid'] = 1;
+                $_SESSION["coursename"] = "HTML";
+                
                 // If logged in, show the username and a logout button
                 // echo "Welcome, " . $_SESSION['username'] . "!";
                 echo '<a href="../Homepage/logout.php" style="float:right;padding-top: 1%;"><i class="material-icons">person</i> Logout</a>';

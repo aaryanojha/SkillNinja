@@ -95,7 +95,7 @@ if (isset($_POST['pay'])) {
   $expmonth = $_POST['expmonth'];
   $expyear = $_POST['expyear'];
   $cvv = $_POST['cvv'];
-
+  
 
   //Connect to the MySQL database
   require_once('../Database/functions.php');
@@ -108,7 +108,8 @@ if (isset($_POST['pay'])) {
   ) {
 session_start();
 $UserId=$_SESSION['u_id'];
-
+$_SESSION['fullname']=$fullname;
+$_SESSION['u_id']=$UserId;
     $INSERT = "INSERT Into payment(Full_Name,u_id,Email,Address,City,State,Zip,Card_Name,Card_Number,Expmonth,Expyear,Cvv) values(?,?,?,?,?,?,?,?,?,?,?,?)";
     $stmt = $conn->prepare($INSERT);
     $stmt->bind_param("sissssisiiii", $fullname,$UserId, $Email, $address, $city, $state, $zip, $cardname, $cardnumber, $expmonth, $expyear, $cvv);

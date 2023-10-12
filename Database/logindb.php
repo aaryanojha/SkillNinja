@@ -20,7 +20,7 @@ if (isset($_POST["login"])) {
             $row = mysqli_fetch_assoc($result);
             $IsAdmin = $row["IsAdmin"];
             $Fullname = $row['fname'];
-
+            
             // Start the session
             session_start();
 

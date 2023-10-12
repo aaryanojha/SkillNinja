@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 04, 2023 at 05:27 PM
+-- Generation Time: Oct 12, 2023 at 02:36 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -24,6 +24,77 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `certificate`
+--
+
+DROP TABLE IF EXISTS `certificate`;
+CREATE TABLE IF NOT EXISTS `certificate` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `u_id` int NOT NULL,
+  `fname` varchar(99) NOT NULL,
+  `coursename` varchar(99) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course`
+--
+
+DROP TABLE IF EXISTS `course`;
+CREATE TABLE IF NOT EXISTS `course` (
+  `c_id` int NOT NULL,
+  `c_name` varchar(99) NOT NULL,
+  PRIMARY KEY (`c_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `course`
+--
+
+INSERT INTO `course` (`c_id`, `c_name`) VALUES
+(2, 'CSS'),
+(1, 'HTML'),
+(3, 'JAVASCRIPT'),
+(4, 'C'),
+(5, 'PHP'),
+(6, 'SQL'),
+(7, 'JAVA'),
+(8, 'PYTHON'),
+(9, 'CPP');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course_users`
+--
+
+DROP TABLE IF EXISTS `course_users`;
+CREATE TABLE IF NOT EXISTS `course_users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `c_id` int NOT NULL,
+  `u_id` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `course_users`
+--
+
+INSERT INTO `course_users` (`id`, `c_id`, `u_id`) VALUES
+(3, 1, 39),
+(4, 1, 39),
+(5, 1, 39),
+(6, 1, 39),
+(7, 1, 39),
+(8, 1, 39),
+(9, 1, 39),
+(10, 1, 39);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `enquiries`
 --
 
@@ -35,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `enquiries` (
   `Email` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   `Message` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `enquiries`
@@ -44,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `enquiries` (
 INSERT INTO `enquiries` (`id`, `Frist_name`, `Last_Name`, `Email`, `Message`) VALUES
 (5, 'pranav', 'malwatkar', 'pranav@gmail.com', 'hey,This is pranav'),
 (14, 'Aaryan', 'Ojha', 'hello1@gmail.com', 'Hello Admin'),
-(16, 'e', 'e', 'e@gmail.com', 'e');
+(17, 'sunil', 'khaple', 'sunil@gmail.com', 'hi , This is nice website');
 
 -- --------------------------------------------------------
 
@@ -93,17 +164,19 @@ CREATE TABLE IF NOT EXISTS `users` (
   `IsAdmin` tinyint NOT NULL,
   `loggedIn` tinyint NOT NULL,
   PRIMARY KEY (`u_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`u_id`, `fname`, `name`, `pass`, `IsAdmin`, `loggedIn`) VALUES
+(42, 'pp', 'ppoo12', 'ppoo12', 0, 0),
 (16, 'pranav', 'pppp123', 'pppp123', 1, 0),
 (40, 'pppp12', 'pppp12', 'pppp12', 0, 0),
 (39, 'gg', 'gggg21', 'gggg21', 0, 0),
-(41, 'aaaa12', 'aaaa12', 'aaaa12', 0, 0);
+(41, 'aaaa12', 'aaaa12', 'aaaa12', 0, 0),
+(43, 'sunil', 'sunil12', 'sunil12', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -123,14 +196,10 @@ CREATE TABLE IF NOT EXISTS `video` (
 --
 
 INSERT INTO `video` (`id`, `name`) VALUES
-(8, 'html4.mp4'),
 (7, 'html3.mp4'),
 (6, 'html2.mp4'),
 (5, 'html1.mp4'),
-(9, 'html4.mp4'),
-(10, 'html2.mp4'),
-(11, 'html2.mp4'),
-(12, 'html4.mp4');
+(9, 'html4.mp4');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
