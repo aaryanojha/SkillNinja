@@ -12,11 +12,11 @@
 </head>
 <body>
     <div class="side-bar" id="mySide-bar">
-        <a href="admin.html" class="active">SkillNinja ⚔︎</a>
+        <a href="admin.php" class="active">SkillNinja ⚔︎</a>
         <a href="">Dashboard</a>
         <a href="userinfo.html"><i class="material-icons" style="position: relative; top: 6%;">person</i> Users</a>
         <a href="courseinfo.html"><i class="material-icons" style="position: relative; top: 6%;">library_books</i> Courses</a>
-        <a href="addcourse.html"><i class="material-icons" style="position: relative; top: 6%;">add</i> Add Courses</a>
+        <a href="upload.html"><i class="material-icons" style="position: relative; top: 6%;">add</i> Add Courses</a>
         <a href="Enquiryinfo.html"><i class="material-icons" style="position: relative; top: 6%;">message</i> Enquiries</a>
         <a href="../Homepage/index.php"><i class="material-icons" style="position: relative; top: 6%;">exit_to_app</i> Logout</a>
         <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>

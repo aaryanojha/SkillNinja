@@ -30,11 +30,11 @@ function display_payment(int $u_id)
 //     return $result;
 // }
 
-function Get_Courses(int $c_id)
-{
-    $conn = DBConnect();
-    $query = "select * from course_table where c_id='$c_id'";
-    $result = mysqli_query($conn, $query);
-    return $result;
-}
+// function Get_Courses(int $c_id)
+// {
+//     $conn = DBConnect();
+//     $query = "select * from course_table where c_id='$c_id'";
+//     $result = mysqli_query($conn, $query);
+//     return $result;
+// }
 ?>

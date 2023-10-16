@@ -180,7 +180,7 @@
                 $row = mysqli_fetch_assoc($result);
                 $PaymentId = $row["id"];
                 if (isset($PaymentId)) {
-                    $html = '<a href="htmlcourse.php"><button type="submit" id="enroll">Start Course</button></a>';
+                    $html = '<a href="course.php"><button type="submit" id="enroll">Start Course</button></a>';
                 }
             }
             return $html;

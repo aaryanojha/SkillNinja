@@ -12,10 +12,7 @@
     <div class="content">
       <?php
       session_start();
-
-      // $Fullname = $_SESSION["fname"];
-      // $CourseName = $_SESSION["coursename"];
-      
+  
       $loginUserID = $_SESSION["u_id"];
 
       // Connect to the database
@@ -34,9 +31,7 @@
         $row = mysqli_fetch_assoc($result);
         $CourseName = $row["c_name"];
         $Fullname = $row['fname'];
-
       }
-
       // Display the certificate
       echo "<h1>" . strtoupper($Fullname) . "</h1>";
       echo "<h2>" . strtoupper($CourseName) . " Online Course</h2>";
