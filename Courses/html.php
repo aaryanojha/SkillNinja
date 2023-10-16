@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="courses.css">
     <script src="../Homepage/script.js"></script>
 </head>
@@ -95,6 +97,18 @@
             </div>
         </div>
     </form>
+    <div class="bgcolor">
+        <div style="float:right;margin-top:12%;padding-right:4%;font-family: 'Roboto Condensed', sans-serif;">
+        <h3>Course</h3>
+        <p>Gain insight into a topic and learn the fundamentals</p>
+        <hr>
+        <b><span class="material-symbols-outlined">school</span> Instructor:</b> SkillNinja
+        </div>
+        <div class="text">
+        <h1>What is HTML?</h1>
+        <b><span class="material-symbols-outlined">translate</span> Taught in English</b>
+    </div>
+    </div>
     <div class="mainbody">
         <div class="content">
 
@@ -102,8 +116,7 @@
         </div>
         <div class="rating-card">
             <span class="span1">4.6 <span class="fa fa-star checked"></span></span>
-            <span>Hello sexy prnav</span>
-            <span style="text-align: right;">Flexible schedule Learn at your own pace</span>
+            <span style="text-align: right;">Flexible| schedule Learn at your own pace</span>
         </div>
         <div class="info">
             <h2>Skills you'll gain</h2>
