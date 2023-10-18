@@ -6,8 +6,13 @@ if (isset($_POST["signup"])) {
     $Fullname = $_POST['fullname'];
     $UserName = $_POST["username"];
     $Password = $_POST["password"];
+        // Store the values in the session
+        $_SESSION["username"] = $UserName;
+        $_SESSION["password"] = $Password;
     $IsAdmin = 0;
+
     $redirectTo = $_POST['redirectTo'];
+    $_SESSION["redirectTo"] = $redirectTo;
     // Connect to the database
     require_once "functions.php";
 
@@ -28,7 +33,7 @@ if (isset($_POST["signup"])) {
             $INSERT = "INSERT Into users(fname,name,pass) values('$Fullname','$UserName','$Password')";
             $result = $conn->query($INSERT);
             echo "<script> alert('Account Created Successfully!.');
-              window.location.href='../$redirectTo';
+            window.location.href='../Homepage/verification.php';
               </script>";
         } else {
             echo "<script>

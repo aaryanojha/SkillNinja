@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 16, 2023 at 05:00 PM
+-- Generation Time: Oct 18, 2023 at 11:22 AM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -138,16 +138,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `name` varchar(33) NOT NULL,
   `pass` varchar(33) NOT NULL,
   `IsAdmin` tinyint NOT NULL,
+  `question1` varchar(99) NOT NULL,
+  `question2` varchar(99) NOT NULL,
   PRIMARY KEY (`u_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`u_id`, `fname`, `name`, `pass`, `IsAdmin`) VALUES
-(44, 'Pranav Raju Malwatkar', 'pranav123', 'pranav123', 0),
-(46, 'Admin', 'Admin', 'Admin', 1);
+INSERT INTO `users` (`u_id`, `fname`, `name`, `pass`, `IsAdmin`, `question1`, `question2`) VALUES
+(44, 'Pranav Raju Malwatkar', 'pranav123', 'pranav123', 0, '0', ''),
+(46, 'Admin', 'Admin', 'Admin', 1, '0', ''),
+(48, 'Pranav Raju Malwatkar', 'pranav1234', 'pranav1234', 0, '0', ''),
+(55, 'q', 'qqqq12', 'qqqq12', 0, 'indira', 'mm'),
+(57, 'g', 'gggg12', 'gggg12', 0, 'gg', 'gg');
 
 -- --------------------------------------------------------
 

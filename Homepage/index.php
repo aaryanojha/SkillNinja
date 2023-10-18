@@ -90,7 +90,6 @@
         <input type="password" name="password" id="password" required pattern="[a-z]{4,8}[0-9][0-9]{1,9}?"
           oninvalid="this.setCustomValidity('Password must contain atleast 4 alphabets and a number!')" maxlength="12"
           placeholder="Password" />
-
         <button type="submit" name="signup">Join Now!</button>
 
         <hr style="
@@ -130,7 +129,8 @@
     <!-- Join For Free! -->
     <?php if (!isset($_SESSION['username'])) { ?>
       <button class="centerbtn" style="animation: 1.5s ease-out 0s 1 textanim" onclick="openform2()">Join For Free!
-        <?php }else {echo "Welcome, <br>" . $_SESSION['username'] . " !"; ?>
+      <?php } else {
+      echo "Welcome, <br>" . $_SESSION['username'] . " !"; ?>
       </button>
     <?php } ?>
     <a href="#mycourses">
