@@ -15,6 +15,9 @@
     <a href="#home" class="" style="padding-top: 1.5%">News</a>
     <a href="aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
     <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
+    <!-- <a style="pointer-events:none;float:right"> &emsp;</a> -->
+    <div>
+  </div> 
     <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
     <?php
     // Check if the user is logged in
@@ -22,7 +25,17 @@
     if (isset($_SESSION['username'])) {
       // If logged in, show the username and a logout button
       // echo "Welcome, " . $_SESSION['username'] . "!";
-      echo '<a href="logout.php" style="float:right;padding-top: 1%"><i class="material-icons" >person</i> Logout</a>';
+      echo '  <div class="dropdown">
+    <button class="dropbtn">
+      <img src="../Images/user.png" style="zoom:8%">&emsp;&emsp;
+    </button>
+    <div class="dropdown-content">
+      <a>Signed in as <b>' .$_SESSION['username'].'</b></a>
+      <hr>
+      <a href="profile.php"><i class="material-icons">person</i> Profile</a>
+      <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+    </div>
+  </div> ';
     } else { // If not logged in, show the login form 
       echo '<a href="#" onclick="openform()" style="float:right;padding-top: 1%;"><i class="material-icons">person</i> Login</a>';
     } ?>

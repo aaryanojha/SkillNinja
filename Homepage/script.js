@@ -38,3 +38,10 @@ function generateReport() {
 function generateReport() {
   window.location.href = "#enroll";
 }
+
+function showbtn() {
+  document.getElementById("addemail").style.display="block";
+}
+function condelete() {
+  document.getElementById("cdelete").style.display="block";
+}
