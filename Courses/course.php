@@ -45,8 +45,8 @@
                 <video id="my-video" class="video-js" controls preload="auto" width="1360" height="664" poster=""
                     data-setup='{
                         "controlBar": {
-                            "seekToLive": false,
-                            "progressControl": false
+                            "seekToLive": true,
+                            "progressControl": true
                         }
                     }'>
                     <source src="<?php echo '../Admin/upload/' . $name; ?>">
@@ -115,7 +115,7 @@
                     }
                 }
                 ?>
-                window.location.href = 'congratulation.html';
+                window.location.href = 'congratulation.php';
             }
         });
 

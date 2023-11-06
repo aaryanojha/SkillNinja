@@ -12,19 +12,16 @@
     <div class="content">
       <?php
       session_start();
-  
       $loginUserID = $_SESSION["u_id"];
-
       // Connect to the database
       require_once "../Database/functions.php";
-
       $conn = DBConnect();
 
-      $query = "SELECT u.fname, c.c_name FROM `course_users` AS cu
-      INNER JOIN `course` AS c ON cu.c_id=c.c_id
-      INNER JOIN `users` AS u ON cu.u_id=u.u_id
-      WHERE u.u_id=$loginUserID
-      LIMIT 1 ";
+      $query = "SELECT u.fname, c.c_name FROM course_users AS cu 
+      INNER JOIN course AS c ON cu.c_id = c.c_id 
+      INNER JOIN users AS u ON cu.u_id = u.u_id 
+      WHERE u.u_id =$loginUserID
+      LIMIT 1";
       $result = mysqli_query($conn, $query);
 
       if ($result && mysqli_num_rows($result) > 0) {
@@ -32,7 +29,7 @@
         $CourseName = $row["c_name"];
         $Fullname = $row['fname'];
       }
-      // Display the certificate
+      // // Display the certificate
       echo "<h1>" . strtoupper($Fullname) . "</h1>";
       echo "<h2>" . strtoupper($CourseName) . " Online Course</h2>";
       echo "<h7>" . date('(F j, Y)') . "</h7>";

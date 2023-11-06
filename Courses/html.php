@@ -116,7 +116,7 @@
         </div>
         <div class="rating-card">
             <span class="span1">4.6 <span class="fa fa-star checked"></span></span>
-            <span style="text-align: right;">Flexible| schedule Learn at your own pace</span>
+            <span style="text-align: right;">&emsp;Flexible schedule &emsp;|&emsp;  Learn at your own pace</span>
         </div>
         <div class="info">
             <h2>Skills you'll gain</h2>
@@ -177,8 +177,9 @@
             $html = '<a href="../Payment/payment.php"><button type="submit" id="enroll">Start Course</button></a>';
             $result = display_payment($_SESSION['u_id']);
             if ($result && mysqli_num_rows($result) > 0) {
-                $row = mysqli_fetch_assoc($result);
+                $row = mysqli_fetch_assoc($result); 
                 $PaymentId = $row["id"];
+               
                 if (isset($PaymentId)) {
                     $html = '<a href="course.php"><button type="submit" id="enroll">Start Course</button></a>';
                 }

@@ -57,7 +57,7 @@
       <h1>Welcome Back!</h1>
       <a href="#closebtn" class="closebtn" onclick="closeform()"><i class="material-icons">close</i></a>
       <form action="../Database/logindb.php" method="POST">
-        <input type="hidden" name="redirectTo" value="Homepage/verification.php">
+      <input type="hidden" name="redirectTo" value="Homepage/index.php">
         <label for="username">USERNAME:</label>
         <input type="text" name="uname" id="" placeholder="Username" />
         <label for="password">PASSWORD:</label>
@@ -87,7 +87,7 @@
   </div>
 
   <form action="../Database/registerdb.php" method="POST">
-    <input type="hidden" name="redirectTo" value="Homepage/index.php">
+  <input type="hidden" name="redirectTo" value="Homepage/verification.php">
     <!-- Register -->
     <div class="form-popup" id="myform2" style="display: none">
       <div class="form-container">
@@ -140,7 +140,8 @@
     </h4>
 
     <!-- Join For Free! -->
-    <?php if (!isset($_SESSION['username'])) { ?>
+    <?php 
+    if (!isset($_SESSION['username'])) { ?>
       <button class="centerbtn" style="animation: 1.5s ease-out 0s 1 textanim" onclick="openform2()">Join For Free!
       <?php } else {
       echo "Welcome, <br>" . $_SESSION['username'] . " !"; ?>

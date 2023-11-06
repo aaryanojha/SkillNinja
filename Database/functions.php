@@ -21,7 +21,13 @@ function display_payment(int $u_id)
     return $result;
 }
 
-
+function fullname(String $Full_Name)
+{
+    $conn = DBConnect();
+    $query = "select * from payment where Full_Name='$Full_Name'";
+    $result = mysqli_query($conn, $query);
+    return $result;
+}
 // function display_certificate(int $c_id)
 // {
 //     $conn = DBConnect();

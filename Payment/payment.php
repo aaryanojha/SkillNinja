@@ -95,7 +95,6 @@ if (isset($_POST['pay'])) {
   $expmonth = $_POST['expmonth'];
   $expyear = $_POST['expyear'];
   $cvv = $_POST['cvv'];
-  
 
   //Connect to the MySQL database
   require_once('../Database/functions.php');

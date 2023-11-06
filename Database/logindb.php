@@ -5,7 +5,7 @@ if (isset($_POST["login"])) {
     $UserName = $_POST["uname"];
     $Password = $_POST["pass"];
     $redirectTo = $_POST['redirectTo'];
-    
+ 
     // Connect to the database
     require_once "functions.php";
 
@@ -20,7 +20,7 @@ if (isset($_POST["login"])) {
             $row = mysqli_fetch_assoc($result);
             $IsAdmin = $row["IsAdmin"];
             $Fullname = $row['fname'];
-            
+
             // Start the session
             session_start();
 
@@ -42,26 +42,39 @@ if (isset($_POST["login"])) {
                     $_SESSION["loggedin"] = true;
                     $_SESSION["username"] = $UserName;
                     $_SESSION["u_id"] = $row['u_id'];
-                   
-                    $_SESSION["fname"]=$Fullname;
+
+                    $_SESSION["fname"] = $Fullname;
+
                     // Successful login
                     // header("Location: ../Homepage/index.php");
                     echo "<script>window.location.href='../$redirectTo'; </script>";
-                }else{
+                } else {
                     // Login failed, show an error message
-                    echo "Error: Invalid username or password. <a href='../$redirectTo'>Go back</a>";
+                    echo "<script>
+                    alert('Invalid username or password.');
+                    window.location.href='../Homepage/logout.php';
+                    </script>";
                 }
             }
-        }else{
-            echo "Error: Invalid username or password. <a href='../$redirectTo'>Go back</a>";
+        } else {
+            echo "<script>
+            alert('Invalid username or password.');
+            window.location.href='../Homepage/logout.php';
+            </script>";
         }
 
     } else {
         // User doesn't exist or wrong password
-        echo "Error: Invalid username or password. <a href='../$redirectTo'>Go back</a>";
+        echo "<script>
+        alert('Invalid username or password.');
+        window.location.href='../Homepage/logout.php';
+        </script>";
     }
 } else {
-    echo "error 1";
+    echo "<script>
+    alert('Invalid username or password.');
+    window.location.href='../Homepage/logout.php';
+    </script>";
 }
 
 

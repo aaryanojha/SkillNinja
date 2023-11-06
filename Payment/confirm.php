@@ -68,7 +68,7 @@
         <p id="mytext">Payment Success!</p>
         <p style="text-align: center;font-weight: 600;"> Your Booking has been Confirmed. <br>
           Thank You !</p><br>
-        <p style="text-align: center"><button class="button" formaction="../Courses/htmlcourse.php">Proceed For the Course</button></p>
+        <p style="text-align: center"><button class="button" formaction="../Courses/course.php">Proceed For the Course</button></p>
       </div>
     </div>
   </form>

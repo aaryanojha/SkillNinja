@@ -12,8 +12,8 @@
     <div class="content">
       <?php
       // Get user input
-      $username = $_POST['username'];
-      $coursename = $_POST['coursename'];
+      $username = $_SESSION['username'];
+      $coursename = $_SESSION['coursename'];
 
       // Display the certificate
       echo "<h1>".strtoupper($username)."</h1>";
