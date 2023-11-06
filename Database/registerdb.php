@@ -33,7 +33,7 @@ if (isset($_POST["signup"])) {
             $INSERT = "INSERT Into users(fname,name,pass) values('$Fullname','$UserName','$Password')";
             $result = $conn->query($INSERT);
             echo "<script> alert('Account Created Successfully!.');
-            window.location.href='../Homepage/verification.php';
+            window.location.href='../$redirectTo';
               </script>";
         } else {
             echo "<script>

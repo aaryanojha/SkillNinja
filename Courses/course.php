@@ -45,8 +45,8 @@
                 <video id="my-video" class="video-js" controls preload="auto" width="1360" height="664" poster=""
                     data-setup='{
                         "controlBar": {
-                            "seekToLive": true,
-                            "progressControl": true
+                            "seekToLive": false,
+                            "progressControl": false
                         }
                     }'>
                     <source src="<?php echo '../Admin/upload/' . $name; ?>">

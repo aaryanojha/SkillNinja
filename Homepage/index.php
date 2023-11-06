@@ -57,7 +57,7 @@
       <h1>Welcome Back!</h1>
       <a href="#closebtn" class="closebtn" onclick="closeform()"><i class="material-icons">close</i></a>
       <form action="../Database/logindb.php" method="POST">
-        <input type="hidden" name="redirectTo" value="Homepage/index.php">
+        <input type="hidden" name="redirectTo" value="Homepage/verification.php">
         <label for="username">USERNAME:</label>
         <input type="text" name="uname" id="" placeholder="Username" />
         <label for="password">PASSWORD:</label>
