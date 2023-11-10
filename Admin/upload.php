@@ -1,5 +1,8 @@
 <?php
-include("db.php");
+// include("db.php");
+require_once "../Database/functions.php";
+
+$conn = DBConnect();
 if (isset($_POST['upload'])) {
     $file_name = $_FILES['file']['name'];
     $file_type = $_FILES['file']['type'];

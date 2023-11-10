@@ -134,14 +134,17 @@
       <!-- Main container -->
 <div class="container">
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-    <h1>Update Password</h1>
+    <h1>Delete Account</h1>
     <hr>
-    <p> <h4><i class="fa fa-address-card-o" style="font-size:24px"></i> Account Information</h4>
-          FullName:&emsp;&nbsp;&nbsp; <?php echo "".$_SESSION['fname'].""; ?> <br><br>
-          Username:&emsp; <input type="text" name="uname" id=""><br><br>
-          Current Password: &nbsp;<input type="password" name="pass" id=""><br><br>
-          New Password:&emsp;&emsp;<input type="password" name="npass" id=""> 
-          &emsp;<button id="reg-btn" name="update">Update</button>
+    <p> <h4><i class="fa fa-address-card-o" style="font-size:24px"></i> &nbsp;Enter Account Information</h4>
+          Username:&emsp; <?php echo "".$_SESSION['username'].""; ?><br><br>
+          Password: &nbsp;&emsp;<input type="password" name="pass" id=""><br><br>
+          College Name: &nbsp;<input type="text" name="q1" id=""> &emsp;
+          Mothers Name: &nbsp;<input type="text" name="q2" id=""><br><br>
+          <!-- <button id="reg-btn" name="delete">Delete Account</button> -->
+          <button type="button" id="reg-btn" onclick="condelete()">Delete Account</button><br><br>
+          <span id="cdelete" style="display:none">Are you sure you want to proceed? 
+          <button id="reg-btn" style="background:red" name="delete">Confirm</button></span>
     </p>
 </div>
 </form>
@@ -149,43 +152,43 @@
 </html>
 
 <?php
-if (isset($_POST["update"])) {
-    $UserName = $_POST["uname"];
-    $Password = $_POST["pass"];
-    $NewPassword = $_POST["npass"];
+if (isset($_POST['delete'])) {
 
-    // Connect to the MariaDB server
-    require_once "../Database/functions.php";
-
+    $username = $_SESSION['username'];
+    $password = $_POST['pass'];
+  
+  
+    //Connect to the MySQL database
+    require_once('../Database/functions.php');
+  
     $conn = DBConnect();
-    if (!empty($UserName) && !empty($Password) && !empty($NewPassword)) {
-        $query = "SELECT * FROM users WHERE name='$UserName' AND pass='$Password'";
-
-        $result = mysqli_query($conn, $query);
-
-        // Check if the query was successful
-        if ($result && mysqli_num_rows($result) > 0) {
-            // Update the user's username and password'
-            $sql = "UPDATE users SET pass='$NewPassword' WHERE pass='$Password' AND name='$UserName' ";
-
-            if ($conn->query($sql) === true) {
-                echo "<script>alert('User record updated successfully');
-                window.location.href='../Homepage/updateprofile.php';
-                </script>";
-            } else {
-                echo "Error updating user record: " . $conn->error;
-            }
-        } else {
-            echo "<script> alert('Invalid Input');
-            window.location.href='../Homepage/updateprofile.php';
-            </script>";
-        }
-    } else {
-        echo "<script> alert('Incorrect input');
-        window.location.href='../Homepage/updateprofile.php';
+  
+    if (!empty($username) && !empty($password)) {
+      // Check if the connection was successful
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+  
+      // Define the SQL query to delete a row from the table
+      $sql = "DELETE FROM users WHERE name='$username' AND pass='$password'";
+  
+      // Execute the query
+      if ($conn->query($sql) === TRUE) {
+        session_destroy();
+        echo "<script>
+        alert('Account Deleted successfully');
+        window.location.href='../User/Homepage/index.php';
         </script>";
+      } else {
+        echo "Error deleting row: " . $conn->error;
+      }
+    } else {
+      echo "<script>
+      alert('Invalid Input');
+      window.location.href='../User/Homepage/deleteprofile.php';
+      </script>";
     }
     // Close the database connection
     $conn->close();
-}
-?>
+  }
+  ?>

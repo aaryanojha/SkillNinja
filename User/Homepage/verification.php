@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
 
             // Handle success or failure here
             echo "<script> alert('Account Created Successfully! Please Login.');
-            window.location.href='../Homepage/logout.php';
+            window.location.href='../User/Homepage/logout.php';
               </script>";
         } else {
             // User not found, handle the error

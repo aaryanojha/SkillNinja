@@ -13,6 +13,27 @@ function DBConnect()
     }
     return $conn;
 }
+function display_enquiries()
+{
+    global $conn;
+    $query = "SELECT * FROM enquiries ORDER BY id ASC;";
+    $result = mysqli_query($conn, $query);
+    return $result;
+}
+function display_users()
+{
+    global $conn;
+    $query = "SELECT * FROM users ORDER BY u_id ASC;";
+    $result = mysqli_query($conn, $query);
+    return $result;
+}
+function display_course()
+{
+    global $conn;
+    $query = "SELECT * FROM course ORDER BY c_id ASC;";
+    $result = mysqli_query($conn, $query);
+    return $result;
+}
 function display_payment(int $u_id)
 {
     $conn = DBConnect();

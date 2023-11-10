@@ -40,12 +40,12 @@ if (isset($_POST["signup"])) {
         } else {
             echo "<script>
             alert('Someone already registered using this Username.');
-            window.location.href='../Homepage/logout.php';
+            window.location.href='../User/Homepage/logout.php';
             </script>";
         }
     } else {
         echo "<script> alert('Invalid input !');
-        window.location.href='../Homepage/logout.php';
+        window.location.href='../User/Homepage/logout.php';
         </script>";
     }
 

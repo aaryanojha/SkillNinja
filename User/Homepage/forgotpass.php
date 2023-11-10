@@ -10,7 +10,7 @@
 
 <body>
     <div class="nav">
-        <a href="#">SkillNinja ⚔︎</a>
+        <a href="../Homepage/index.php">SkillNinja ⚔︎</a>
     </div>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <div class="form-body">
@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
             // echo "Your Password:  ". $result_Password;
             echo "<script>
             alert('Your Password:  $result_Password');
-            window.location.href='../Login/login.html';
+            window.location.href='index.php';
             </script>";
         } else {
             // User input does not match with the bound variables
@@ -66,7 +66,7 @@ if (isset($_POST['submit'])) {
             // echo "invalid input";
             echo "<script>
             alert('Invalid Input.');
-            window.location.href='../Homepage/forgotpass.php';
+            window.location.href='../User/Homepage/forgotpass.php';
             </script>";
         }
 
@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
     } else {
         echo "<script>
         alert('Invalid Input.');
-        window.location.href='../Homepage/forgotpass.php';
+        window.location.href='../User/Homepage/forgotpass.php';
         </script>";
     }
 }

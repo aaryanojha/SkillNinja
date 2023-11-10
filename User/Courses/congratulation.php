@@ -85,7 +85,7 @@
   <body>
 
     <div class="navbar">
-      <a href="../Homepage/index.php" class="active">SkillNinja ⚔︎</a>
+      <a href="../User/Homepage/index.php" class="active">SkillNinja ⚔︎</a>
     </div>
     <div class="container">
       <img
@@ -120,7 +120,7 @@
       document.getElementById("back").style.display = "block";
     }
     function generateReport() {
-      window.location.href = "../Homepage/index.php";
+      window.location.href = "../User/Homepage/index.php";
     }
   </script>
 </html>

@@ -46,20 +46,20 @@ if (isset($_POST["login"])) {
                     $_SESSION["fname"] = $Fullname;
 
                     // Successful login
-                    // header("Location: ../Homepage/index.php");
+                    // header("Location: ../User/Homepage/index.php");
                     echo "<script>window.location.href='../$redirectTo'; </script>";
                 } else {
                     // Login failed, show an error message
                     echo "<script>
                     alert('Invalid username or password.');
-                    window.location.href='../Homepage/logout.php';
+                    window.location.href='../User/Homepage/logout.php';
                     </script>";
                 }
             }
         } else {
             echo "<script>
             alert('Invalid username or password.');
-            window.location.href='../Homepage/logout.php';
+            window.location.href='../User/Homepage/logout.php';
             </script>";
         }
 
@@ -67,13 +67,13 @@ if (isset($_POST["login"])) {
         // User doesn't exist or wrong password
         echo "<script>
         alert('Invalid username or password.');
-        window.location.href='../Homepage/logout.php';
+        window.location.href='../User/Homepage/logout.php';
         </script>";
     }
 } else {
     echo "<script>
     alert('Invalid username or password.');
-    window.location.href='../Homepage/logout.php';
+    window.location.href='../User/Homepage/logout.php';
     </script>";
 }
 
