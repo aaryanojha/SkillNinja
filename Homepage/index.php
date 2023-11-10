@@ -63,7 +63,7 @@
         <label for="password">PASSWORD:</label>
         <input type="password" name="pass" placeholder="Password" />
         <p>
-          <a href="#forgotpass" style="text-decoration: none">Forgot Password?</a>
+          <a href="forgotpass.php" style="text-decoration: none">Forgot Password?</a>
         </p>
         <button type="submit" name="login" value="login">Login</button>
       </form>

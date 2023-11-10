@@ -142,8 +142,6 @@
     <hr>
     <p>
     <h4><i class="fa fa-address-card-o" style="font-size:24px"></i> Course Information</h4>
-    </p>
-  </div>
   <?php
   // Connect to the database
   require_once "../Database/functions.php";
@@ -176,7 +174,8 @@ echo $fname;
   // Close the database connection
   $conn->close();
   ?>
-
+    </p>
+  </div>
 </body>
 
 </html>
