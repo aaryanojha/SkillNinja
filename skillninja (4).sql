@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 18, 2023 at 11:22 AM
+-- Generation Time: Nov 22, 2023 at 09:41 AM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -61,14 +61,15 @@ CREATE TABLE IF NOT EXISTS `course_users` (
   `c_id` int NOT NULL,
   `u_id` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=135 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=138 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `course_users`
 --
 
 INSERT INTO `course_users` (`id`, `c_id`, `u_id`) VALUES
-(134, 1, 44);
+(135, 1, 76),
+(137, 1, 77);
 
 -- --------------------------------------------------------
 
@@ -84,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `enquiries` (
   `Email` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   `Message` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `enquiries`
@@ -92,7 +93,8 @@ CREATE TABLE IF NOT EXISTS `enquiries` (
 
 INSERT INTO `enquiries` (`id`, `Frist_name`, `Last_Name`, `Email`, `Message`) VALUES
 (5, 'pranav', 'malwatkar', 'pranav@gmail.com', 'hey,This is pranav'),
-(14, 'Aaryan', 'Ojha', 'hello1@gmail.com', 'Hello Admin');
+(14, 'Aaryan', 'Ojha', 'hello1@gmail.com', 'Hello Admin'),
+(18, 'pranav', 'malwatkar', 'p@gmail.com', 'hi aaryan how are you');
 
 -- --------------------------------------------------------
 
@@ -116,14 +118,14 @@ CREATE TABLE IF NOT EXISTS `payment` (
   `Expyear` int DEFAULT NULL,
   `Cvv` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `payment`
 --
 
 INSERT INTO `payment` (`id`, `u_id`, `Full_Name`, `Email`, `Address`, `City`, `State`, `Zip`, `Card_Name`, `Card_Number`, `Expmonth`, `Expyear`, `Cvv`) VALUES
-(10, 44, 'Pranav Raju Malwatkar', 'aa@mail.com', 'pune', 'pune', 'maharshatra', 411057, 'Hello', 12345678, 12, 2003, 123);
+(15, 76, 'll', 'll@gmail.com', 'll', 'll', 'lll', 55, 'lll', 555, 55, 55, 55);
 
 -- --------------------------------------------------------
 
@@ -141,18 +143,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `question1` varchar(99) NOT NULL,
   `question2` varchar(99) NOT NULL,
   PRIMARY KEY (`u_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=78 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`u_id`, `fname`, `name`, `pass`, `IsAdmin`, `question1`, `question2`) VALUES
-(44, 'Pranav Raju Malwatkar', 'pranav123', 'pranav123', 0, '0', ''),
-(46, 'Admin', 'Admin', 'Admin', 1, '0', ''),
-(48, 'Pranav Raju Malwatkar', 'pranav1234', 'pranav1234', 0, '0', ''),
-(55, 'q', 'qqqq12', 'qqqq12', 0, 'indira', 'mm'),
-(57, 'g', 'gggg12', 'gggg12', 0, 'gg', 'gg');
+(46, 'Admin', 'Admin', 'Admin', 1, 'Admin', 'Admin'),
+(48, 'Aaryan Ojha', 'aaryan1234', 'aaryan1234', 0, 'Indira', 'Neeti'),
+(76, 'll', 'llll12', 'llll12', 0, 'll', 'll'),
+(77, 'Pranav Raju Malwatkar', 'pranav12', 'pranav12', 0, 'Indira', 'Anita');
 
 -- --------------------------------------------------------
 
@@ -166,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `video` (
   `name` varchar(400) NOT NULL,
   `c_id` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `video`
