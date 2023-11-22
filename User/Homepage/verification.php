@@ -10,7 +10,7 @@
 
 <body>
     <div class="nav">
-        <a href="#">SkillNinja ⚔︎</a>
+        <a href="index.php">SkillNinja ⚔︎</a>
     </div>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <div class="form-body">
@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
 
             // Handle success or failure here
             echo "<script> alert('Account Created Successfully! Please Login.');
-            window.location.href='../User/Homepage/logout.php';
+            window.location.href='logout.php';
               </script>";
         } else {
             // User not found, handle the error

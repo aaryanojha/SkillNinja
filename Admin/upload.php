@@ -1,6 +1,6 @@
 <?php
 // include("db.php");
-require_once "../Database/functions.php";
+require_once "../User/Database/functions.php";
 
 $conn = DBConnect();
 if (isset($_POST['upload'])) {

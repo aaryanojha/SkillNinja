@@ -85,7 +85,7 @@
   <body>
 
     <div class="navbar">
-      <a href="../User/Homepage/index.php" class="active">SkillNinja ⚔︎</a>
+      <a href="../Homepage/index.php" class="active">SkillNinja ⚔︎</a>
     </div>
     <div class="container">
       <img

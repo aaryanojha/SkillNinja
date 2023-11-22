@@ -35,6 +35,7 @@
         $conn = DBConnect();
         $q = "SELECT * FROM video WHERE c_id='$c_id'";
         $query = mysqli_query($conn, $q);
+
         $videos = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
         if (!empty($videos)) {
@@ -49,7 +50,7 @@
                             "progressControl": true
                         }
                     }'>
-                    <source src="<?php echo '../Admin/upload/' . $name; ?>">
+                    <source src="<?php echo '../../Admin/upload/' . $name; ?>">
                     <source src="MY_VIDEO.webm" type="video/webm" />
                     <p class="vjs-no-js">
                         To view this video please enable JavaScript, and consider upgrading to a
@@ -90,7 +91,7 @@
         nextBtn.addEventListener('click', function () {
             if (currentVideoIndex < videos.length - 1) {
                 currentVideoIndex++;
-                var nextVideoSource = '<?php echo '../Admin/upload/'; ?>' + videos[currentVideoIndex].name;
+                var nextVideoSource = '<?php echo '../../Admin/upload/'; ?>' + videos[currentVideoIndex].name;
                 video.src = nextVideoSource;
                 video.load();
                 video.play();
@@ -102,16 +103,17 @@
                 if (isset($_SESSION["courseid"])) {
                     $u_id = $_SESSION["u_id"];
                     $c_id = $_SESSION["courseid"];
-                    // Connect to the database
-                    require_once "../Database/functions.php";
-                    $conn = DBConnect();
+
                     // Check if the record exists
-                    $checkQuery = "SELECT * FROM course_users WHERE c_id = '$c_id' && c_id='$c_id'";
+                    $checkQuery = "SELECT * FROM course_users WHERE c_id = '$c_id' && u_id = '$u_id'";
                     $checkResult = mysqli_query($conn, $checkQuery);
 
                     if (mysqli_num_rows($checkResult) == 0) {
-                        $INSERT = "INSERT Into course_users(c_id,u_id) values('$c_id','$u_id')";
+                        $INSERT = "INSERT INTO course_users (c_id, u_id) VALUES ('$c_id', '$u_id')";
                         $result = $conn->query($INSERT);
+                        if (!$result) {
+                            echo "Error: " . $conn->error;
+                        }
                     }
                 }
                 ?>

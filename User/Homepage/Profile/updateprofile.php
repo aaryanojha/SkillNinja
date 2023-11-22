@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="index.php" class="active">&nbsp;&nbsp; SkillNinja ⚔︎ &nbsp;&nbsp;</a>
+        <a href="../index.php" class="active">&nbsp;&nbsp; SkillNinja ⚔︎ &nbsp;&nbsp;</a>
         <a href="#home" class="" style="padding-top: 1.5%">News</a>
         <a href="aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
         <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>

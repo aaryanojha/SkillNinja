@@ -32,7 +32,7 @@
     <div class="dropdown-content">
       <a>Signed in as <b>' .$_SESSION['username'].'</b></a>
       <hr>
-      <a href="profile.php"><i class="material-icons">person</i> Profile</a>
+      <a href="../Homepage/Profile/profile.php"><i class="material-icons">person</i> Profile</a>
       <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
     </div>
   </div> ';

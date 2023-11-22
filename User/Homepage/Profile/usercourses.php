@@ -16,7 +16,7 @@
 
 <body>
   <div class="topnav" id="myTopnav">
-    <a href="index.php" class="active">&nbsp;&nbsp; SkillNinja ⚔︎ &nbsp;&nbsp;</a>
+    <a href="../index.php" class="active">&nbsp;&nbsp; SkillNinja ⚔︎ &nbsp;&nbsp;</a>
     <a href="#home" class="" style="padding-top: 1.5%">News</a>
     <a href="aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
     <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
@@ -142,38 +142,38 @@
     <hr>
     <p>
     <h4><i class="fa fa-address-card-o" style="font-size:24px"></i> Course Information</h4>
-  <?php
-  // Connect to the database
-  require_once "../Database/functions.php";
+    <?php
+    // Connect to the database
+    require_once "../../Database/functions.php";
 
-  $conn = DBConnect();
-  $user_id = $_SESSION['u_id'];
+    $conn = DBConnect();
+    $user_id = $_SESSION['u_id'];
 
-  // Query to fetch user_id and course_name for courses associated with users
-  $sql = "SELECT u.U_id AS user_id, u.fname AS fname, c.c_name AS course_name
+    // Query to fetch user_id and course_name for courses associated with users
+    $sql = "SELECT u.U_id AS user_id, u.fname AS fname, c.c_name AS course_name
   FROM course_users cu
   INNER JOIN course c ON cu.c_id = c.c_id
   INNER JOIN users u ON cu.u_id = u.U_id
   WHERE cu.u_id = $user_id";
 
-  $result = $conn->query($sql);
+    $result = $conn->query($sql);
 
-  if ($result->num_rows > 0) {
-    echo "User ID and Course Name for Courses: <br>";
-    while ($row = $result->fetch_assoc()) {
-      $user_id = $row["user_id"];
-      $fname = $row["fname"];
-      $course_name = $row["course_name"];
-      echo "User ID: " . $user_id . ", Course Name: " . $course_name . "<br>";
-echo $fname;
+    if ($result->num_rows > 0) {
+      echo "User ID and Course Name for Courses: <br>";
+      while ($row = $result->fetch_assoc()) {
+        $user_id = $row["user_id"];
+        $fname = $row["fname"];
+        $course_name = $row["course_name"];
+        echo "User ID: " . $user_id . ", Course Name: " . $course_name . "<br>";
+        echo $fname;
+      }
+    } else {
+      echo "No courses found for any users.";
     }
-  } else {
-    echo "No courses found for any users.";
-  }
 
-  // Close the database connection
-  $conn->close();
-  ?>
+    // Close the database connection
+    $conn->close();
+    ?>
     </p>
   </div>
 </body>

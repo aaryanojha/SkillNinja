@@ -23,7 +23,8 @@ function display_enquiries()
 function display_users()
 {
     global $conn;
-    $query = "SELECT * FROM users ORDER BY u_id ASC;";
+    // $query = "SELECT * FROM users ORDER BY u_id ASC;";
+    $query = "SELECT * FROM users WHERE isAdmin <> 1 ORDER BY u_id ASC";
     $result = mysqli_query($conn, $query);
     return $result;
 }
