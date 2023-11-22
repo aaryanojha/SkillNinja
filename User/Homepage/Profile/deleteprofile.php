@@ -15,8 +15,8 @@
     <div class="topnav" id="myTopnav">
         <a href="../index.php" class="active">&nbsp;&nbsp; SkillNinja ⚔︎ &nbsp;&nbsp;</a>
         <a href="#home" class="" style="padding-top: 1.5%">News</a>
-        <a href="aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
-        <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
+        <a href="../aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
+        <a href="../enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
         <!-- <a style="pointer-events:none;float:right"> &emsp;</a> -->
         <div>
       </div> 
@@ -29,7 +29,7 @@
           // echo "Welcome, " . $_SESSION['username'] . "!";
           echo '  <div class="dropdown">
         <button class="dropbtn">
-          <img src="../Images/user.png" style="zoom:8%">&emsp;&emsp;
+          <img src="../../Images/user.png" style="zoom:8%">&emsp;&emsp;
         </button>
         <div class="dropdown-content">
           <a>Signed in as <b>' .$_SESSION['username'].'</b></a>
@@ -52,7 +52,7 @@
     
       </div>
       <div class="sidebar">
-        <img src="../Images/user.png" alt="" style="zoom:25%">
+        <img src="../../Images/user.png" alt="" style="zoom:25%">
         <p> <?php echo "".$_SESSION['fname'].""; ?> </p>
         <a href="profile.php" class="active"><i class="fa fa-info-circle"></i> Profile Info</a>
         <a href="usercourses.php"><i class="fa fa-search"></i> Course Info</a>

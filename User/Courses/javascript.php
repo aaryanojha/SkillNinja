@@ -119,7 +119,7 @@
         <b><span class="material-symbols-outlined">school</span> Instructor:</b> SkillNinja
         </div>
         <div class="text">
-        <h1>What is HTML?</h1>
+        <h1>What is JavaScript?</h1>
         <b><span class="material-symbols-outlined">translate</span> Taught in English</b>
     </div>
     </div>
@@ -129,19 +129,17 @@
             <a href="#enroll"><button>Enroll Now!</button></a>
         </div>
         <div class="rating-card">
-            <span class="span1">4.6 <span class="fa fa-star checked"></span></span>
-            <span style="text-align: right;">&emsp;Flexible schedule &emsp;|&emsp;  Learn at your own pace &emsp;|&emsp;  Easy to Learn</span>
+            <span class="span1">4.4 <span class="fa fa-star checked"></span></span>
+            <span style="text-align: right;">&emsp;Flexible schedule &emsp;|&emsp;  Beginner Level  &emsp;|&emsp;  Easy to Learn</span>
         </div>
         <div class="info">
             <h2>Skills you'll gain</h2>
-            <p> HTML </p> <p> Web-Development </p>
+            <p> Javascript </p> <p> HTML </p> <p> Web-Development </p>
       
             <h2>Course Description:</h2>
-            <span>Discover the fundamental world of HTML in our beginner course tailored for budding web developers.
-                Uncover
-                the core concepts of<br> structuring content and get hands-on experience crafting your own web pages. No
-                prior
-                coding knowledge required - start your web development journey here.</span>
+            <span>Embark on a journey into the essential realm of JavaScript with our beginner course designed for aspiring web developers.
+                Delve into the foundational concepts of programming and gain practical experience in creating dynamic and interactive
+                web pages. No previous coding experience is necessary - kickstart your web development adventure right here.</span>
         </div>
         <div class="modules-info">
             <h1>There are 5 modules in this course</h1>

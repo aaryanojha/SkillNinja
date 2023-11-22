@@ -5,16 +5,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="enquire.css" />
+  <link rel="stylesheet" href="../Courses/courses.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="script.js"></script>
 </head>
 
 <body>
-  <div class="topnav" id="myTopnav">
+<div class="topnav" id="myTopnav">
     <a href="index.php" class="active">SkillNinja ⚔︎</a>
     <a href="#home" class="" style="padding-top: 1.5%">News</a>
     <a href="aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
     <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
+    <!-- <a style="pointer-events:none;float:right"> &emsp;</a> -->
+    <div>
+  </div> 
     <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
     <?php
     // Check if the user is logged in
@@ -22,9 +26,19 @@
     if (isset($_SESSION['username'])) {
       // If logged in, show the username and a logout button
       // echo "Welcome, " . $_SESSION['username'] . "!";
-      echo '<a href="logout.php" style="float:right;padding-top: 1.5%">Logout</a>';
+      echo '  <div class="dropdown">
+    <button class="dropbtn">
+      <img src="../Images/user.png" style="zoom:8%">&emsp;&emsp;
+    </button>
+    <div class="dropdown-content">
+      <a>Signed in as <b>' .$_SESSION['username'].'</b></a>
+      <hr>
+      <a href="../Homepage/Profile/profile.php"><i class="material-icons">person</i> Profile</a>
+      <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+    </div>
+  </div> ';
     } else { // If not logged in, show the login form 
-      echo '<a href="#" onclick="openform()" style="float:right;padding-top: 1.5%;">Login</a>';
+      echo '<a href="#" onclick="openform()" style="float:right;padding-top: 1%;"><i class="material-icons">person</i> Login</a>';
     } ?>
     <?php
     if (!isset($_SESSION['username'])) { ?>
@@ -115,7 +129,7 @@
   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 <div class="form">
   
-<div class="contactus">
+<div class="contactus"  style="z-index:-1">
       <h1>Contact Us</h1>
     
     <p>If you have any questions or need assistance, please don't hesitate to get in touch with us. We're here to help!</p>
@@ -127,7 +141,7 @@
     <h2>Contact Form</h2>
     <p>If you prefer, you can also use the contact/enquire form here to send us a message:</p>
       </div>
-    <div class="enquiry">
+    <div class="enquiry" style="z-index:-1">
         <h2>Send Enquiry:</h2>
         <div class="name-inputs">
         <input type="text" name="fname" placeholder="Enter First Name"/>

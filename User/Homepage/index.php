@@ -228,7 +228,7 @@
         </a>
       </div>
       <div class="course-card">
-        <a href="#html" style="text-decoration: none; color: #3399ff"><img src="../Images/js2.png" alt=""
+        <a href="../Courses/javascript.php" style="text-decoration: none; color: #3399ff"><img src="../Images/js2.png" alt=""
             style="zoom: 40%" />
           <p style="float: right">
             4.4

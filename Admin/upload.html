@@ -25,10 +25,14 @@
           Logout</a>
       <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
   </div> 
+  <div class="form-box">
+    <h2>Upload Courses:</h2><br>
     <form action="upload.php" method="POST" enctype="multipart/form-data">
-      Select image to upload:
+      Select a file to upload:
       <input type="file" name="file" />
-      <input type="submit" value="Upload" name="upload" />
+      <button value="Upload" name="Upload">Upload</button>
+      <!-- <input type="submit" value="Upload" name="upload" /> -->
     </form>
+  </div>
   </body>
 </html>

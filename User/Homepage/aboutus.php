@@ -5,38 +5,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="aboutus.css" />
+    <link rel="stylesheet" href="../Courses/courses.css">
     <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="topnav" id="myTopnav">
-        <a href="index.php" class="active">SkillNinja ⚔︎</a>
-        <a href="#home" class="" style="padding-top: 1.5%">News</a>
-        <a href="#home" class="" style="padding-top: 1.5%">About Us</a>
-        <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
-        <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
-        <?php
-        // Check if the user is logged in
-        session_start();
-        if (isset($_SESSION['username'])) {
-            // If logged in, show the username and a logout button
-            // echo "Welcome, " . $_SESSION['username'] . "!";
-            echo '<a href="logout.php" style="float:right;padding-top: 1.5%">Logout</a>';
-        } else { // If not logged in, show the login form 
-            echo '<a href="#" onclick="openform()" style="float:right;padding-top: 1.5%;">Login</a>';
-        } ?>
-        <?php
-        if (!isset($_SESSION['username'])) { ?>
-            <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform2()"><button id="reg-btn"
-                    style="pointer-events: none">
-                    Join For Free!
-                </button></a>
-        <?php } ?>
-        <a href="#none" style="padding-top: 1%">&nbsp;<input type="search" name="" id="" class="search-bar" />&nbsp;<i
-                id="search-btn" class="fa fa-search"></i></a>
-        <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-
+<div class="topnav" id="myTopnav">
+    <a href="index.php" class="active">SkillNinja ⚔︎</a>
+    <a href="#home" class="" style="padding-top: 1.5%">News</a>
+    <a href="aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
+    <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
+    <!-- <a style="pointer-events:none;float:right"> &emsp;</a> -->
+    <div>
+  </div> 
+    <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
+    <?php
+    // Check if the user is logged in
+    session_start();
+    if (isset($_SESSION['username'])) {
+      // If logged in, show the username and a logout button
+      // echo "Welcome, " . $_SESSION['username'] . "!";
+      echo '  <div class="dropdown">
+    <button class="dropbtn">
+      <img src="../Images/user.png" style="zoom:8%">&emsp;&emsp;
+    </button>
+    <div class="dropdown-content">
+      <a>Signed in as <b>' .$_SESSION['username'].'</b></a>
+      <hr>
+      <a href="../Homepage/Profile/profile.php"><i class="material-icons">person</i> Profile</a>
+      <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
     </div>
+  </div> ';
+    } else { // If not logged in, show the login form 
+      echo '<a href="#" onclick="openform()" style="float:right;padding-top: 1%;"><i class="material-icons">person</i> Login</a>';
+    } ?>
+    <?php
+    if (!isset($_SESSION['username'])) { ?>
+      <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform2()"><button id="reg-btn"
+          style="pointer-events: none">
+          Join For Free!
+        </button></a>
+    <?php } ?>
+    <a href="#none" style="padding-top: 1%">&nbsp;<input type="search" name="" id="" class="search-bar" />&nbsp;<i
+        id="search-btn" class="fa fa-search"></i></a>
+    <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+
+  </div>
     <!-- Login -->
     <div class="form-popup" id="myform">
         <div class="form-container">
@@ -45,9 +59,9 @@
             <form action="../Database/logindb.php" method="POST">
                 <input type="hidden" name="redirectTo" value="Homepage/aboutus.php">
                 <label for="username">USERNAME:</label>
-                <input type="text" name="uname" value="gggg21" id="" placeholder="Username" />
+                <input type="text" name="uname" value="" id="" placeholder="Username" />
                 <label for="password">PASSWORD:</label>
-                <input type="password" value="gggg21" name="pass" placeholder="Password" />
+                <input type="password" value="" name="pass" placeholder="Password" />
                 <p>
                     <a href="#forgotpass" style="text-decoration: none">Forgot Password?</a>
                 </p>
