@@ -30,7 +30,7 @@
     <form>
         <?php
         //Connect to the MySQL database
-        require_once "../Database/functions.php";
+        require_once "../User/Database/functions.php";
 
         $conn = DBConnect();
         $result = display_enquiries();

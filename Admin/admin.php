@@ -35,7 +35,7 @@
             <h2>Total Users</h2>
             <p id="userCount">
                 <?php
-                require_once "../Database/functions.php";
+                require_once "../User/Database/functions.php";
 
                 $conn = DBConnect();
                 // Query to get the user count from the database
@@ -63,7 +63,7 @@
         <div class="card">
             <?php
             // Connect to the database
-            require_once "../Database/functions.php";
+            require_once "../User/Database/functions.php";
 
             $conn = DBConnect();
             // SQL query to count records for each c_id

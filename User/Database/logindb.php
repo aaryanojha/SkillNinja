@@ -36,7 +36,7 @@ if (isset($_POST["login"])) {
             $valid_password = $row["pass"];
 
             if ($IsAdmin) {
-                header("Location:../Admin/admin.php"); // Redirect to dashboard page
+                header("Location:../../Admin/admin.php"); // Redirect to dashboard page
             } else {
                 if ($UserName == $valid_username && $Password == $valid_password) {
                     $_SESSION["loggedin"] = true;

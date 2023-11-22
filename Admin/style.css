@@ -219,3 +219,47 @@ body{
   display: inline;
   margin: 2%;
 }
+
+.area{
+  padding-top: 10%;
+  padding-left: 15%;
+}
+.area .boxes{
+  font-size: xx-large;
+  padding-left: 10%;
+  padding-bottom: 1%;
+  color: blue;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.area table{
+  font-size: large;
+  background-color:white ;
+  border: 0;
+  border-radius: 5px;
+  line-height: 200%;
+  box-shadow: 0 0 2px 0 #898989;
+  padding: 1% 1% 0% 1%
+}
+.area table tr{
+  border: 0;
+}
+.area table td{
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1 black;
+  -webkit-box-shadow: 0 6px 1px -6px grey;
+  -moz-box-shadow: 0 6px 1px -6px grey;
+   box-shadow: 0 6px 1px -6px grey;
+}
+.area table th{
+  font-size: x-large;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1 black;
+  -webkit-box-shadow: 0 6px 1px -6px grey;
+  -moz-box-shadow: 0 6px 1px -6px grey;
+   box-shadow: 0 6px 1px -6px grey;
+}

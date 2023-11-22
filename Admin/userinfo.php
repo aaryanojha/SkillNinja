@@ -26,7 +26,7 @@
     </div>
     <?php
         //Connect to the MySQL database
-        require_once "../Database/functions.php";
+        require_once "../User/Database/functions.php";
 
         $conn = DBConnect();
         $result = display_users();
@@ -34,7 +34,7 @@
      
         <div class="area">
             <div class="boxes">
-                <span>User Enquiries</span>
+                <span>Users</span>
             </div>
 
 

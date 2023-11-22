@@ -27,7 +27,7 @@
     <form>
         <?php
         //Connect to the MySQL database
-        require_once "../Database/functions.php";
+        require_once "../User/Database/functions.php";
 
         $conn = DBConnect();
         $result = display_course()
@@ -35,12 +35,12 @@
      
         <div class="area">
             <div class="boxes">
-                <span>User Enquiries</span>
+                <span>Courses</span>
             </div>
             <table border="3" width="80%" align="center" class="customers">
                 <tr align="center">
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
 
                 </tr>
 
