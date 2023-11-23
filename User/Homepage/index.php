@@ -7,23 +7,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="script.js"></script>
-  <script>
-function showHint(str) {
-     if (str.length == 0) {
-         document.getElementById("txtHint").innerHTML = "";
-         return;
-     } else {
-         var xmlhttp = new XMLHttpRequest();
-         xmlhttp.onreadystatechange = function() {
-             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                 document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
-             }
-         }
-         xmlhttp.open("GET", "hint.php?q="+str, true);
-         xmlhttp.send();
-     }
-}
-</script>
 </head>
 
 <body>
@@ -67,7 +50,6 @@ function showHint(str) {
         <i id="search-btn" class="fa fa-search"></i>
         <div id="txtHint"></div>
       </a>
-
   </div>
   <!-- Login -->
   <div class="form-popup" id="myform">
@@ -420,19 +402,24 @@ function showHint(str) {
     </div>
   </div>
   <div class="boxbtm">
+    
     <img src="../Images/boxbtm.png" alt="" />
     <p>
+    <button onclick="openform2()">Join Now!</button>
+    <br><br>
       Take the next step toward<br />
       your personal and <br />professional goals with SkillNinja.
     </p>
-    <p><button>Join Now!</button></p>
   </div>
   <footer>
     <ul>
       <li>
-        <h4><a href="" class="">About Us</a></h4>
+        <h4>Explore</h4>
       </li>
       <li><a href="index.php">Home</a></li>
+      <li><a href="#"> </a></li>
+      <li><a href="aboutus.php">AboutUs</a></li>
+      <li><a href="enquire.php">Enquire</a></li>
     </ul>
     <hr style="width: 90%" />
     <p>

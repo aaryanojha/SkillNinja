@@ -85,7 +85,7 @@ video {
   width: 100%;
   height: fit-content;
   text-align: center;
-  
+  z-index: 1;
 }
 
 .topnav a {
@@ -262,7 +262,8 @@ video {
 }
 .bgcolor{
   width: 100%;
-  height: 600px;
+  height: 650px;
+  /* padding-bottom: 5%; */
   background-color: #dceeff;
 }
 .bgcolor .text{
@@ -280,7 +281,7 @@ video {
 .content {
   font-family: 'Poppins', sans-serif;
   text-align: left;
-  padding-top: 10%;
+  padding-top: 5%;
   padding-left: 5%;
   font-size: x-large;
   display: block;

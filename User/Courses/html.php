@@ -55,9 +55,11 @@
           Join For Free!
         </button></a>
     <?php } ?>
-    <a href="#none" style="padding-top: 1%">&nbsp;<input type="search" name="" id="" class="search-bar" />&nbsp;<i
-        id="search-btn" class="fa fa-search"></i></a>
-    <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    <a href="#none" style="padding-top: 1%">
+        <input type="search" name="search" id="search" class="search-bar" onkeyup="showHint(this.value)">
+        <i id="search-btn" class="fa fa-search"></i>
+        <div id="txtHint"></div>
+      </a>
   </div>
 
         <!-- Login -->
@@ -124,7 +126,7 @@
     <div class="mainbody">
         <div class="content">
 
-            <a href="#enroll"><button>Enroll Now!</button></a>
+            <a href="#enroll"><button>Enroll Now!</button></a> <p style="font-size:large;color:blue;font-weight:900;">Course Fee: <i class="fa fa-rupee" style="font-size:xx-large"> <b style="  font-family:'Poppins', sans-serif;">1000</b></i></p>
         </div>
         <div class="rating-card">
             <span class="span1">4.6 <span class="fa fa-star checked"></span></span>
@@ -208,15 +210,21 @@
         ?>
     </div>
     <footer>
-        <ul>
-            <li>
-                <h4><a href="" class="">About Us</a></h4>
-            </li>
-            <li><a href="index.php">Home</a></li>
-        </ul>
-        <hr style="width: 90%;">
-        <p><i class="fa fa-copyright"></i> 2023 SkillNinja Inc. All rights reserved.</p>
-    </footer>
+    <ul>
+      <li>
+        <h4>Explore</h4>
+      </li>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="#"> </a></li>
+      <li><a href="aboutus.php">AboutUs</a></li>
+      <li><a href="enquire.php">Enquire</a></li>
+    </ul>
+    <hr style="width: 90%" />
+    <p>
+      <i class="fa fa-copyright"></i> 2023 SkillNinja Inc. All rights
+      reserved.
+    </p>
+  </footer>
 </body>
 
 </html>

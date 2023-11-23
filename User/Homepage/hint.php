@@ -1,35 +1,15 @@
 <?php
-// Array with names
-$a[] = "HTML";
-$a[] = "Brittany";
-$a[] = "Cinderella";
-$a[] = "Diana";
-$a[] = "Eva";
-$a[] = "Fiona";
-$a[] = "Gunda";
-$a[] = "Hege";
-$a[] = "Inga";
-$a[] = "Johanna";
-$a[] = "Kitty";
-$a[] = "Linda";
-$a[] = "Nina";
-$a[] = "Ophelia";
-$a[] = "Petunia";
-$a[] = "Amanda";
-$a[] = "Raquel";
-$a[] = "Cindy";
-$a[] = "Doris";
-$a[] = "Eve";
-$a[] = "Evita";
-$a[] = "Sunniva";
-$a[] = "Tove";
-$a[] = "Unni";
-$a[] = "Violet";
-$a[] = "Liza";
-$a[] = "Elizabeth";
-$a[] = "Ellen";
-$a[] = "Wenche";
-$a[] = "Vicky";
+// Array with names and their respective links
+$terms = array(
+    "HTML" => "../Courses/html.php",
+    "JavaScript" => "../Courses/javascript.php",
+    "CSS" => "../Courses/css.php",
+    "C++" => "../Courses/cpp.php",
+    "C" => "../Courses/c.php",
+    "PHP" => "../Courses/php.php",
+    "Python" => "../Courses/python.php",
+    "Java" => "../Courses/java.php"
+);
 
 // get the q parameter from URL
 $q = $_REQUEST["q"];
@@ -38,12 +18,12 @@ $hint = "";
 if ($q !== "") {
     $q = strtolower($q);
     $len = strlen($q);
-    foreach ($a as $name) {
+    foreach ($terms as $name => $link) {
         if (stristr($q, substr($name, 0, $len))) {
             if ($hint === "") {
-                $hint = "<a href='index.php?name=" . urlencode($name) . "'>$name</a>";
+                $hint = "<a href='$link'>$name</a>";
             } else {
-                $hint .= ", <a href='index.php?name=" . urlencode($name) . "'>$name</a>";
+                $hint .= ", <a href='$link'>$name</a>";
             }
         }
     }

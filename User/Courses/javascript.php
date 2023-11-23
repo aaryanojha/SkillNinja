@@ -56,9 +56,11 @@
           Join For Free!
         </button></a>
     <?php } ?>
-    <a href="#none" style="padding-top: 1%">&nbsp;<input type="search" name="" id="" class="search-bar" />&nbsp;<i
-        id="search-btn" class="fa fa-search"></i></a>
-    <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    <a href="#none" style="padding-top: 1%">
+        <input type="search" name="search" id="search" class="search-bar" onkeyup="showHint(this.value)">
+        <i id="search-btn" class="fa fa-search"></i>
+        <div id="txtHint"></div>
+      </a>
   </div>
 
         <!-- Login -->
@@ -125,7 +127,7 @@
     <div class="mainbody">
         <div class="content">
 
-            <a href="#enroll"><button>Enroll Now!</button></a>
+            <a href="#enroll"><button>Enroll Now!</button></a> <p style="font-size:large;color:blue;font-weight:900;">Course Fee: <i class="fa fa-rupee" style="font-size:xx-large"> <b style="  font-family:'Poppins', sans-serif;">2000</b></i></p>
         </div>
         <div class="rating-card">
             <span class="span1">4.4 <span class="fa fa-star checked"></span></span>
@@ -142,13 +144,11 @@
         </div>
         <div class="modules-info">
             <h1>There are 5 modules in this course</h1>
-            <p>
-                Explore the fundamentals of web development with our Basic HTML online course. Designed for beginners,
-                this
-                course covers essential HTML concepts such as creating content, adding links, and incorporating images.
-                Through interactive lessons and expert guidance, you'll gain the skills needed to build your own web
-                pages
-                from scratch. Join us today and start your journey into the world of web development!</p>
+            <p>Discover the foundations of web development through our Beginner's JavaScript online course. 
+                Crafted with newcomers in mind, this course delves into key JavaScript principles such as variables,
+                functions, and conditional statements. With interactive modules and seasoned guidance, you'll develop the 
+                proficiency to bring interactivity and dynamism to your web projects.
+                Enroll today to initiate your venture into the dynamic realm of JavaScript and enhance your prowess in web development!</p>
         </div>
         <div class="modules">
             <div>
@@ -208,15 +208,21 @@
         ?>
     </div>
     <footer>
-        <ul>
-            <li>
-                <h4><a href="" class="">About Us</a></h4>
-            </li>
-            <li><a href="../Homepage/index.php">Home</a></li>
-        </ul>
-        <hr style="width: 90%;">
-        <p><i class="fa fa-copyright"></i> 2023 SkillNinja Inc. All rights reserved.</p>
-    </footer>
+    <ul>
+      <li>
+        <h4>Explore</h4>
+      </li>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="#"> </a></li>
+      <li><a href="aboutus.php">AboutUs</a></li>
+      <li><a href="enquire.php">Enquire</a></li>
+    </ul>
+    <hr style="width: 90%" />
+    <p>
+      <i class="fa fa-copyright"></i> 2023 SkillNinja Inc. All rights
+      reserved.
+    </p>
+  </footer>
 </body>
 
 </html>

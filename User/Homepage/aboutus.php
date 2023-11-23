@@ -10,8 +10,8 @@
 </head>
 
 <body>
-<div class="topnav" id="myTopnav">
-    <a href="index.php" class="active">SkillNinja ⚔︎</a>
+<div class="topnav" id="myTopnav" style="zoom:90%">
+    <a href="index.php" class="active" style="zoom:112%">SkillNinja ⚔︎</a>
     <a href="#home" class="" style="padding-top: 1.5%">News</a>
     <a href="aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
     <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
@@ -120,12 +120,11 @@
                 </p>
             </div>
         </div>
-        <div class="about-section">
+        <div class="about-section"><br>
       <h1>About Us</h1>
-      <p>Made By Aaryan And Pranav, SY BBA(CA), ICCS.</p>
+      <p>Made By Aaryan And Pranav, TY BBA(CA), ICCS.</p>
       <p>
-        AdvenTour is a Travel and Tourism website created for users throughout the world to have an easy and friendly
-        environment and interface.
+        SkillNinja
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -143,9 +142,8 @@
   <p class="title">CEO & Founder, Designer</p>
   <p>ICCS</p>
   <div style="margin: 24px 0">
-  <a href="#"><i class='fab fa-twitter'></i></a>
-    <a href="https://www.linkedin.com/in/aaryan-ojha-6ab578270"><i class='fab fa-linkedin-in'></i></a>
-    <a href="#"><i class='fab fa-facebook-f'></i></a>
+    <a href="https://www.linkedin.com/in/aaryan-ojha-6ab578270"><i class="fa fa-linkedin"></i></a> 
+    <a href="https://github.com/aaryanojha"><i class="fa fa-github"></i></a>
   </div>
   <p><button>Contact</button></p>
 </div>
@@ -156,14 +154,14 @@
   <p class="title">CEO & Founder, Designer</p>
   <p>ICCS</p>
   <div style="margin: 24px 0">
-    <a href="#"><i class='fab fa-twitter'></i></a>
-    <a href="https://www.linkedin.com/in/pranav-malwatkar-9834b1239"><i class='fab fa-linkedin-in'></i></a>
-    <a href="#"><i class='fab fa-facebook-f'></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/pranav-malwatkar-9834b1239"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook-f"></i></a>
   </div>
   <p><button>Contact</button></p>
 </div>
 
-<div style="text-align: center">AdvenTour ko banaya hai</div>
+<div style="text-align: center">SkillNinja ko banaya hai</div>
     </form>
 </body>
 
