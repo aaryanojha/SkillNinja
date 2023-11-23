@@ -37,9 +37,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $update_result = mysqli_query($conn, $update_query);
 
     if ($update_result) {
-        echo "User information updated successfully.";
+        echo "<script>
+            alert('Data Updated Successfully');
+            window.location.href='#';
+            </script>";
     } else {
-        echo "Error updating user information: " . mysqli_error($conn);
+        echo "<script>
+            alert('Error updating Information.');
+            window.location.href='#';
+            </script>". mysqli_error($conn);
     }
 }
 ?>
@@ -52,10 +58,82 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit User Information</title>
-</head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Pangolin&family=Rubik+Puddles&family=Ubuntu:wght@600&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed&display=swap');
 
+        html {
+        scroll-behavior: smooth;
+        }
+        *{
+            padding:0 ;
+            text-align:left;
+        }
+        body{
+            background-color: whitesmoke;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;
+            padding: 0;
+
+            }
+
+            form {
+                max-width: 400px;
+                margin: 20px auto;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+            }
+            h2{
+                text-align:center;
+                font-size:xx-large;
+            }
+
+            input ,button{
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 16px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            input[type="submit"], button {
+                background-color: #4caf50;
+                color: #fff;
+                cursor: pointer;
+                text-align:center
+            }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+            /* Optional: Style for required fields */
+            input:required {
+                border-color: #e74c3c;
+            }
+
+            input:focus {
+                outline: none;
+                border-color: #3498db;
+                box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+            }
+        
+
+</style>
 <body>
-
+    <button style="float:left;max-width:100px" onclick="window.location.href='userinfo.php'">Back</button>
     <h2>Edit User Information</h2>
 
     <form method="post" action="">

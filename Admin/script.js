@@ -22,25 +22,27 @@ function myFunction() {
         icon.textContent = "🌙";
     }
 }
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
 
-var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-var yValues = [55, 49, 44, 24, 15];
-var barColors = ["red", "green","blue","orange","brown"];
+function drawChart() {
+const data = google.visualization.arrayToDataTable([
+  ['Courses', 'Users'],
+  ['HTML',2],
+  ['CSS',0],
+  ['JS',1],
+  ['PHP',0],
+  ['SQL',0],
+  ['JAVA',0],
+  ['Python',0],
+  ['C',0],
+  ['C++',0]
+]);
 
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "World Wine Production 2018"
-    }
-  }
-});
+const options = {
+  title:'Total Courses and their Users'
+};
+
+const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+  chart.draw(data, options);
+}

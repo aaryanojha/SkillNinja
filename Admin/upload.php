@@ -13,7 +13,7 @@ if (isset($_POST['upload'])) {
         if (mysqli_query($conn, $q)) {
             echo "<script>
             alert('Video uploaded successfully.');
-            window.location.href='upload.php';
+            window.location.href='upload.html';
             </script>";
         } else {
             echo "<script>

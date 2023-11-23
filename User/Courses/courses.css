@@ -438,6 +438,7 @@ video {
 
 .modules {
   padding-left: 5%;
+  padding-right: 8%;
   display: block;
   margin-top: 5%;
   border: 3.5px solid #b8b8b8;
@@ -449,9 +450,13 @@ video {
   zoom: 90%;
   background-color: white;
 }
-
+.modules div{
+  padding-left: 2%;
+  padding-bottom: 2%;
+  width: 80%;
+  transition: width .5s;
+}
 .modules div:hover {
-  transition: ease-in-out width;
   cursor: pointer;
   background: #e5f2ff;
   width: 90%;
@@ -473,6 +478,12 @@ video {
   float: left;
   border: 1px solid #b8b8b8;
 
+}
+.modules p{
+  display: none;
+  padding-left: 10%;
+  padding-bottom: 2%;
+  font-size: medium;
 }
 
 footer {

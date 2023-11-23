@@ -82,12 +82,12 @@
                         </td>
                         <td align="center">
                             <!-- Add an Edit button linking to the edit_user.php page -->
-                            <a href="edit_user.php?u_id=<?php echo $row['u_id']; ?>">Edit</a>
+                            <a href="edit_user.php?u_id=<?php echo $row['u_id']; ?>" style="background-color:green">&emsp; Edit &emsp;</a>
                         </td>
                         <td align="center">
                             <!-- Add a Delete button linking to the delete.php page -->
                             <a href="delete.php?u_id=<?php echo $row['u_id']; ?>"
-                                onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                                onclick="return confirm('Are you sure you want to delete this user?')">&emsp;Delete&emsp;</a>
                         </td>
 
                     </tr>

@@ -162,24 +162,30 @@
                 web development!</p>
         </div>
         <div class="modules">
-            <div>
-                <h2>Introduction to HTML</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
-                <li>Module 1:</li>
+            <div onmouseover="showModule1()" onmouseout="hideModule1()">
+                <h2>Foundations of JavaScript Programming</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
+                <li>Module 1: <p id="show-info1">Lay the groundwork for JavaScript mastery, covering essential language features, data types, and control structures to build a<br> solid programming foundation.</p></li>
+                
             </div>
             <hr>
-            <div>
-                <h2>Working of HTML</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
-                <li>Module 2:</li>
+            <div onmouseover="showModule2()" onmouseout="hideModule2()">
+                <h2>Building Dynamic Websites with JavaScript</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
+                <li>Module 2: <p id="show-info2">Explore the power of JavaScript in web development, focusing on DOM manipulation, event handling, and AJAX to create dynamic<br> and responsive user interfaces.</p></li>
             </div>
             <hr>
-            <div>
-                <h2>Web Development Using HTML</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
-                <li>Module 3:</li>
+            <div onmouseover="showModule3()" onmouseout="hideModule3()">
+                <h2>Advanced JavaScript Concepts</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
+                <li>Module 3: <p id="show-info3">Elevate your JavaScript skills with advanced concepts like closures, scopes, and asynchronous programming, unlocking the ability to create<br> efficient and sophisticated applications.</p></li>
             </div>
             <hr>
-            <div>
-                <h2>Working of HTML CSS, JS</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
-                <li>Module 4:</li>
+            <div onmouseover="showModule4()" onmouseout="hideModule4()">
+                <h2>Front-End Development with JavaScript Frameworks</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
+                <li>Module 4: <p id="show-info4">Dive into popular front-end frameworks such as React, Angular, or Vue.js, mastering the art of building interactive and scalable user interfaces for modern web applications.</p></li>
+            </div>
+            <hr>
+            <div onmouseover="showModule5()" onmouseout="hideModule5()">
+                <h2>Full-Stack JavaScript Development</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
+                <li>Module 5: <p id="show-info5">Embark on a comprehensive journey into full-stack development, combining server-side JavaScript with technologies like Node.js and database integration (e.g., MongoDB), enabling end-to-end application development.</p></li>
             </div>
             <hr>
         </div>

@@ -154,24 +154,25 @@
                 from scratch. Join us today and start your journey into the world of web development!</p>
         </div>
         <div class="modules">
-            <div>
+            <div onmouseover="showModule1()" onmouseout="hideModule1()">
                 <h2>Introduction to HTML</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
-                <li>Module 1:</li>
+                <li>Module 1: <p id="show-info1">Explore the fundamentals of HTML, including tags, attributes, and document structure, laying the foundation for web development.</p></li>
+                
             </div>
             <hr>
-            <div>
+            <div onmouseover="showModule2()" onmouseout="hideModule2()">
                 <h2>Working of HTML</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
-                <li>Module 2:</li>
+                <li>Module 2: <p id="show-info2">Dive into the intricacies of HTML, understanding how browsers interpret and render HTML code, ensuring a solid grasp of its functionality.</p></li>
             </div>
             <hr>
-            <div>
+            <div onmouseover="showModule3()" onmouseout="hideModule3()">
                 <h2>Web Development Using HTML</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
-                <li>Module 3:</li>
+                <li>Module 3: <p id="show-info3">Apply HTML skills to practical scenarios, learning to create web pages, structure content, and incorporate multimedia elements for effective <br> web development.</p></li>
             </div>
             <hr>
-            <div>
+            <div onmouseover="showModule4()" onmouseout="hideModule4()">
                 <h2>Working of HTML CSS, JS</h2><span><i class="fa fa-angle-down" style="font-size:36px"></i></span>
-                <li>Module 4:</li>
+                <li>Module 4: <p id="show-info4">Delve into the synergy of HTML, CSS, and JavaScript, discovering how these technologies collaborate to enhance the visual appeal <br> and interactivity of modern web applications.</p></li>
             </div>
             <hr>
         </div>

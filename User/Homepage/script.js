@@ -60,3 +60,38 @@ function showHint(str) {
       xmlhttp.send();
   }
 }
+// show
+function showModule1() {
+  document.getElementById("show-info1").style.display="block"
+}
+function showModule2() {
+  document.getElementById("show-info2").style.display="block"
+}
+function showModule3() {
+  document.getElementById("show-info3").style.display="block"
+}
+function showModule4() {
+  document.getElementById("show-info4").style.display="block"
+}
+function showModule5() {
+  document.getElementById("show-info5").style.display="block"
+}
+// hide
+function hideModule1() {
+  document.getElementById("show-info1").style.display = "none";
+}
+
+function hideModule2() {
+  document.getElementById("show-info2").style.display = "none";
+}
+
+function hideModule3() {
+  document.getElementById("show-info3").style.display = "none";
+}
+
+function hideModule4() {
+  document.getElementById("show-info4").style.display = "none";
+}
+function hideModule5() {
+  document.getElementById("show-info5").style.display = "none";
+}

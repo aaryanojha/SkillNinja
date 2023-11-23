@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <script src="script.js"></script>
     <title>SkillNinja</title>
 </head>
@@ -121,24 +123,11 @@
             </div>
         </div>
         <div class="graph">
-            <div class="graph-card">
-                <div class="bar-graph">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis hendrerit turpis. Phasellus
-                        in
-                        sapien euismod, sed placerat libero nec nisi. Fusce tincidunt diam id justo. Aenean ac elit eu
-                        neque. Curabitur sagittis quam id augue. Vivamus fermentum justo eget massa.
-                        Proin gravida risus quis justo.</p><br>
-                    <div class="bar" style="height: 100px;"></div>
-                    <div class="bar" style="height: 150px;"></div>
-                    <div class="bar" style="height: 75px;"></div>
-                    <div class="bar" style="height: 120px;"></div>
-                </div>
-                <div class="bar-label">HTML</div>
-                <div class="bar-label">CSS</div>
-                <div class="bar-label">Bar 3</div>
-                <div class="bar-label">Bar 4</div>
-            </div>
-            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        <div
+id="myChart" style="width:100%; max-width:600px;">
+</div>  
+        </div>
+ 
             
 </body>
 
