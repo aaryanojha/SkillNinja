@@ -105,13 +105,15 @@ if (isset($_POST['pay'])) {
     !empty($fullname) && !empty($Email) && !empty($address) && !empty($city) && !empty($state) && !empty($zip)
     && !empty($cardname) && !empty($cardnumber) && !empty($expmonth) && !empty($expyear) && !empty($cvv)
   ) {
-session_start();
-$UserId=$_SESSION['u_id'];
-$_SESSION['fullname']=$fullname;
-$_SESSION['u_id']=$UserId;
-    $INSERT = "INSERT Into payment(Full_Name,u_id,Email,Address,City,State,Zip,Card_Name,Card_Number,Expmonth,Expyear,Cvv) values(?,?,?,?,?,?,?,?,?,?,?,?)";
+    session_start();
+    $UserId = $_SESSION['u_id'];
+    $_SESSION['fullname'] = $fullname;
+    $c_id = $_SESSION["courseid"];
+    $price=$_SESSION['price'];
+    $_SESSION['u_id'] = $UserId;
+    $INSERT = "INSERT Into payment(Full_Name,u_id,c_id,Email,Address,City,State,Zip,Card_Name,Card_Number,Expmonth,Expyear,Cvv,price) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     $stmt = $conn->prepare($INSERT);
-    $stmt->bind_param("sissssisiiii", $fullname,$UserId, $Email, $address, $city, $state, $zip, $cardname, $cardnumber, $expmonth, $expyear, $cvv);
+    $stmt->bind_param("siissssisiiiii", $fullname, $UserId, $c_id, $Email, $address, $city, $state, $zip, $cardname, $cardnumber, $expmonth, $expyear, $cvv,$price);
     $stmt->execute();
     header("Location: processing.php");
   } else {

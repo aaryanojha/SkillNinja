@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="courses.css">
-    <!-- <link rel="stylesheet" href="../Homepage/style.css"> -->
     <script src="../Homepage/script.js"></script>
 </head>
 
@@ -21,20 +20,20 @@
             <a href="../Homepage/index.php" class="active">SkillNinja ⚔︎</a>
             <a href="#home" class="" style="padding-top: 1.5%;">News</a>
             <a href="../Homepage/aboutus.php" class="" style="padding-top: 1.5%;">About Us</a>
-            <a href="../User/Homepage/enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
-
-            <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%;" onclick="openform()">Login &emsp;</a> -->  
+            <a href="../Homepage/enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
         <div> 
     </div>
-    <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
     <?php
     // Check if the user is logged in
     session_start();
     if (isset($_SESSION['username'])) {
         $_SESSION['courseid'] = 1;
+        $_SESSION['price']=1000;
+        $c_id = $_SESSION["courseid"];
         $_SESSION["coursename"] = "HTML";
+        $_SESSION['parth']="html.php";
       // If logged in, show the username and a logout button
-      // echo "Welcome, " . $_SESSION['username'] . "!";
+ 
       echo '  <div class="dropdown">
     <button class="dropbtn">
       <img src="../Images/user.png" style="zoom:8%">&emsp;&emsp;
@@ -42,8 +41,8 @@
     <div class="dropdown-content">
       <a>Signed in as <b>' .$_SESSION['username'].'</b></a>
       <hr>
-      <a href="profile.php"><i class="material-icons">person</i> Profile</a>
-      <a href="../User/Homepage/logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+      <a href="../Homepage/Profile/profile.php"><i class="material-icons">person</i> Profile</a>
+      <a href="../Homepage/logout.php"><i class="fa fa-sign-out"></i> Logout</a>
     </div>
   </div> ';
     } else { // If not logged in, show the login form 
@@ -59,7 +58,6 @@
     <a href="#none" style="padding-top: 1%">&nbsp;<input type="search" name="" id="" class="search-bar" />&nbsp;<i
         id="search-btn" class="fa fa-search"></i></a>
     <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-
   </div>
 
         <!-- Login -->
@@ -193,9 +191,9 @@
             if ($result && mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_assoc($result); 
                 $PaymentId = $row["id"];
-               
-                if (isset($PaymentId)) {
-                    $html = '<a href="course.php"><button type="submit" id="enroll">Start Course</button></a>';
+                $c_idc=$row['c_id'];
+                if (!empty($PaymentId) && !empty($c_idc) &&  $c_id=$c_idc) {
+                        $html = '<a href="course.php"><button type="submit" id="enroll">Start Course</button></a>';
                 }
             }
             return $html;

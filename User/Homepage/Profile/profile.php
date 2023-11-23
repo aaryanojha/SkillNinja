@@ -30,16 +30,19 @@
     <a href="#home" class="" style="padding-top: 1.5%">News</a>
     <a href="../aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
     <a href="../enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
-    <!-- <a style="pointer-events:none;float:right"> &emsp;</a> -->
     <div>
     </div>
-    <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
     <?php
+    // Connect to the database
+    require_once "../../Database/functions.php";
+
+    $conn = DBConnect();
+
+
     // Check if the user is logged in
     session_start();
+    $loginUserID = $_SESSION["u_id"];
     if (isset($_SESSION['username'])) {
-      // If logged in, show the username and a logout button
-      // echo "Welcome, " . $_SESSION['username'] . "!";
       echo '  <div class="dropdown">
         <button class="dropbtn">
           <img src="../../Images/user.png" style="zoom:8%">&emsp;&emsp;
@@ -48,7 +51,7 @@
           <a>Signed in as <b>' . $_SESSION['username'] . '</b></a>
           <hr>
           <a href="profile.php"><i class="material-icons">person</i> Profile</a>
-          <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+          <a href="../logout.php"><i class="fa fa-sign-out"></i> Logout</a>
         </div>
       </div> ';
     } else { // If not logged in, show the login form 
@@ -146,14 +149,6 @@
       </div>
     </div>
   </form>
-  <!-- Main container -->
-  <!-- <script>
-        function submitEmail() {
-            var newEmail = document.getElementById("new_email").value;
-            session_start();
-    $_SESSION["new_email"] = new_email; 
-          }
-    </script> -->
   <div class="container">
     <h1>Account</h1>
     <hr>
@@ -168,32 +163,48 @@
     Email:&emsp; &emsp; &emsp;
 
     <?php
-    if (!isset($_SESSION['new_email'])) { ?>
+    if (empty($_SESSION['email'])) { ?>
       <button id="reg-btn" onclick="showEmailForm()">Add Email +</button><br>
     <?php } else { ?>
-      <?php echo "" . $_SESSION['new_email'] . ""; ?><br><br>
+      <?php echo $_SESSION['email']; ?><br><br>
     <?php } ?>
     </p>
-    <!-- <button id="reg-btn" onclick="showEmailForm()">Add Email +</button><br> -->
+
     <div id="addemail" style="display: none;">
-      <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+      <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <input type="text" name="new_email" id="new_email">
         <button type="submit" name="email">Submit</button>
       </form>
     </div>
-
     <?php
-    if (isset($_POST['email'])) {
-      // Handle the form submission here
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
+      // Get the new email from the form
       $newEmail = $_POST['new_email'];
-      $_SESSION['new_email'] = $newEmail;
+
+      // Update the email in the database
+      $sql = "UPDATE users SET Email = '$newEmail' WHERE u_id = $loginUserID";
+      if ($conn->query($sql) === TRUE) {
+        // Update the session variable with the new email
+        $_SESSION['email'] = $newEmail;
+      } else {
+        echo "Error updating record: " . $conn->error;
+      }
     }
+
+    // Fetch the email from the database
+    $query = "SELECT Email FROM users WHERE u_id = '$loginUserID'";
+    $result = $conn->query($query);
+
+    if ($result && $result->num_rows > 0) {
+      while ($row = $result->fetch_assoc()) {
+        $newEmail = $row['Email'];
+      }
+    } else {
+      echo "No records found for email.";
+    }
+
     ?>
-
-
-
-    <!-- <button id="reg-btn" onclick=showbtn()>Add Email +</button><br>
-    <span id="addemail"><input type="text" name="" id=""><button>Submit</button></span> -->
   </div>
 </body>
 

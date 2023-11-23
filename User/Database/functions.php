@@ -23,7 +23,6 @@ function display_enquiries()
 function display_users()
 {
     global $conn;
-    // $query = "SELECT * FROM users ORDER BY u_id ASC;";
     $query = "SELECT * FROM users WHERE isAdmin <> 1 ORDER BY u_id ASC";
     $result = mysqli_query($conn, $query);
     return $result;
@@ -43,26 +42,14 @@ function display_payment(int $u_id)
     return $result;
 }
 
-function fullname(String $Full_Name)
+function display_date()
 {
     $conn = DBConnect();
-    $query = "select * from payment where Full_Name='$Full_Name'";
-    $result = mysqli_query($conn, $query);
-    return $result;
+    $q = "SELECT * FROM course_users;";
+    $date = mysqli_query($conn, $q);
+    return $date;
 }
-// function display_certificate(int $c_id)
-// {
-//     $conn = DBConnect();
-//     $query = "select * from course_table where c_id='$c_id'";
-//     $result = mysqli_query($conn, $query);
-//     return $result;
-// }
 
-// function Get_Courses(int $c_id)
-// {
-//     $conn = DBConnect();
-//     $query = "select * from course_table where c_id='$c_id'";
-//     $result = mysqli_query($conn, $query);
-//     return $result;
-// }
+
+
 ?>

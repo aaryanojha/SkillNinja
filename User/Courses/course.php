@@ -13,22 +13,24 @@
 </head>
 
 <body>
+<?php
+    session_start();
+    $c_id = $_SESSION["courseid"];
+    $parth = $_SESSION["parth"];
+    session_abort();
+    ?>
     <div class="nav-bar">
         <a href="#" onclick="myFunction()"> Back</a>
     </div>
     <div class="alert-box" style="display:none" id="alert-box">
         <strong>NOTE:-</strong> You will lose all your progress without and would have to start again.
-        <strong>Are you Sure you want to go <a href="html.php" style="color:yellow">back?</a></strong>
+        <strong>Are you Sure you want to go <a href="<?php echo $parth; ?>" style="color:yellow">back?</a></strong>
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
     </div>
     <div class="side-bar">
         <Button id="nextBtn" style="display:none;">Next</Button>
     </div>
-    <?php
-    session_start();
-    $c_id = $_SESSION["courseid"];
-    session_abort();
-    ?>
+
     <div class="row">
         <?php
         require_once "../Database/functions.php";

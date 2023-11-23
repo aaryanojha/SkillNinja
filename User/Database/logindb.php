@@ -5,7 +5,7 @@ if (isset($_POST["login"])) {
     $UserName = $_POST["uname"];
     $Password = $_POST["pass"];
     $redirectTo = $_POST['redirectTo'];
- 
+
     // Connect to the database
     require_once "functions.php";
 
@@ -44,6 +44,7 @@ if (isset($_POST["login"])) {
                     $_SESSION["u_id"] = $row['u_id'];
 
                     $_SESSION["fname"] = $Fullname;
+                    $_SESSION["email"] = $row['Email'];
 
                     // Successful login
                     // header("Location: ../User/Homepage/index.php");
@@ -52,14 +53,14 @@ if (isset($_POST["login"])) {
                     // Login failed, show an error message
                     echo "<script>
                     alert('Invalid username or password.');
-                    window.location.href='../User/Homepage/logout.php';
+                    window.location.href='../Homepage/logout.php';
                     </script>";
                 }
             }
         } else {
             echo "<script>
             alert('Invalid username or password.');
-            window.location.href='../User/Homepage/logout.php';
+            window.location.href='../Homepage/logout.php';
             </script>";
         }
 
@@ -67,13 +68,13 @@ if (isset($_POST["login"])) {
         // User doesn't exist or wrong password
         echo "<script>
         alert('Invalid username or password.');
-        window.location.href='../User/Homepage/logout.php';
+        window.location.href='../Homepage/logout.php';
         </script>";
     }
 } else {
     echo "<script>
     alert('Invalid username or password.');
-    window.location.href='../User/Homepage/logout.php';
+    window.location.href='../Homepage/logout.php';
     </script>";
 }
 

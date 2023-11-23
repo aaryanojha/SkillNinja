@@ -7,6 +7,23 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="script.js"></script>
+  <script>
+function showHint(str) {
+     if (str.length == 0) {
+         document.getElementById("txtHint").innerHTML = "";
+         return;
+     } else {
+         var xmlhttp = new XMLHttpRequest();
+         xmlhttp.onreadystatechange = function() {
+             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                 document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+             }
+         }
+         xmlhttp.open("GET", "hint.php?q="+str, true);
+         xmlhttp.send();
+     }
+}
+</script>
 </head>
 
 <body>
@@ -15,10 +32,8 @@
     <a href="#home" class="" style="padding-top: 1.5%">News</a>
     <a href="aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
     <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
-    <!-- <a style="pointer-events:none;float:right"> &emsp;</a> -->
     <div>
-  </div> 
-    <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
+    </div>
     <?php
     // Check if the user is logged in
     session_start();
@@ -30,7 +45,7 @@
       <img src="../Images/user.png" style="zoom:8%">&emsp;&emsp;
     </button>
     <div class="dropdown-content">
-      <a>Signed in as <b>' .$_SESSION['username'].'</b></a>
+      <a>Signed in as <b>' . $_SESSION['username'] . '</b></a>
       <hr>
       <a href="../Homepage/Profile/profile.php"><i class="material-icons">person</i> Profile</a>
       <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
@@ -46,9 +61,12 @@
           Join For Free!
         </button></a>
     <?php } ?>
-    <a href="#none" style="padding-top: 1%">&nbsp;<input type="search" name="" id="" class="search-bar" />&nbsp;<i
-        id="search-btn" class="fa fa-search"></i></a>
-    <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    <a href="#none" style="padding-top: 1%">&nbsp;
+      <a href="#none" style="padding-top: 1%">
+        <input type="search" name="search" id="search" class="search-bar" onkeyup="showHint(this.value)">
+        <i id="search-btn" class="fa fa-search"></i>
+        <div id="txtHint"></div>
+      </a>
 
   </div>
   <!-- Login -->
@@ -57,7 +75,7 @@
       <h1>Welcome Back!</h1>
       <a href="#closebtn" class="closebtn" onclick="closeform()"><i class="material-icons">close</i></a>
       <form action="../Database/logindb.php" method="POST">
-      <input type="hidden" name="redirectTo" value="Homepage/index.php">
+        <input type="hidden" name="redirectTo" value="Homepage/index.php">
         <label for="username">USERNAME:</label>
         <input type="text" name="uname" id="" placeholder="Username" />
         <label for="password">PASSWORD:</label>
@@ -87,7 +105,7 @@
   </div>
 
   <form action="../Database/registerdb.php" method="POST">
-  <input type="hidden" name="redirectTo" value="Homepage/verification.php">
+    <input type="hidden" name="redirectTo" value="Homepage/verification.php">
     <!-- Register -->
     <div class="form-popup" id="myform2" style="display: none">
       <div class="form-container">
@@ -140,7 +158,7 @@
     </h4>
 
     <!-- Join For Free! -->
-    <?php 
+    <?php
     if (!isset($_SESSION['username'])) { ?>
       <button class="centerbtn" style="animation: 1.5s ease-out 0s 1 textanim" onclick="openform2()">Join For Free!
       <?php } else {
@@ -228,8 +246,8 @@
         </a>
       </div>
       <div class="course-card">
-        <a href="../Courses/javascript.php" style="text-decoration: none; color: #3399ff"><img src="../Images/js2.png" alt=""
-            style="zoom: 40%" />
+        <a href="../Courses/javascript.php" style="text-decoration: none; color: #3399ff"><img src="../Images/js2.png"
+            alt="" style="zoom: 40%" />
           <p style="float: right">
             4.4
             <span class="fa fa-star checked"></span>

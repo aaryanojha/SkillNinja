@@ -103,9 +103,21 @@
        ";
             ?>
             <div class="card">
-
-                <h2>Total Revenue</h2>
-                <p id="revenueCount">$0</p>
+            <?php
+            $sql = "SELECT SUM(price) as totalPayments FROM payment";
+             $result = $conn->query($sql);
+             if ($result->num_rows > 0) {
+                // Fetch the result
+                $row = $result->fetch_assoc();
+                $totalPayments = $row['totalPayments'];
+        
+                echo "
+                <h2>Total Payments</h2>
+                <p id='revenueCount'>$totalPayments</p>";
+            } else {
+                echo "No records found";
+            }
+             ?>
             </div>
         </div>
         <div class="graph">
@@ -127,6 +139,7 @@
                 <div class="bar-label">Bar 4</div>
             </div>
             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            
 </body>
 
 </html>

@@ -21,18 +21,18 @@
             <a href="../Homepage/index.php" class="active">SkillNinja ⚔︎</a>
             <a href="#home" class="" style="padding-top: 1.5%;">News</a>
             <a href="../Homepage/aboutus.php" class="" style="padding-top: 1.5%;">About Us</a>
-            <a href="../User/Homepage/enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
-
-            <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%;" onclick="openform()">Login &emsp;</a> -->  
+            <a href="../Homepage/enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
         <div> 
     </div>
-    <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
     <?php
     // Check if the user is logged in
     session_start();
     if (isset($_SESSION['username'])) {
-        $_SESSION['courseid'] = 1;
-        $_SESSION["coursename"] = "HTML";
+        $_SESSION['courseid'] = 3;
+        $_SESSION['price']=3000;
+        $_SESSION["coursename"] = "JAVASCRIPT";
+        $_SESSION['parth']="javascript.php";
+
       // If logged in, show the username and a logout button
       // echo "Welcome, " . $_SESSION['username'] . "!";
       echo '  <div class="dropdown">
@@ -42,8 +42,8 @@
     <div class="dropdown-content">
       <a>Signed in as <b>' .$_SESSION['username'].'</b></a>
       <hr>
-      <a href="profile.php"><i class="material-icons">person</i> Profile</a>
-      <a href="../User/Homepage/logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+      <a href="../Homepage/Profile/profile.php"><i class="material-icons">person</i> Profile</a>
+      <a href="../Homepage/logout.php"><i class="fa fa-sign-out"></i> Logout</a>
     </div>
   </div> ';
     } else { // If not logged in, show the login form 
@@ -59,7 +59,6 @@
     <a href="#none" style="padding-top: 1%">&nbsp;<input type="search" name="" id="" class="search-bar" />&nbsp;<i
         id="search-btn" class="fa fa-search"></i></a>
     <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-
   </div>
 
         <!-- Login -->
@@ -191,8 +190,9 @@
             if ($result && mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_assoc($result); 
                 $PaymentId = $row["id"];
+                if (!empty($PaymentId) && !empty($c_idc) &&  $c_id=$c_idc) {
                
-                if (isset($PaymentId)) {
+                // if (isset($PaymentId)) {
                     $html = '<a href="course.php"><button type="submit" id="enroll">Start Course</button></a>';
                 }
             }
@@ -212,7 +212,7 @@
             <li>
                 <h4><a href="" class="">About Us</a></h4>
             </li>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="../Homepage/index.php">Home</a></li>
         </ul>
         <hr style="width: 90%;">
         <p><i class="fa fa-copyright"></i> 2023 SkillNinja Inc. All rights reserved.</p>

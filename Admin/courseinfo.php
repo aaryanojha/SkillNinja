@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <script src="script.js"></script>
     <title>SkillNinja</title>
 </head>
+
 <body>
     <!-- <div class="nav-bar">
         <a href="">LOGO</a>
@@ -18,10 +20,13 @@
         <a href="admin.php" class="active">SkillNinja ⚔︎</a>
         <a href="">Dashboard</a>
         <a href="userinfo.php"><i class="material-icons" style="position: relative; top: 6%;">person</i> Users</a>
-        <a href="courseinfo.php"><i class="material-icons" style="position: relative; top: 6%;">library_books</i> Courses</a>
+        <a href="courseinfo.php"><i class="material-icons" style="position: relative; top: 6%;">library_books</i>
+            Courses</a>
         <a href="upload.html"><i class="material-icons" style="position: relative; top: 6%;">add</i> Add Courses</a>
-        <a href="Enquiryinfo.php"><i class="material-icons" style="position: relative; top: 6%;">message</i> Enquiries</a>
-        <a href="../User/Homepage/index.php"><i class="material-icons" style="position: relative; top: 6%;">exit_to_app</i> Logout</a>
+        <a href="Enquiryinfo.php"><i class="material-icons" style="position: relative; top: 6%;">message</i>
+            Enquiries</a>
+        <a href="../User/Homepage/index.php"><i class="material-icons"
+                style="position: relative; top: 6%;">exit_to_app</i> Logout</a>
         <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
     </div>
     <form>
@@ -30,9 +35,10 @@
         require_once "../User/Database/functions.php";
 
         $conn = DBConnect();
-        $result = display_course()
-        ?>
-     
+        $result = display_course();
+        // $date=display_date();
+            ?>
+
         <div class="area">
             <div class="boxes">
                 <span>Courses</span>
@@ -55,15 +61,16 @@
                         <td align="center">
                             <?php echo $row['c_name']; ?>
                         </td>
-                      
                     </tr>
                     <?php
-                    }
-                    ?>
+                    } ?>
+
             </table>
-            <?php
-            ?>
         </div>
+
+       
+
     </form>
 </body>
+
 </html>

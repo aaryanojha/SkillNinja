@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 22, 2023 at 09:41 AM
+-- Generation Time: Nov 23, 2023 at 06:16 AM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -60,16 +60,20 @@ CREATE TABLE IF NOT EXISTS `course_users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `c_id` int NOT NULL,
   `u_id` int NOT NULL,
+  `c_date` varchar(99) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=138 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=141 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `course_users`
 --
 
-INSERT INTO `course_users` (`id`, `c_id`, `u_id`) VALUES
-(135, 1, 76),
-(137, 1, 77);
+INSERT INTO `course_users` (`id`, `c_id`, `u_id`, `c_date`) VALUES
+(138, 3, 77, 'November 22, 2023'),
+(135, 1, 76, 'November 22, 2023'),
+(137, 1, 77, 'November 23, 2023'),
+(139, 1, 48, 'November 23, 2023'),
+(140, 3, 48, 'November 23, 2023');
 
 -- --------------------------------------------------------
 
@@ -106,6 +110,7 @@ DROP TABLE IF EXISTS `payment`;
 CREATE TABLE IF NOT EXISTS `payment` (
   `id` int NOT NULL AUTO_INCREMENT,
   `u_id` int NOT NULL,
+  `c_id` int NOT NULL,
   `Full_Name` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   `Email` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   `Address` varchar(35) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
@@ -117,15 +122,19 @@ CREATE TABLE IF NOT EXISTS `payment` (
   `Expmonth` int DEFAULT NULL,
   `Expyear` int DEFAULT NULL,
   `Cvv` int DEFAULT NULL,
+  `price` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `payment`
 --
 
-INSERT INTO `payment` (`id`, `u_id`, `Full_Name`, `Email`, `Address`, `City`, `State`, `Zip`, `Card_Name`, `Card_Number`, `Expmonth`, `Expyear`, `Cvv`) VALUES
-(15, 76, 'll', 'll@gmail.com', 'll', 'll', 'lll', 55, 'lll', 555, 55, 55, 55);
+INSERT INTO `payment` (`id`, `u_id`, `c_id`, `Full_Name`, `Email`, `Address`, `City`, `State`, `Zip`, `Card_Name`, `Card_Number`, `Expmonth`, `Expyear`, `Cvv`, `price`) VALUES
+(15, 76, 1, 'll', 'll@gmail.com', 'll', 'll', 'lll', 55, 'lll', 555, 55, 55, 55, 1000),
+(18, 77, 1, 'Pranav Raju Malwatkar', 'pranavmalwatkar142@gmail.com', 'wakad', 'pune', 'maharshatra', 411057, 'pranav', 12334, 22, 2003, 22, 1000),
+(19, 48, 1, 'Aaryan ojha', 'aa@mail.com', 'pune', 'pune', 'maharshatra', 411057, 'aaryan', 2344, 33, 44, 33, 1000),
+(21, 48, 3, 'Aaryan ojha', 'aa@mail.com', 'pune', 'pune', 'maharshatra', 411057, 'aaryan', 234, 33, 33, 33, 3000);
 
 -- --------------------------------------------------------
 
@@ -142,6 +151,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `IsAdmin` tinyint NOT NULL,
   `question1` varchar(99) NOT NULL,
   `question2` varchar(99) NOT NULL,
+  `Email` varchar(99) NOT NULL,
   PRIMARY KEY (`u_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=78 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -149,11 +159,11 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`u_id`, `fname`, `name`, `pass`, `IsAdmin`, `question1`, `question2`) VALUES
-(46, 'Admin', 'Admin', 'Admin', 1, 'Admin', 'Admin'),
-(48, 'Aaryan Ojha', 'aaryan1234', 'aaryan1234', 0, 'Indira', 'Neeti'),
-(76, 'll', 'llll12', 'llll12', 0, 'll', 'll'),
-(77, 'Pranav Raju Malwatkar', 'pranav12', 'pranav12', 0, 'Indira', 'Anita');
+INSERT INTO `users` (`u_id`, `fname`, `name`, `pass`, `IsAdmin`, `question1`, `question2`, `Email`) VALUES
+(46, 'Admin', 'Admin', 'Admin', 1, 'Admin', 'Admin', ''),
+(48, 'Aaryan Ojha', 'aaryan1234', 'aaryan1234', 0, 'Indira', 'Neeti', 'aaryan@gmail.com'),
+(76, 'll', 'llll12', 'llll12', 0, 'll', 'll', 'l@gmail.com'),
+(77, 'Pranav Raju Malwatkar', 'pranav12', 'pranav12', 0, 'Indira', 'Anita', 'pranav@gmail.com');
 
 -- --------------------------------------------------------
 

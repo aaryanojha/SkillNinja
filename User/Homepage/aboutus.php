@@ -15,16 +15,13 @@
     <a href="#home" class="" style="padding-top: 1.5%">News</a>
     <a href="aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
     <a href="enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
-    <!-- <a style="pointer-events:none;float:right"> &emsp;</a> -->
     <div>
   </div> 
-    <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
     <?php
     // Check if the user is logged in
     session_start();
     if (isset($_SESSION['username'])) {
       // If logged in, show the username and a logout button
-      // echo "Welcome, " . $_SESSION['username'] . "!";
       echo '  <div class="dropdown">
     <button class="dropbtn">
       <img src="../Images/user.png" style="zoom:8%">&emsp;&emsp;

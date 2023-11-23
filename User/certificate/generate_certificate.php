@@ -13,6 +13,8 @@
       <?php
       session_start();
       $loginUserID = $_SESSION["u_id"];
+      $c_id = $_SESSION['courseid'];
+      $CourseName=$_SESSION["coursename"];
       // Connect to the database
       require_once "../Database/functions.php";
       $conn = DBConnect();
@@ -26,13 +28,20 @@
 
       if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-        $CourseName = $row["c_name"];
         $Fullname = $row['fname'];
       }
       // // Display the certificate
       echo "<h1>" . strtoupper($Fullname) . "</h1>";
       echo "<h2>" . strtoupper($CourseName) . " Online Course</h2>";
       echo "<h7>" . date('(F j, Y)') . "</h7>";
+      $currentDate = date('F j, Y');
+      $sql = "UPDATE course_users SET c_date = '$currentDate' WHERE  c_id = $c_id AND u_id = $loginUserID";
+      if ($conn->query($sql) === TRUE) {
+        echo "";
+    } else {
+        echo "Error updating record: " . $conn->error;
+    }
+    $conn->close();
 
       ?>
       <!-- Add the download button -->
