@@ -17,16 +17,13 @@
         <a href="#home" class="" style="padding-top: 1.5%">News</a>
         <a href="../aboutus.php" class="" style="padding-top: 1.5%">About Us</a>
         <a href="../enquire.php" class="" style="padding-top: 1.5%">Enquire</a>
-        <!-- <a style="pointer-events:none;float:right"> &emsp;</a> -->
         <div>
       </div> 
-        <!-- <a href="#home" class="" style="float: right; padding-top: 1.5%" onclick="openform()">Login &emsp;</a> -->
         <?php
         // Check if the user is logged in
         session_start();
         if (isset($_SESSION['username'])) {
           // If logged in, show the username and a logout button
-          // echo "Welcome, " . $_SESSION['username'] . "!";
           echo '  <div class="dropdown">
         <button class="dropbtn">
           <img src="../../Images/user.png" style="zoom:8%">&emsp;&emsp;
@@ -86,7 +83,6 @@
                   float: right;
                   border: 1px solid rgb(204, 204, 204);
                 " />
-    
           <p>
             New to SkillNinja?
             <a href="#home" onclick="openform2(),closeform()">SignUp</a>
@@ -138,7 +134,7 @@
     <hr>
     <p> <h4><i class="fa fa-address-card-o" style="font-size:24px"></i> Account Information</h4>
           FullName:&emsp;&nbsp;&nbsp; <?php echo "".$_SESSION['fname'].""; ?> <br><br>
-          Username:&emsp; <input type="text" name="uname" id=""><br><br>
+          Username:&emsp; <?php echo "".$_SESSION['username'].""; ?><br><br>
           Current Password: &nbsp;<input type="password" name="pass" id=""><br><br>
           New Password:&emsp;&emsp;<input type="password" name="npass" id=""> 
           &emsp;<button id="reg-btn" name="update">Update</button>
@@ -150,12 +146,12 @@
 
 <?php
 if (isset($_POST["update"])) {
-    $UserName = $_POST["uname"];
+    $UserName = $_SESSION['username'];
     $Password = $_POST["pass"];
     $NewPassword = $_POST["npass"];
 
     // Connect to the MariaDB server
-    require_once "../Database/functions.php";
+    require_once "../../Database/functions.php";
 
     $conn = DBConnect();
     if (!empty($UserName) && !empty($Password) && !empty($NewPassword)) {
@@ -170,19 +166,19 @@ if (isset($_POST["update"])) {
 
             if ($conn->query($sql) === true) {
                 echo "<script>alert('User record updated successfully');
-                window.location.href='../User/Homepage/updateprofile.php';
+                window.location.href='../Profile/updateprofile.php';
                 </script>";
             } else {
                 echo "Error updating user record: " . $conn->error;
             }
         } else {
             echo "<script> alert('Invalid Input');
-            window.location.href='../User/Homepage/updateprofile.php';
+            window.location.href='../Profile/updateprofile.php';
             </script>";
         }
     } else {
         echo "<script> alert('Incorrect input');
-        window.location.href='../User/Homepage/updateprofile.php';
+        window.location.href='../Profile/updateprofile.php';
         </script>";
     }
     // Close the database connection

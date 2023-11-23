@@ -27,6 +27,16 @@ function display_users()
     $result = mysqli_query($conn, $query);
     return $result;
 }
+function payment()
+{
+    global $conn;
+    // $query = "SELECT * FROM payment ORDER BY u_id ASC";
+    $query = "SELECT u_id, SUM(price) AS total_price
+    FROM payment
+    GROUP BY u_id";
+    $result1 = mysqli_query($conn, $query);
+    return $result1;
+}
 function display_course()
 {
     global $conn;
@@ -34,6 +44,7 @@ function display_course()
     $result = mysqli_query($conn, $query);
     return $result;
 }
+
 function display_payment(int $u_id)
 {
     $conn = DBConnect();

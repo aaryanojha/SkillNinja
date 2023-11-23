@@ -57,9 +57,9 @@
       <form action="../Database/logindb.php" method="POST">
         <input type="hidden" name="redirectTo" value="Homepage/enquire.php">
         <label for="username">USERNAME:</label>
-        <input type="text" name="uname" value="pppp12" id="" placeholder="Username" />
+        <input type="text" name="uname" id="" placeholder="Username" />
         <label for="password">PASSWORD:</label>
-        <input type="password" value="pppp12" name="pass" placeholder="Password" />
+        <input type="password" name="pass" placeholder="Password" />
         <p>
           <a href="#forgotpass" style="text-decoration: none">Forgot Password?</a>
         </p>
@@ -126,7 +126,7 @@
   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
     <div class="form">
 
-      <div class="contactus" style="z-index:-1">
+      <div class="contactus">
         <h1>Contact Us</h1>
 
         <p>If you have any questions or need assistance, please don't hesitate to get in touch with us. We're here to
@@ -140,7 +140,7 @@
         <h2>Contact Form</h2>
         <p>If you prefer, you can also use the contact/enquire form here to send us a message:</p>
       </div>
-      <div class="enquiry" style="z-index:-1">
+      <div class="enquiry">
         <h2>Send Enquiry:</h2>
         <div class="name-inputs">
           <input type="text" name="fname" placeholder="Enter First Name" />

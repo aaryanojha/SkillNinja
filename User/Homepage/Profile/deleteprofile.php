@@ -35,7 +35,7 @@
           <a>Signed in as <b>' .$_SESSION['username'].'</b></a>
           <hr>
           <a href="profile.php"><i class="material-icons">person</i> Profile</a>
-          <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+          <a href="../logout.php"><i class="fa fa-sign-out"></i> Logout</a>
         </div>
       </div> ';
         } else { // If not logged in, show the login form 
@@ -138,11 +138,12 @@
     <hr>
     <p> <h4><i class="fa fa-address-card-o" style="font-size:24px"></i> &nbsp;Enter Account Information</h4>
           Username:&emsp; <?php echo "".$_SESSION['username'].""; ?><br><br>
-          Password: &nbsp;&emsp;<input type="password" name="pass" id=""><br><br>
+          Password: &nbsp;&emsp;<input type="password" name="pass" id=""><br>
+          <h2>SEQURITY QUESTION</h2>
           College Name: &nbsp;<input type="text" name="q1" id=""> &emsp;
           Mothers Name: &nbsp;<input type="text" name="q2" id=""><br><br>
-          <!-- <button id="reg-btn" name="delete">Delete Account</button> -->
-          <button type="button" id="reg-btn" onclick="condelete()">Delete Account</button><br><br>
+          <button id="reg-btn" name="delete">Delete Account</button>
+          <!-- <button type="button" id="reg-btn" onclick="condelete()">Delete Account</button><br><br> -->
           <span id="cdelete" style="display:none">Are you sure you want to proceed? 
           <button id="reg-btn" style="background:red" name="delete">Confirm</button></span>
     </p>
@@ -156,10 +157,8 @@ if (isset($_POST['delete'])) {
 
     $username = $_SESSION['username'];
     $password = $_POST['pass'];
-  
-  
     //Connect to the MySQL database
-    require_once('../Database/functions.php');
+    require_once('../../Database/functions.php');
   
     $conn = DBConnect();
   
@@ -170,14 +169,14 @@ if (isset($_POST['delete'])) {
       }
   
       // Define the SQL query to delete a row from the table
-      $sql = "DELETE FROM users WHERE name='$username' AND pass='$password'";
+      $sql = "DELETE FROM users WHERE  pass='$password'";
   
       // Execute the query
       if ($conn->query($sql) === TRUE) {
         session_destroy();
         echo "<script>
         alert('Account Deleted successfully');
-        window.location.href='../User/Homepage/index.php';
+        window.location.href='../index.php';
         </script>";
       } else {
         echo "Error deleting row: " . $conn->error;
@@ -185,7 +184,7 @@ if (isset($_POST['delete'])) {
     } else {
       echo "<script>
       alert('Invalid Input');
-      window.location.href='../User/Homepage/deleteprofile.php';
+      window.location.href='../Profile/deleteprofile.php';
       </script>";
     }
     // Close the database connection

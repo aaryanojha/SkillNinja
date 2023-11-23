@@ -18,7 +18,7 @@
     </div> -->
     <div class="side-bar" id="mySide-bar">
         <a href="admin.php" class="active">SkillNinja ⚔︎</a>
-        <a href="">Dashboard</a>
+        <a href="admin.php">Dashboard</a>
         <a href="userinfo.php"><i class="material-icons" style="position: relative; top: 6%;">person</i> Users</a>
         <a href="courseinfo.php"><i class="material-icons" style="position: relative; top: 6%;">library_books</i>
             Courses</a>
@@ -37,7 +37,7 @@
         $conn = DBConnect();
         $result = display_course();
         // $date=display_date();
-            ?>
+        ?>
 
         <div class="area">
             <div class="boxes">
@@ -47,7 +47,7 @@
                 <tr align="center">
                     <th>Course ID</th>
                     <th>Course Name</th>
-
+                    <th>Price</th>
                 </tr>
 
                 <tr align="center">
@@ -61,6 +61,9 @@
                         <td align="center">
                             <?php echo $row['c_name']; ?>
                         </td>
+                        <td align="center">
+                        <?php echo $row['c_price']; ?>
+                        </td>
                     </tr>
                     <?php
                     } ?>
@@ -68,7 +71,7 @@
             </table>
         </div>
 
-       
+
 
     </form>
 </body>

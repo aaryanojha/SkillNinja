@@ -148,39 +148,32 @@
 
     $conn = DBConnect();
     $user_id = $_SESSION['u_id'];
-
-    // Query to fetch user_id and course_name for courses associated with users
-    // $sql = "SELECT u.U_id AS user_id, u.fname AS fname, c.c_name AS course_name
-    // FROM course_users cu
-    // INNER JOIN course c ON cu.c_id = c.c_id
-    // INNER JOIN users u ON cu.u_id = u.U_id
-    // WHERE cu.u_id = $user_id";
-$sql = "SELECT u.U_id AS user_id, u.fname AS fname, c.c_name AS course_name, cu.c_date
-FROM course_users cu
-INNER JOIN course c ON cu.c_id = c.c_id
-INNER JOIN users u ON cu.u_id = u.U_id
-WHERE cu.u_id =  $user_id";
+    $sql = "SELECT u.U_id AS user_id, u.fname AS fname, c.c_name AS course_name, c.c_price, cu.c_date
+    FROM course_users cu
+    INNER JOIN course c ON cu.c_id = c.c_id
+    INNER JOIN users u ON cu.u_id = u.U_id
+    WHERE cu.u_id = $user_id";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
       echo '<table border="1">';
-      echo '<tr><th>User ID</th><th>First Name</th><th>Course Name</th><th>Completed Date</th></tr>';
+      echo '<tr><th>User ID</th><th>First Name</th><th>Course Name</th><th>Completed Date</th><th>Price</th></tr>';
 
       while ($row = $result->fetch_assoc()) {
         $user_id = $row["user_id"];
         $fname = $row["fname"];
         $course_name = $row["course_name"];
-        $c_date=$row["c_date"];
+        $c_date = $row["c_date"];
+        $c_price = $row["c_price"];
         echo '<tr>';
         echo '<td>' . $user_id . '</td>';
         echo '<td>' . $fname . '</td>';
         echo '<td>' . $course_name . '</td>';
         echo '<td>' . $c_date . '</td>';
+        echo '<td>' . $c_price . '</td>';
 
         echo '</tr>';
       }
-      // echo '<tr><td>'.$currentDate.'</td></tr>';
-      // echo '<tr><td>' . $a . '</td></tr>';
       echo '</table>';
 
     } else {

@@ -1,5 +1,4 @@
 <?php
-// include("db.php");
 require_once "../User/Database/functions.php";
 
 $conn = DBConnect();
@@ -11,14 +10,30 @@ if (isset($_POST['upload'])) {
     $file_destination = "upload/" . $file_name;
     if (move_uploaded_file($temp_name, $file_destination)) {
         $q = "INSERT INTO video (name) VALUES ('$file_name')";
-
         if (mysqli_query($conn, $q)) {
-            echo "Video uploaded successfully.";
+            echo "<script>
+            alert('Video uploaded successfully.');
+            window.location.href='upload.php';
+            </script>";
         } else {
-            echo "Something went wrong??";
+            echo "<script>
+            alert('Something went wrong??');
+            window.location.href='upload.html';
+            </script>";
         }
+
     } else {
-        echo "Please select a video-to-upload.";
+        echo "<script>
+        alert('Please select a video-to-upload.');
+        window.location.href='upload.html';
+        </script>";
     }
+} else {
+    // Login failed, show an error message
+    echo "<script>
+    alert('Please select a video-to-upload.');
+    window.location.href='upload.html';
+    </script>";
 }
+
 ?>

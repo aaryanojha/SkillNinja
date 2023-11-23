@@ -10,7 +10,7 @@
 
 <body>
     <div class="nav">
-        <a href="index.php">SkillNinja ⚔︎</a>
+        <a href="verification.php">SkillNinja ⚔︎</a>
     </div>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <div class="form-body">
