@@ -114,7 +114,7 @@
                 $totalPayments = $row['totalPayments'];
         
                 echo "
-                <h2>Total Payments</h2>
+                <h2>Total Amount</h2>
                 <p id='revenueCount'>$totalPayments</p>";
             } else {
                 echo "No records found";

@@ -173,7 +173,7 @@
     <div id="addemail" style="display: none;">
       <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <input type="text" name="new_email" id="new_email">
-        <button type="submit" name="email">Submit</button>
+        <button type="submit" name="email" class="sbtn">Submit</button>
       </form>
     </div>
     <?php
